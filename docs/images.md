@@ -1,5 +1,16 @@
 # Image Rules
 
+## Mandatory rule: school-related content
+
+Any content that references a specific school MUST include at least one real image of that school (campus, building, entrance, facility). This applies to:
+- School profile pages
+- Journal articles that mention schools by name
+- City pages featuring school cards
+- Homepage school cards or features
+- Any page where a school appears as a primary subject
+
+Do not publish school content with placeholder, stock, or AI-generated images. Follow the sourcing process below.
+
 ## Source priority by context
 
 | Context | Best source | Fallback |

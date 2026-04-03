@@ -7,9 +7,14 @@
     "country": "Singapore",
     "countrySlug": "singapore",
     "type": "Day",
-    "ageRange": "3–18",
-    "yearRange": "Nursery–Year 13",
-    "curricula": ["English National Curriculum", "IGCSE", "A Level", "IB Diploma"],
+    "ageRange": "3\u201318",
+    "yearRange": "Nursery\u2013Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "A Level",
+      "IB Diploma"
+    ],
     "founded": 1925,
     "roll": 2800,
     "website": "https://www.tts.edu.sg",
@@ -23,25 +28,100 @@
     "asiaRank": 1,
     "cityRank": 1,
     "hasEditorial": true,
-    "heroImage": "/images/tanglin-trust-hero.jpg",
+    "heroImage": "/images/tanglin-trust-campus.jpg",
     "overview": "Tanglin Trust School is a co-educational day school in Singapore, established in 1925. It is the oldest British school in Southeast Asia. The school follows the English National Curriculum and is the only school in Singapore to offer both A Level and IB Diploma pathways in Sixth Form. Tanglin operates as a not-for-profit trust, with all tuition fees directed back into the school. Approximately 2,800 students from over 50 nationalities are enrolled across Infant, Junior, and Senior schools on its Portsdown Road campus.",
     "editorial": "Tanglin Trust is widely regarded as the strongest British school in Singapore. Parents on Reddit and expat forums consistently cite high academic standards, particularly at A Level and IB. The school regularly achieves strong university placement to Russell Group and Ivy League institutions. Some parents note that demand significantly exceeds supply, with waitlists common in popular year groups. A small number of forum posts mention high fees and a competitive social environment, but these are minority views and do not constitute a pattern of serious concern.",
     "fees": [
-      { "year": "Nursery", "tuition": 28950, "buildingFund": 5820, "total": 34770 },
-      { "year": "Reception", "tuition": 36855, "buildingFund": 5820, "total": 42675 },
-      { "year": "Year 1", "tuition": 37710, "buildingFund": 5820, "total": 43530 },
-      { "year": "Year 2", "tuition": 37710, "buildingFund": 5820, "total": 43530 },
-      { "year": "Year 3", "tuition": 39750, "buildingFund": 5820, "total": 45570 },
-      { "year": "Year 4", "tuition": 39750, "buildingFund": 5820, "total": 45570 },
-      { "year": "Year 5", "tuition": 39750, "buildingFund": 5820, "total": 45570 },
-      { "year": "Year 6", "tuition": 39750, "buildingFund": 5820, "total": 45570 },
-      { "year": "Year 7", "tuition": 45555, "buildingFund": 5820, "total": 51375 },
-      { "year": "Year 8", "tuition": 45555, "buildingFund": 5820, "total": 51375 },
-      { "year": "Year 9", "tuition": 45555, "buildingFund": 5820, "total": 51375 },
-      { "year": "Year 10", "tuition": 47940, "buildingFund": 5820, "total": 53760 },
-      { "year": "Year 11", "tuition": 47940, "buildingFund": 5820, "total": 53760 },
-      { "year": "Year 12", "tuition": 49914, "buildingFund": 5820, "total": 55734 },
-      { "year": "Year 13", "tuition": 49914, "buildingFund": 5820, "total": 55734 }
+      {
+        "year": "Nursery",
+        "tuition": 28950,
+        "buildingFund": 5820,
+        "total": 34770
+      },
+      {
+        "year": "Reception",
+        "tuition": 36855,
+        "buildingFund": 5820,
+        "total": 42675
+      },
+      {
+        "year": "Year 1",
+        "tuition": 37710,
+        "buildingFund": 5820,
+        "total": 43530
+      },
+      {
+        "year": "Year 2",
+        "tuition": 37710,
+        "buildingFund": 5820,
+        "total": 43530
+      },
+      {
+        "year": "Year 3",
+        "tuition": 39750,
+        "buildingFund": 5820,
+        "total": 45570
+      },
+      {
+        "year": "Year 4",
+        "tuition": 39750,
+        "buildingFund": 5820,
+        "total": 45570
+      },
+      {
+        "year": "Year 5",
+        "tuition": 39750,
+        "buildingFund": 5820,
+        "total": 45570
+      },
+      {
+        "year": "Year 6",
+        "tuition": 39750,
+        "buildingFund": 5820,
+        "total": 45570
+      },
+      {
+        "year": "Year 7",
+        "tuition": 45555,
+        "buildingFund": 5820,
+        "total": 51375
+      },
+      {
+        "year": "Year 8",
+        "tuition": 45555,
+        "buildingFund": 5820,
+        "total": 51375
+      },
+      {
+        "year": "Year 9",
+        "tuition": 45555,
+        "buildingFund": 5820,
+        "total": 51375
+      },
+      {
+        "year": "Year 10",
+        "tuition": 47940,
+        "buildingFund": 5820,
+        "total": 53760
+      },
+      {
+        "year": "Year 11",
+        "tuition": 47940,
+        "buildingFund": 5820,
+        "total": 53760
+      },
+      {
+        "year": "Year 12",
+        "tuition": 49914,
+        "buildingFund": 5820,
+        "total": 55734
+      },
+      {
+        "year": "Year 13",
+        "tuition": 49914,
+        "buildingFund": 5820,
+        "total": 55734
+      }
     ],
     "campus": {
       "address": "95 Portsdown Road, Singapore 139299",
@@ -64,9 +144,13 @@
     "country": "Singapore",
     "countrySlug": "singapore",
     "type": "Day",
-    "ageRange": "2–18",
-    "yearRange": "Toddler–Year 13",
-    "curricula": ["English National Curriculum", "IGCSE", "IB Diploma"],
+    "ageRange": "2\u201318",
+    "yearRange": "Toddler\u2013Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
     "founded": 2014,
     "roll": 3000,
     "website": "https://singapore.dulwich.org",
@@ -80,7 +164,7 @@
     "asiaRank": 2,
     "cityRank": 2,
     "hasEditorial": false,
-    "heroImage": null,
+    "heroImage": "/images/dulwich-college-campus.jpg",
     "overview": "Dulwich College (Singapore) is a co-educational day school in the Bukit Timah area. Part of the Dulwich College International group, the school follows the English National Curriculum through to IGCSE before offering the IB Diploma. The Singapore campus opened in 2014 and enrols approximately 3,000 students.",
     "editorial": null,
     "fees": [],
@@ -96,9 +180,11 @@
     "country": "Singapore",
     "countrySlug": "singapore",
     "type": "Day",
-    "ageRange": "2–14",
-    "yearRange": "Nursery–Year 9",
-    "curricula": ["English National Curriculum"],
+    "ageRange": "2\u201314",
+    "yearRange": "Nursery\u2013Year 9",
+    "curricula": [
+      "English National Curriculum"
+    ],
     "founded": 2020,
     "roll": null,
     "website": "https://www.brightoncollege.edu.sg",
@@ -112,7 +198,7 @@
     "asiaRank": 3,
     "cityRank": 3,
     "hasEditorial": false,
-    "heroImage": null,
+    "heroImage": "/images/brighton-college-campus.jpg",
     "overview": "Brighton College (Singapore) is a co-educational day school offering the English National Curriculum. Part of the Brighton College family of schools, the Singapore campus opened in 2020. The school currently serves students from Nursery through Year 9.",
     "editorial": null,
     "fees": [],
@@ -128,9 +214,13 @@
     "country": "Singapore",
     "countrySlug": "singapore",
     "type": "Day",
-    "ageRange": "3–18",
-    "yearRange": "Nursery–Year 13",
-    "curricula": ["English National Curriculum", "IGCSE", "IB Diploma"],
+    "ageRange": "3\u201318",
+    "yearRange": "Nursery\u2013Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
     "founded": 2007,
     "roll": null,
     "website": "https://www.nexus.edu.sg",
@@ -144,7 +234,7 @@
     "asiaRank": 4,
     "cityRank": 4,
     "hasEditorial": false,
-    "heroImage": null,
+    "heroImage": "/images/nexus-international-campus.jpg",
     "overview": "Nexus International School is a co-educational day school in Singapore offering the English National Curriculum through to IGCSE and the IB Diploma. The school opened in 2007.",
     "editorial": null,
     "fees": [],
