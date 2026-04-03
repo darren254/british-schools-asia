@@ -147,7 +147,7 @@
   }
 
   /* Content container */
-  .container {
+  .bsa-container {
     width: 100%;
     max-width: var(--width-content);
     margin-left: auto;
@@ -157,14 +157,14 @@
   }
 
   @media (min-width: 768px) {
-    .container {
+    .bsa-container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
-    .container {
+    .bsa-container {
       padding-left: 2rem;
       padding-right: 2rem;
     }
