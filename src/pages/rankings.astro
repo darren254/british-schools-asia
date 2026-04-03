@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import schools from '../data/schools.json';
+
+const rankedSchools = [...schools].sort((a, b) => a.asiaRank - b.asiaRank);
+---
+<BaseLayout title="Asia's Top British Schools — Rankings" description="The ranked index of British curriculum schools across Asia, scored by fees and independent reputation data.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Rankings</p>
+      <h1 class="mb-6">Asia's Top British Schools</h1>
+      <p class="font-body text-black/70 max-w-2xl mb-4">
+        British Schools Asia ranks every British curriculum school in the region using a composite score derived from tuition fees and independent reputation signals. Schools are listed in order of their adjusted score.
+      </p>
+      <p class="font-body text-black/70 max-w-2xl mb-12">
+        This index is updated regularly as new fee schedules and evidence become available.
+      </p>
+
+      <hr class="divider mb-8" />
+
+      <!-- Rankings Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="border-b border-black">
+              <th class="label py-3 pr-4 w-16">Rank</th>
+              <th class="label py-3 pr-4">School</th>
+              <th class="label py-3 pr-4 hidden sm:table-cell">City</th>
+              <th class="label py-3 pr-4 hidden md:table-cell">Curricula</th>
+              <th class="label py-3 text-right">Fees From</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rankedSchools.map((school) => (
+              <tr class="border-b border-border">
+                <td class="py-5 pr-4 font-display text-2xl">{school.asiaRank}</td>
+                <td class="py-5 pr-4">
+                  <a href={`/schools/${school.countrySlug}/${school.citySlug}/${school.slug}`} class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+                    {school.name}
+                  </a>
+                  <p class="font-body text-sm text-black/50 mt-1 sm:hidden">{school.city}</p>
+                </td>
+                <td class="py-5 pr-4 font-body text-sm text-black/60 hidden sm:table-cell">{school.city}</td>
+                <td class="py-5 pr-4 font-body text-sm text-black/60 hidden md:table-cell">{school.curricula.join(', ')}</td>
+                <td class="py-5 font-body text-sm text-right whitespace-nowrap">{school.feeSummaryUSD.replace('Fees from ', '')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-12">
+        <a href="/methodology" class="btn-ghost-dark">How We Rank Schools</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

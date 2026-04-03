@@ -1,0 +1,36 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  city: string;
+  citySlug: string;
+  countrySlug: string;
+  feeSummary: string;
+  asiaRank: number;
+  heroImage?: string | null;
+}
+
+const { name, slug, city, citySlug, countrySlug, feeSummary, asiaRank, heroImage } = Astro.props;
+const href = `/schools/${countrySlug}/${citySlug}/${slug}`;
+const placeholderBg = 'bg-black/5';
+---
+<a href={href} class="block group no-underline" style="text-decoration:none;">
+  <div class="overflow-hidden">
+    {heroImage ? (
+      <img
+        src={heroImage}
+        alt={name}
+        class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    ) : (
+      <div class={`w-full aspect-[4/3] ${placeholderBg} flex items-center justify-center`}>
+        <span class="label text-black/30">#{asiaRank}</span>
+      </div>
+    )}
+  </div>
+  <div class="pt-3 pb-1">
+    <p class="label text-black/50 mb-2">{city} &middot; Rank #{asiaRank}</p>
+    <h3 class="font-display text-xl leading-snug mb-1">{name}</h3>
+    <p class="font-body text-sm text-black/60">{feeSummary}</p>
+  </div>
+</a>

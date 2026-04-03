@@ -1,0 +1,28 @@
+---
+interface Props {
+  active?: string;
+}
+const { active } = Astro.props;
+const links = [
+  { label: 'Rankings', href: '/journal' },
+  { label: 'Cities', href: '/journal' },
+  { label: 'Guides', href: '/journal' },
+  { label: 'News', href: '/journal' },
+];
+---
+<nav class="border-b border-border">
+  <div class="bsa-container flex items-center gap-6 overflow-x-auto py-3">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class:list={[
+          'label whitespace-nowrap no-underline hover:text-black transition-colors',
+          active === link.label ? 'text-black' : 'text-black/40',
+        ]}
+        style="text-decoration:none;"
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+</nav>

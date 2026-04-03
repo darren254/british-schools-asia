@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="Contact — British Schools Asia" description="Get in touch with the British Schools Asia team.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Contact</p>
+        <h1 class="mb-8">Contact</h1>
+
+        <div class="space-y-6 font-body text-black/70 leading-relaxed">
+          <p>
+            For questions about the index, corrections to school data, or general enquiries, please email:
+          </p>
+
+          <p class="text-black font-medium text-lg">
+            <a href="mailto:hello@britishschoolsasia.com">hello@britishschoolsasia.com</a>
+          </p>
+
+          <p>
+            We aim to respond to all enquiries within two working days. If you represent a school and believe any information on this site is inaccurate, please include the specific data point and a source for the correction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

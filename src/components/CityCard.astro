@@ -1,0 +1,30 @@
+---
+interface Props {
+  city: string;
+  slug: string;
+  schoolCount: number;
+  image?: string | null;
+}
+
+const { city, slug, schoolCount, image } = Astro.props;
+const href = `/cities/${slug}`;
+---
+<a href={href} class="block group no-underline" style="text-decoration:none;">
+  <div class="overflow-hidden">
+    {image ? (
+      <img
+        src={image}
+        alt={`British schools in ${city}`}
+        class="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    ) : (
+      <div class="w-full aspect-[3/2] bg-black/5 flex items-center justify-center">
+        <span class="font-display text-2xl text-black/20">{city}</span>
+      </div>
+    )}
+  </div>
+  <div class="pt-3">
+    <h3 class="font-display text-xl mb-1">{city}</h3>
+    <p class="font-body text-sm text-black/50">{schoolCount} {schoolCount === 1 ? 'school' : 'schools'}</p>
+  </div>
+</a>

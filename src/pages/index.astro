@@ -1,33 +1,146 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import UtilityRibbon from '../components/UtilityRibbon.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SchoolCard from '../components/SchoolCard.astro';
+import CityCard from '../components/CityCard.astro';
+import schools from '../data/schools.json';
+
+const rankedSchools = schools.sort((a, b) => a.asiaRank - b.asiaRank);
 ---
+<BaseLayout title="British Schools Asia" description="The independent guide to British curriculum schools across Asia. Rankings, fees, and editorial reviews.">
+  <UtilityRibbon slot="ribbon" />
+  <Header slot="header" />
 
-<BaseLayout title="British Schools Asia" description="A curated index of Asia's top British schools. Rankings, fees, and independent editorial reviews.">
-
-  <!-- Placeholder: Utility ribbon component (Phase 2) -->
-  <!-- Placeholder: Header component (Phase 2) -->
-
-  <div class="section">
-    <div class="bsa-container">
-      <h1>Find the top British schools in Asia</h1>
-      <p class="mt-6" style="max-width: var(--width-narrow); font-size: var(--text-lg);">
-        A curated, editorially independent index of British curriculum schools across Asia's major cities. Ranked by fees. Adjusted by reputation.
-      </p>
-
-      <hr class="divider mt-12 mb-12" />
-
-      <!-- Phase 1 type specimen -->
-      <div class="mt-16">
-        <p class="label mb-4">Design System Check</p>
-        <h2 class="mb-4">Typography &amp; Spacing</h2>
-        <p>Body text at 15px Inter. Headings in Cormorant Garamond. This paragraph verifies the base type stack renders correctly before Phase 2 component work begins.</p>
-
-        <div class="mt-8 flex gap-4 flex-wrap">
-          <a href="#" class="btn-primary">Primary Button</a>
-          <a href="#" class="btn-ghost-dark">Ghost Button</a>
-        </div>
+  <!-- HERO -->
+  <section class="relative w-full h-[80vh] min-h-[500px] overflow-hidden">
+    <img
+      src="/images/homepage-hero.jpg"
+      alt="Aerial view of Singapore"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
+      <div class="bsa-container">
+        <h1 class="text-white text-4xl md:text-5xl lg:text-6xl max-w-2xl mb-4">
+          Find the top British schools in Asia
+        </h1>
+        <p class="text-white/80 font-body text-base md:text-lg max-w-lg mb-8">
+          Independent rankings, fees, and reviews for British curriculum schools across the region.
+        </p>
+        <a href="/rankings" class="btn-ghost">View Rankings</a>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- TOP RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Top Ranked Schools</p>
+      <h2 class="mb-2">The leading British schools in Asia</h2>
+      <p class="font-body text-black/60 mb-10 max-w-xl">
+        Ranked by a composite score based on tuition fees, reputation, and independent evidence.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {rankedSchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+      <div class="mt-10">
+        <a href="/rankings" class="btn-primary">See Full Rankings</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- BROWSE BY CITY -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Browse by City</p>
+      <h2 class="mb-10">Explore schools by location</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        <CityCard city="Singapore" slug="singapore" schoolCount={4} image="/images/singapore-hero.jpg" />
+        <CityCard city="Hong Kong" slug="hong-kong" schoolCount={0} />
+        <CityCard city="Bangkok" slug="bangkok" schoolCount={0} />
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- METHODOLOGY TEASER -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">How We Rank</p>
+        <h2 class="mb-6">A transparent, evidence-based index</h2>
+        <p class="font-body text-black/70 mb-4">
+          Every school in the index is scored using publicly available fee data, adjusted for local reputation signals drawn from independent sources. The methodology is designed to be replicable and free of commercial influence.
+        </p>
+        <p class="font-body text-black/70 mb-8">
+          No school can pay to be ranked. No school can pay to be removed.
+        </p>
+        <a href="/methodology" class="btn-ghost-dark">Read the Methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- JOURNAL CROSSOVER -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">From the Journal</p>
+      <h2 class="font-display italic mb-10">Journal</h2>
+      <a href="/journal/best-british-schools-singapore" class="block group no-underline md:flex md:gap-8" style="text-decoration:none;">
+        <div class="md:w-1/2 overflow-hidden">
+          <img
+            src="/images/journal-singapore.jpg"
+            alt="Singapore skyline"
+            class="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="pt-4 md:pt-0 md:w-1/2 md:flex md:flex-col md:justify-center">
+          <p class="label text-black/50 mb-3">Cities</p>
+          <h3 class="text-2xl md:text-3xl mb-3">Best British Schools in Singapore</h3>
+          <p class="font-body text-black/60 mb-4">
+            A guide to Singapore's top-ranked British curriculum schools, covering fees, curricula, and what parents should know before applying.
+          </p>
+          <span class="font-body text-sm underline">Read article</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- EMAIL CAPTURE -->
+  <section class="bg-black py-16 md:py-20">
+    <div class="bsa-container text-center">
+      <h2 class="text-white mb-4">Stay informed</h2>
+      <p class="font-body text-white/60 mb-8 max-w-md mx-auto">
+        Receive updates when new schools are ranked and new guides are published.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return false;">
+        <input
+          type="email"
+          placeholder="Your email address"
+          class="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white font-body text-sm placeholder:text-white/40 outline-none focus:border-white/60"
+          style="border-radius:0;"
+        />
+        <button type="submit" class="btn-primary whitespace-nowrap">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
 </BaseLayout>

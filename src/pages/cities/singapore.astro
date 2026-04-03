@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const sgSchools = schools
+  .filter((s) => s.citySlug === 'singapore')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much do British schools cost in Singapore?',
+    a: 'Tuition fees at British curriculum schools in Singapore typically range from SGD 28,000 to SGD 50,000 per year, depending on the year group. Most schools also charge a non-refundable building or capital levy of SGD 4,000–6,000 annually.'
+  },
+  {
+    q: 'Which British schools in Singapore offer A Levels?',
+    a: 'Tanglin Trust School is the only British school in Singapore that offers A Levels alongside the IB Diploma. Most other British schools in Singapore transition to the IB Diploma after IGCSEs.'
+  },
+  {
+    q: 'Are there waitlists at British schools in Singapore?',
+    a: 'Yes. The most established schools, particularly Tanglin Trust, report waitlists in popular year groups. Parents are advised to apply early, especially for Infant and Junior School entry.'
+  },
+  {
+    q: 'What curriculum do British schools in Singapore follow?',
+    a: 'British schools in Singapore follow the English National Curriculum from Early Years through to IGCSE (Year 10–11). For Sixth Form, most offer the IB Diploma rather than A Levels.'
+  }
+];
+---
+<BaseLayout title="British Schools in Singapore" description="Ranked guide to the best British curriculum schools in Singapore, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/singapore-hero.jpg"
+      alt="Marina Bay, Singapore at dusk"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Singapore</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Singapore is the largest market for British curriculum schools in Southeast Asia. The city-state hosts a concentrated group of schools offering the English National Curriculum, IGCSE, and Sixth Form pathways including A Levels and the IB Diploma.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Tuition fees are among the highest in the region, reflecting Singapore's cost of living and the level of investment in facilities and staffing. Most schools operate as not-for-profit trusts or are backed by UK-based education groups.
+        </p>
+        <p class="font-body text-black/70">
+          Competition for places is strong, particularly at the most established schools. Parents considering Singapore should begin their research early and be prepared for waitlists at popular year groups.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Singapore's top British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {sgSchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Singapore's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Singapore's international school sector is regulated by the Council for Private Education (CPE). British schools here must meet local regulatory standards while delivering the English National Curriculum.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          The market is mature and relatively concentrated. Unlike larger countries where British schools are spread across multiple cities, Singapore's compact geography means all schools are within a 30-minute drive of the central business district. This makes direct comparison between schools straightforward.
+        </p>
+        <p class="font-body text-black/70">
+          Fee levels in Singapore are comparable to Hong Kong and higher than most other Asian markets. Parents should budget for annual tuition of USD 22,000–39,000 depending on year group, plus one-off enrolment and building fund charges.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Singapore</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

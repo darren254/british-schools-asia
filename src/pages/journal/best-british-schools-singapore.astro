@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Singapore — Journal" description="A guide to Singapore's top-ranked British curriculum schools, covering fees, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/journal-singapore.jpg"
+      alt="Singapore cityscape"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Singapore</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 4 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Singapore hosts four British curriculum schools in the current British Schools Asia index. The market is compact but competitive, with annual tuition fees ranging from approximately USD 22,500 to USD 33,000 depending on year group and school.
+        </p>
+
+        <p>
+          <a href="/schools/singapore/singapore/tanglin-trust-school">Tanglin Trust School</a> leads the ranking. Established in 1925, it is the oldest British school in Southeast Asia and the only school in Singapore offering both A Levels and the IB Diploma in Sixth Form. Fees start from SGD 28,950 per year at Nursery level and rise to SGD 49,914 at Year 13. The school operates as a not-for-profit trust with approximately 2,800 students from over 50 nationalities.
+        </p>
+
+        <p>
+          Dulwich College (Singapore), ranked second, opened in 2014 as part of the Dulwich College International network. The school follows the English National Curriculum through IGCSE, then offers the IB Diploma. It enrols approximately 3,000 students on its Bukit Timah campus.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          British school fees in Singapore are among the highest in Asia. Parents should expect to pay between SGD 29,000 and SGD 50,000 per year in tuition alone. Most schools add a mandatory building or capital fund of SGD 4,000–6,000 annually. One-off enrolment fees and deposits are also standard.
+        </p>
+
+        <p>
+          At the exchange rate of 1 SGD = 0.7777 USD, this translates to total annual costs of approximately USD 27,000–43,000 per child at Senior School level, making Singapore comparable in cost to Hong Kong but significantly more expensive than Bangkok or Kuala Lumpur.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          The most important practical consideration is availability. Tanglin Trust, in particular, is known to have waitlists in popular year groups. Parents relocating to Singapore with school-age children should begin applications well in advance of their move. Some families apply 12–18 months ahead to secure a place.
+        </p>
+
+        <p>
+          All four schools in the index follow the English National Curriculum in some form, but post-16 pathways differ. Tanglin Trust is the only school offering A Levels alongside the IB. Dulwich, Brighton, and Nexus all route students towards the IB Diploma after IGCSE. Parents with a preference for A Levels have limited options.
+        </p>
+
+        <p>
+          Brighton College, ranked third, is the newest entrant. It opened in 2020 and currently serves students up to Year 9. As the school grows into senior year groups, it may become a strong competitor in the market. Nexus International School, ranked fourth, has been operating since 2007 and offers a full through-school from Nursery to Year 13.
+        </p>
+
+        <p>
+          For a full breakdown of every school, visit the <a href="/cities/singapore">Singapore city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/singapore" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Singapore City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

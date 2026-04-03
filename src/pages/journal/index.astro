@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Journal — British Schools Asia" description="Guides, analysis, and news about British curriculum schools across Asia.">
+  <Header slot="header" />
+
+  <JournalSubNav />
+
+  <!-- JOURNAL WORDMARK -->
+  <section class="section">
+    <div class="bsa-container text-center">
+      <h1 class="font-display italic text-5xl md:text-6xl">Journal</h1>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FEATURED ARTICLE -->
+  <section class="section">
+    <div class="bsa-container">
+      <a href="/journal/best-british-schools-singapore" class="block group no-underline md:flex md:gap-10" style="text-decoration:none;">
+        <div class="md:w-3/5 overflow-hidden">
+          <img
+            src="/images/journal-singapore.jpg"
+            alt="Singapore skyline"
+            class="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="pt-6 md:pt-0 md:w-2/5 md:flex md:flex-col md:justify-center">
+          <p class="label text-black/50 mb-3">Cities</p>
+          <h2 class="text-3xl md:text-4xl mb-4">Best British Schools in Singapore</h2>
+          <p class="font-body text-black/60 mb-6">
+            A guide to Singapore's top-ranked British curriculum schools, covering fees, curricula, and what parents should know before applying.
+          </p>
+          <span class="font-body text-sm underline">Read article</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKINGS CLUSTER -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-8">Rankings</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="/rankings" class="block group no-underline" style="text-decoration:none;">
+          <div class="overflow-hidden">
+            <img
+              src="/images/homepage-hero.jpg"
+              alt="Singapore aerial view"
+              class="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="pt-4">
+            <p class="label text-black/50 mb-2">Rankings</p>
+            <h3 class="text-xl mb-2">Asia's Top British Schools — 2026 Index</h3>
+            <p class="font-body text-sm text-black/50">The full ranked list of British curriculum schools across Asia, scored by fees and reputation.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- CITIES CLUSTER -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-8">Cities</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="/journal/best-british-schools-singapore" class="block group no-underline" style="text-decoration:none;">
+          <div class="overflow-hidden">
+            <img
+              src="/images/singapore-hero.jpg"
+              alt="Marina Bay at dusk"
+              class="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="pt-4">
+            <p class="label text-black/50 mb-2">Cities</p>
+            <h3 class="text-xl mb-2">Best British Schools in Singapore</h3>
+            <p class="font-body text-sm text-black/50">Fees, rankings, and what parents need to know about British schools in Singapore.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

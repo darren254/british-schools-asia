@@ -1,0 +1,42 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-black text-white">
+  <div class="bsa-container py-16 md:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+      <!-- Brand -->
+      <div>
+        <p class="font-body text-sm font-semibold tracking-[0.2em] uppercase mb-6">British Schools Asia</p>
+        <p class="text-sm text-white/60 leading-relaxed max-w-xs">
+          The independent guide to British curriculum schools across Asia. Rankings, fees, and editorial reviews.
+        </p>
+      </div>
+
+      <!-- Explore -->
+      <div>
+        <p class="label mb-6 text-white/40">Explore</p>
+        <nav class="flex flex-col gap-3">
+          <a href="/rankings" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Rankings</a>
+          <a href="/cities/singapore" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Cities</a>
+          <a href="/journal" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Journal</a>
+          <a href="/methodology" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Methodology</a>
+        </nav>
+      </div>
+
+      <!-- About -->
+      <div>
+        <p class="label mb-6 text-white/40">About</p>
+        <nav class="flex flex-col gap-3">
+          <a href="/about" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">About</a>
+          <a href="/contact" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <hr class="border-white/20 mt-12 mb-8" />
+
+    <p class="text-xs text-white/40 text-center">
+      &copy; {currentYear} British Schools Asia. All rights reserved.
+    </p>
+  </div>
+</footer>

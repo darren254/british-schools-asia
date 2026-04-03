@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="About — British Schools Asia" description="What British Schools Asia is, who it's for, and how the index works.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">About</p>
+        <h1 class="mb-8">About British Schools Asia</h1>
+
+        <div class="space-y-6 font-body text-black/70 leading-relaxed">
+          <p>
+            British Schools Asia is an independent guide to British curriculum schools across the region. It provides rankings, fee data, and editorial assessments to help parents make informed decisions about international education.
+          </p>
+
+          <p>
+            The index covers schools in Singapore, Hong Kong, Thailand, Malaysia, and other Asian markets where British curriculum schools operate. Each school is scored using a transparent methodology based on publicly available fee data and independent reputation signals.
+          </p>
+
+          <p>
+            British Schools Asia is designed for expatriate families, relocating professionals, and anyone researching British education options in Asia. The site aims to provide the kind of factual, independent information that is difficult to find through school marketing materials alone.
+          </p>
+
+          <p>
+            The project is editorially independent. No school can pay to be ranked, promoted, or removed. Editorial assessments are based solely on independent sources and are only published when a sufficient evidence threshold is met.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

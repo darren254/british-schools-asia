@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="How We Rank Schools — Methodology" description="How British Schools Asia ranks British curriculum schools across Asia. A transparent, evidence-based methodology.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Methodology</p>
+        <h1 class="mb-8">How We Rank Schools</h1>
+
+        <div class="space-y-6 font-body text-black/70 leading-relaxed">
+          <p>
+            British Schools Asia maintains a ranked index of British curriculum schools across the region. The methodology is designed to be transparent, replicable, and free of commercial influence.
+          </p>
+
+          <h2 class="text-2xl mt-10 mb-4 text-black">Fee-based scoring</h2>
+          <p>
+            The primary input is publicly available tuition fee data. Schools that charge higher fees for a benchmark year group (Year 3) are assumed to be investing more heavily in facilities, staffing, and academic programmes. Fee data is sourced directly from school websites and published schedules.
+          </p>
+
+          <h2 class="text-2xl mt-10 mb-4 text-black">Reputation adjustment</h2>
+          <p>
+            Fee data alone does not capture quality. The index applies a reputation adjustment based on independent evidence — inspection reports, parent forums, media coverage, and other non-school sources. Schools with consistent negative signals receive a downward adjustment. Schools with no independent evidence receive no adjustment.
+          </p>
+
+          <h2 class="text-2xl mt-10 mb-4 text-black">Evidence threshold</h2>
+          <p>
+            Editorial assessments are only published when three or more independent sources are available. Schools below this threshold display a factual overview only, with a note that an independent review is not yet available.
+          </p>
+
+          <h2 class="text-2xl mt-10 mb-4 text-black">What the index does not do</h2>
+          <p>
+            This is not a league table of academic results. Exam outcomes are not currently part of the scoring model, although they may be incorporated in future editions as data becomes available. The index does not accept payments from schools for ranking, listing, or removal.
+          </p>
+
+          <h2 class="text-2xl mt-10 mb-4 text-black">Currency normalisation</h2>
+          <p>
+            All fees are converted to USD for cross-country comparison. Local currency figures are shown alongside USD on school profiles. Exchange rates are updated periodically and noted on each school page.
+          </p>
+        </div>
+
+        <div class="mt-12">
+          <a href="/rankings" class="btn-ghost-dark">View Rankings</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
