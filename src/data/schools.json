@@ -795,7 +795,7 @@
     "year3FeeUSD": 26726,
     "reputationPenalty": 0,
     "adjustedFeeScore": 26726,
-    "asiaRank": 11,
+    "asiaRank": 12,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/kellett-school-campus.jpg",
@@ -856,7 +856,7 @@
     "year3FeeUSD": 25904,
     "reputationPenalty": 0,
     "adjustedFeeScore": 25904,
-    "asiaRank": 12,
+    "asiaRank": 13,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/shrewsbury-bangkok-campus.jpg",
@@ -931,7 +931,7 @@
     "year3FeeUSD": 25768,
     "reputationPenalty": 0,
     "adjustedFeeScore": 25768,
-    "asiaRank": 13,
+    "asiaRank": 14,
     "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/harrow-hk-campus.jpg",
@@ -1001,7 +1001,7 @@
     "year3FeeUSD": 25223,
     "reputationPenalty": 0,
     "adjustedFeeScore": 25223,
-    "asiaRank": 14,
+    "asiaRank": 15,
     "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/wellington-bangkok-campus.jpg",
@@ -1091,7 +1091,7 @@
     "year3FeeUSD": 25216,
     "reputationPenalty": 0,
     "adjustedFeeScore": 25216,
-    "asiaRank": 15,
+    "asiaRank": 16,
     "cityRank": 3,
     "hasEditorial": false,
     "heroImage": "/images/nais-hk-campus.jpg",
@@ -1161,7 +1161,7 @@
     "year3FeeUSD": 25208,
     "reputationPenalty": 0,
     "adjustedFeeScore": 25208,
-    "asiaRank": 16,
+    "asiaRank": 17,
     "cityRank": 3,
     "hasEditorial": false,
     "heroImage": "/images/brighton-bangkok-campus.jpg",
@@ -1236,7 +1236,7 @@
     "year3FeeUSD": 25152,
     "reputationPenalty": 0,
     "adjustedFeeScore": 25152,
-    "asiaRank": 17,
+    "asiaRank": 18,
     "cityRank": 4,
     "hasEditorial": false,
     "heroImage": "/images/harrow-bangkok-campus.jpg",
@@ -1300,8 +1300,8 @@
     "year3FeeUSD": 23832,
     "reputationPenalty": 0,
     "adjustedFeeScore": 23832,
-    "asiaRank": 18,
-    "cityRank": 1,
+    "asiaRank": 19,
+    "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/bsj-jakarta-campus.jpg",
     "overview": "British School Jakarta (BSJ) was established in 1973 under the auspices of the British Embassy and has developed into one of Southeast Asia's leading international schools, with approximately 1,400 students from over 44 nationalities. The school is located in the Bintaro Sektor 9 area of Tangerang Selatan, Banten Province, with an additional Early Years centre formerly operated in Pondok Indah. BSJ is a member of the Federation of British International Schools in Asia (SEASAC).\n\nPrimary students follow the English National Curriculum for core subjects, with the International Primary Curriculum (IPC) used in Key Stages 1 and 2. Secondary students follow the IB Middle Years Programme (MYP) in Years 7–9, transitioning to IGCSE in Years 10–11 and the IB Diploma Programme in Years 12–13. Annual tuition fees for Key Stage 2 (Years 3–6) in the 2026–27 academic year are IDR 387,504,000, with a separate annual Capital Levy Contribution (CLC) of IDR 62,000,000. Fees cover tuition, textbooks and stationery.",
@@ -1370,7 +1370,7 @@
     "year3FeeUSD": 21220,
     "reputationPenalty": 0,
     "adjustedFeeScore": 21220,
-    "asiaRank": 19,
+    "asiaRank": 20,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/alice-smith-campus.jpg",
@@ -1449,7 +1449,7 @@
     "year3FeeUSD": 21145,
     "reputationPenalty": 0,
     "adjustedFeeScore": 21145,
-    "asiaRank": 20,
+    "asiaRank": 21,
     "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/garden-intl-kl-campus.jpg",
@@ -1544,7 +1544,7 @@
     "year3FeeUSD": 20485,
     "reputationPenalty": 0,
     "adjustedFeeScore": 20485,
-    "asiaRank": 21,
+    "asiaRank": 22,
     "cityRank": 3,
     "hasEditorial": false,
     "heroImage": "/images/bskl-campus.jpg",
@@ -1609,7 +1609,7 @@
     "year3FeeUSD": 18894,
     "reputationPenalty": 0,
     "adjustedFeeScore": 18894,
-    "asiaRank": 22,
+    "asiaRank": 23,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/bst-tokyo-campus.jpg",
@@ -1669,7 +1669,7 @@
     "year3FeeUSD": 18394,
     "reputationPenalty": 0,
     "adjustedFeeScore": 18394,
-    "asiaRank": 23,
+    "asiaRank": 24,
     "cityRank": 4,
     "hasEditorial": false,
     "heroImage": "/images/dbis-hk-campus.jpg",
@@ -1708,5 +1708,79 @@
       "https://en.wikipedia.org/wiki/Discovery_Bay_International_School",
       "https://internationalschools.edb.gov.hk/en/schools/10.html"
     ]
+  },
+  {
+    "name": "The Independent School of Jakarta",
+    "slug": "the-independent-school-of-jakarta",
+    "city": "Jakarta",
+    "citySlug": "jakarta",
+    "country": "Indonesia",
+    "countrySlug": "indonesia",
+    "type": "Day",
+    "ageRange": "2–13",
+    "yearRange": "Pre-Nursery–Year 8",
+    "curricula": [
+      "English National Curriculum"
+    ],
+    "founded": 2021,
+    "roll": 180,
+    "website": "https://international-school-jakarta.id",
+    "feeSummary": "Fees from IDR 148,524,000 per year",
+    "feeSummaryUSD": "Fees from USD 9,135 per year",
+    "feeCurrency": "IDR",
+    "year3Fee": 437819200,
+    "year3FeeUSD": 26926,
+    "reputationPenalty": 0,
+    "adjustedFeeScore": 26926,
+    "asiaRank": 11,
+    "cityRank": 1,
+    "hasEditorial": false,
+    "heroImage": "/images/isj-campus.jpg",
+    "overview": "The Independent School of Jakarta is a co-educational day school in Pondok Indah, South Jakarta, operated by The Schools Trust, a UK-registered charity running 16 schools across 11 countries. The school opened in September 2021 and follows the English National Curriculum exclusively, with plans to offer GCSEs and A Levels when a new secondary campus opens in September 2028. The school currently serves approximately 180 students from over 35 nationalities, from Pre-Nursery through Year 8, with a staff-to-pupil ratio of 1:9.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Pre-Nursery",
+        "annualFee": 148524000,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Nursery",
+        "annualFee": 226148000,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Reception",
+        "annualFee": 332737600,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Years 1–2",
+        "annualFee": 419702400,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Years 3–4",
+        "annualFee": 437819200,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Years 5–6",
+        "annualFee": 464984000,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Years 7–8",
+        "annualFee": 484733600,
+        "currency": "IDR"
+      }
+    ],
+    "campus": {
+      "address": "Jl. TB Simatupang No. 12, Pondok Indah, South Jakarta 12310",
+      "area": "Pondok Indah, South Jakarta",
+      "context": "Located in the affluent Pondok Indah district of South Jakarta. The campus features a 25-metre swimming pool, full-size synthetic football pitch, theatre, science and art labs, and a bouldering wall. A new secondary campus is planned to open in September 2028, extending the school to Year 13 with GCSEs and A Levels."
+    },
+    "waitlistNote": null,
+    "sources": []
   }
 ]
