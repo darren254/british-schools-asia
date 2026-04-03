@@ -151,6 +151,47 @@ function toUSD(local: number): string {
   )}
 
 
+  <!-- FEE TABLE -->
+  {school.fees && school.fees.length > 0 && (
+    <section class="section">
+      <div class="bsa-container">
+        <p class="label mb-4">Fees</p>
+        <h2 class="mb-3">Fee schedule</h2>
+        <p class="font-body text-black/50 text-sm mb-8">All fees in SGD per year. USD equivalent shown at 1 SGD = 0.7777 USD.</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left max-w-2xl">
+            <thead>
+              <tr class="border-b border-black">
+                <th class="label py-3 pr-4">Year Group</th>
+                <th class="label py-3 pr-4 text-right">Tuition (SGD)</th>
+                <th class="label py-3 pr-4 text-right hidden sm:table-cell">Building Fund</th>
+                <th class="label py-3 text-right">Total (SGD)</th>
+                <th class="label py-3 text-right hidden md:table-cell">Total (USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {school.fees.map((fee) => (
+                <tr class="border-b border-border">
+                  <td class="py-3 pr-4 font-body text-sm">{fee.year}</td>
+                  <td class="py-3 pr-4 font-body text-sm text-right">{formatFee(fee.tuition)}</td>
+                  <td class="py-3 pr-4 font-body text-sm text-right hidden sm:table-cell">{formatFee(fee.buildingFund)}</td>
+                  <td class="py-3 font-body text-sm text-right font-medium">{formatFee(fee.total)}</td>
+                  <td class="py-3 font-body text-sm text-right hidden md:table-cell text-black/60">{toUSD(fee.total)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="font-body text-xs text-black/40 mt-4 max-w-2xl">
+          Fees are indicative and based on published schedules. Additional charges may apply for registration, examinations, and school trips. Contact the school directly for the latest fee schedule.
+        </p>
+      </div>
+    </section>
+    <hr class="divider bsa-container" />
+  )}
+
   <!-- ACADEMICS -->
   <section class="section">
     <div class="bsa-container">

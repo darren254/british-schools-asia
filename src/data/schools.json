@@ -248,16 +248,17 @@
     "country": "Singapore",
     "countrySlug": "singapore",
     "type": "Day",
-    "ageRange": "2–14",
-    "yearRange": "Nursery–Year 9",
+    "ageRange": "18 months–16",
+    "yearRange": "Pre-Nursery–Year 11",
     "curricula": [
-      "English National Curriculum"
+      "English National Curriculum",
+      "IGCSE"
     ],
     "founded": 2020,
-    "roll": null,
+    "roll": 504,
     "website": "https://www.brightoncollege.edu.sg",
-    "feeSummary": "Fees from SGD 33,402 per year",
-    "feeSummaryUSD": "Fees from USD 25,973 per year",
+    "feeSummary": "Fees from SGD 34,740 per year",
+    "feeSummaryUSD": "Fees from USD 27,012 per year",
     "feeCurrency": "SGD",
     "year3Fee": 42186,
     "year3FeeUSD": 32811,
@@ -267,10 +268,45 @@
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/brighton-college-campus.jpg",
-    "overview": "Brighton College (Singapore) is a co-educational day school offering the English National Curriculum. Part of the Brighton College family of schools, the Singapore campus opened in 2020. The school currently serves students from Nursery through Year 9.",
+    "overview": "Brighton College (Singapore) is a co-educational day school offering the English National Curriculum, operated by Cognita under the Brighton College UK brand. The Singapore campus opened in August 2020 at the Early Learning Village in Serangoon. The school currently serves approximately 504 students from Pre-Nursery through Year 10, with Year 11 opening in August 2026. IGCSE first examinations are expected in 2027, with Sixth Form to follow.",
     "editorial": null,
-    "fees": [],
-    "campus": null,
+    "fees": [
+      {
+        "year": "Nursery (5-day)",
+        "tuition": 34740,
+        "buildingFund": 3633,
+        "total": 38373
+      },
+      {
+        "year": "Reception–Year 2",
+        "tuition": 41649,
+        "buildingFund": 3633,
+        "total": 45282
+      },
+      {
+        "year": "Years 3–6",
+        "tuition": 43242,
+        "buildingFund": 3633,
+        "total": 46875
+      },
+      {
+        "year": "Years 7–9",
+        "tuition": 47811,
+        "buildingFund": 3633,
+        "total": 51444
+      },
+      {
+        "year": "Years 10–11",
+        "tuition": 50199,
+        "buildingFund": 3633,
+        "total": 53832
+      }
+    ],
+    "campus": {
+      "address": "1 Chuan Lane, Singapore 554299",
+      "area": "Serangoon / Lorong Chuan, North-East Singapore",
+      "context": "Located in the Early Learning Village (ELV), a shared campus facility near Lorong Chuan MRT on the Circle Line. The campus includes shared sports fields, pools, a 300-seat theatre, and a 25m swimming pool. Brighton College occupies its own dedicated teaching spaces within the ELV complex."
+    },
     "waitlistNote": null,
     "sources": []
   },
@@ -285,12 +321,13 @@
     "ageRange": "3–18",
     "yearRange": "Nursery–Year 13",
     "curricula": [
-      "English National Curriculum",
+      "IB PYP",
+      "IB MYP",
       "IGCSE",
       "IB Diploma"
     ],
-    "founded": 2007,
-    "roll": null,
+    "founded": 2011,
+    "roll": 1500,
     "website": "https://www.nexus.edu.sg",
     "feeSummary": "Fees from SGD 32,400 per year",
     "feeSummaryUSD": "Fees from USD 25,197 per year",
@@ -303,10 +340,69 @@
     "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/nexus-international-campus.jpg",
-    "overview": "Nexus International School is a co-educational day school in Singapore offering the English National Curriculum through to IGCSE and the IB Diploma. The school opened in 2007.",
+    "overview": "Nexus International School is a co-educational day school in central Singapore, owned by Malaysia's Taylor's Education Group. The school opened in 2011 and operates from a purpose-built 12-storey campus in Aljunied. It serves approximately 1,500 students from over 60 nationalities, from Nursery through Year 13. The school follows the IB Primary Years Programme and Middle Years Programme before transitioning to IGCSEs and the IB Diploma in Sixth Form.",
     "editorial": null,
-    "fees": [],
-    "campus": null,
+    "fees": [
+      {
+        "year": "Nursery (full day)",
+        "tuition": 32400,
+        "buildingFund": 1744,
+        "total": 34144
+      },
+      {
+        "year": "Kindergarten",
+        "tuition": 36000,
+        "buildingFund": 1744,
+        "total": 37744
+      },
+      {
+        "year": "Year 1",
+        "tuition": 39000,
+        "buildingFund": 1744,
+        "total": 40744
+      },
+      {
+        "year": "Years 2–3",
+        "tuition": 41200,
+        "buildingFund": 1744,
+        "total": 42944
+      },
+      {
+        "year": "Years 4–5",
+        "tuition": 42800,
+        "buildingFund": 1744,
+        "total": 44544
+      },
+      {
+        "year": "Years 6–7",
+        "tuition": 43200,
+        "buildingFund": 1744,
+        "total": 44944
+      },
+      {
+        "year": "Years 8–9",
+        "tuition": 45800,
+        "buildingFund": 1744,
+        "total": 47544
+      },
+      {
+        "year": "Years 10–11",
+        "tuition": 47800,
+        "buildingFund": 1744,
+        "total": 49544
+      },
+      {
+        "year": "Years 12–13",
+        "tuition": 49000,
+        "buildingFund": 1744,
+        "total": 50744
+      }
+    ],
+    "campus": {
+      "address": "1 Aljunied Walk, Singapore 387293",
+      "area": "Aljunied / Kallang, Central Singapore",
+      "context": "Purpose-built 12-storey campus in the Aljunied area of central Singapore. Facilities include an Olympic-size pool with Omega timing system, two air-conditioned sports halls, a FINA-certified Astroturf pitch, two black-box theatres, 12 sound-isolated music practice rooms, and a double-storey library."
+    },
     "waitlistNote": null,
     "sources": []
   },
@@ -463,7 +559,7 @@
       "IB Diploma"
     ],
     "founded": 2014,
-    "roll": 3000,
+    "roll": 2600,
     "website": "https://singapore.dulwich.org",
     "feeSummary": "Fees from SGD 31,650 per year",
     "feeSummaryUSD": "Fees from USD 24,610 per year",
@@ -476,10 +572,51 @@
     "cityRank": 4,
     "hasEditorial": false,
     "heroImage": "/images/dulwich-college-campus.jpg",
-    "overview": "Dulwich College (Singapore) is a co-educational day school in the Bukit Timah area. Part of the Dulwich College International group, the school follows the English National Curriculum through to IGCSE before offering the IB Diploma. The Singapore campus opened in 2014 and enrols approximately 3,000 students.",
+    "overview": "Dulwich College (Singapore) is a co-educational day school in Bukit Batok, western Singapore. Part of the Dulwich College International network affiliated with Dulwich College London, the school opened in August 2014. It serves approximately 2,600 students from over 50 nationalities across three sub-schools: DUCKS (Early Years), Junior School, and Senior School. The campus spans five hectares and includes a 742-seat theatre, three swimming pools, and extensive sports facilities.",
     "editorial": null,
-    "fees": [],
-    "campus": null,
+    "fees": [
+      {
+        "year": "Nursery (full day)",
+        "tuition": 30630,
+        "buildingFund": 3750,
+        "total": 34380
+      },
+      {
+        "year": "Reception–Year 2",
+        "tuition": 36930,
+        "buildingFund": 3750,
+        "total": 40680
+      },
+      {
+        "year": "Years 3–6",
+        "tuition": 37980,
+        "buildingFund": 3750,
+        "total": 41730
+      },
+      {
+        "year": "Years 7–9",
+        "tuition": 43960,
+        "buildingFund": 3750,
+        "total": 47710
+      },
+      {
+        "year": "Years 10–11",
+        "tuition": 46160,
+        "buildingFund": 3750,
+        "total": 49910
+      },
+      {
+        "year": "Years 12–13",
+        "tuition": 47730,
+        "buildingFund": 3750,
+        "total": 51480
+      }
+    ],
+    "campus": {
+      "address": "71 Bukit Batok West Avenue 8, Singapore 658966",
+      "area": "Bukit Batok, West Singapore",
+      "context": "Purpose-built five-hectare campus in western Singapore. Facilities include a 742-seat performing arts centre, pipe organ, three swimming pools, a multi-purpose pitch, two gymnasiums, and a dedicated IB Centre. The DUCKS Early Years section offers a bilingual English-Chinese programme."
+    },
     "waitlistNote": null,
     "sources": []
   },
