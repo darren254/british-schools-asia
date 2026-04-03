@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CityCard from '../../components/CityCard.astro';
+import schools from '../../data/schools.json';
+
+const cities = [
+  { name: 'Singapore', slug: 'singapore', image: '/images/singapore-hero.jpg' },
+  { name: 'Hong Kong', slug: 'hong-kong', image: '/images/hong-kong-hero.jpg' },
+  { name: 'Bangkok', slug: 'bangkok', image: '/images/bangkok-hero.jpg' },
+  { name: 'Kuala Lumpur', slug: 'kuala-lumpur', image: '/images/kuala-lumpur-hero.jpg' },
+  { name: 'Beijing', slug: 'beijing', image: '/images/beijing-hero.jpg' },
+  { name: 'Shanghai', slug: 'shanghai', image: '/images/shanghai-hero.jpg' },
+  { name: 'Shenzhen', slug: 'shenzhen', image: '/images/shenzhen-hero.jpg' },
+  { name: 'Tokyo', slug: 'tokyo', image: '/images/tokyo-hero.jpg' },
+  { name: 'Ho Chi Minh City', slug: 'ho-chi-minh-city', image: '/images/ho-chi-minh-city-hero.jpg' },
+  { name: 'Hanoi', slug: 'hanoi', image: '/images/hanoi-hero.jpg' },
+  { name: 'Jakarta', slug: 'jakarta', image: '/images/jakarta-hero.jpg' },
+];
+
+const citiesWithCounts = cities.map((c) => ({
+  ...c,
+  count: schools.filter((s) => s.citySlug === c.slug).length,
+}));
+---
+<BaseLayout title="Cities — British Schools Asia" description="Browse British curriculum schools by city across Asia. Singapore, Hong Kong, Bangkok, Kuala Lumpur, and more.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container text-center">
+      <h1 class="mb-4">Browse by City</h1>
+      <p class="font-body text-black/60 max-w-xl mx-auto">
+        British curriculum schools across 11 cities in Asia. Select a city to see ranked schools, fees, and local market context.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        {citiesWithCounts.map((city) => (
+          <CityCard
+            city={city.name}
+            slug={city.slug}
+            schoolCount={city.count}
+            image={city.image}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

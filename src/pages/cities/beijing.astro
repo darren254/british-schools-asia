@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'beijing')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much do British schools cost in Beijing?',
+    a: 'Annual tuition at British curriculum schools in Beijing is approximately RMB 300,000 (roughly USD 41,400). Both BSB campuses are operated by Nord Anglia Education and follow similar fee structures, with prices varying by year group.'
+  },
+  {
+    q: 'What is the difference between the two BSB campuses?',
+    a: 'The British School of Beijing operates two campuses: Sanlitun (in central Beijing, near the embassy district) and Shunyi (in the northeastern suburbs, near many expat residential compounds). Both follow the English National Curriculum and are operated by Nord Anglia Education, but they serve different geographic catchments.'
+  },
+  {
+    q: 'Can Chinese nationals attend BSB?',
+    a: 'As with other fully international schools in China, The British School of Beijing primarily serves students holding foreign passports. Chinese national students are generally unable to enrol in the international curriculum stream due to regulatory restrictions.'
+  },
+  {
+    q: 'What post-16 pathways do Beijing British schools offer?',
+    a: 'The BSB campuses offer IGCSE at Year 10–11 followed by the IB Diploma in Sixth Form. Parents specifically seeking A Levels should check current offerings directly with the school, as the IB Diploma is the primary post-16 pathway at both campuses.'
+  }
+];
+---
+<BaseLayout title="British Schools in Beijing" description="Ranked guide to British curriculum schools in Beijing, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/beijing-hero.jpg"
+      alt="Beijing cityscape"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Beijing</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Beijing's British school market is dominated by The British School of Beijing (BSB), which operates two campuses in different parts of the city. Both campuses are part of the Nord Anglia Education group and follow the English National Curriculum. The Sanlitun campus is located centrally, near the embassy district, while the Shunyi campus is in the northeastern suburbs — a popular residential area for expat families.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Annual tuition at both BSB campuses is approximately RMB 300,000 (roughly USD 41,400 per year). This places Beijing among the more expensive Asian markets for British education. As with other Chinese cities, regulatory restrictions mean that fully international schools primarily serve students holding foreign passports. The available market for British schooling is therefore smaller than the city's overall size would suggest.
+        </p>
+        <p class="font-body text-black/70">
+          The two-campus structure gives families some geographic flexibility. Those living in central Beijing may find Sanlitun more convenient, while families based in the Shunyi or Capital Airport area will likely prefer the Shunyi campus. Curriculum and fee structures are broadly similar across both sites.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Beijing's British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Beijing's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Beijing's international school sector is regulated by the Beijing Municipal Education Commission. International schools must hold specific licences and meet government requirements around curriculum, staffing, and admissions. The sector has faced increased regulatory scrutiny in recent years, with tighter rules on foreign school operations in China.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Nord Anglia Education operates both BSB campuses and is one of the largest international school groups globally. The group's scale provides operational consistency and curriculum support across campuses. Parents should be aware that the IB Diploma is the primary post-16 pathway at BSB, rather than A Levels.
+        </p>
+        <p class="font-body text-black/70">
+          Beijing's cost of education is comparable to Shanghai. Parents should budget for annual tuition of approximately USD 41,400 plus additional charges for registration, trips, and uniforms. The regulatory environment adds complexity compared to Southeast Asian markets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Beijing</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

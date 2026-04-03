@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'ho-chi-minh-city')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much does BIS Ho Chi Minh City cost?',
+    a: 'Annual tuition at the British International School Ho Chi Minh City is approximately VND 705 million (roughly USD 27,600). Fees vary by year group, with senior school years costing more than primary levels.'
+  },
+  {
+    q: 'What curriculum does BIS HCMC follow?',
+    a: 'BIS HCMC follows the English National Curriculum from Early Years through IGCSE, with the IB Diploma offered in Sixth Form. The school is part of the Nord Anglia Education group.'
+  },
+  {
+    q: 'Is there more than one British school in Ho Chi Minh City?',
+    a: 'The British International School Ho Chi Minh City is the primary British curriculum school in the city and the only one currently included in the British Schools Asia index. HCMC has a growing international school market with other curriculum options available.'
+  }
+];
+---
+<BaseLayout title="British Schools in Ho Chi Minh City" description="Guide to British curriculum schools in Ho Chi Minh City, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/ho-chi-minh-city-hero.jpg"
+      alt="Ho Chi Minh City skyline"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Ho Chi Minh City</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Ho Chi Minh City is Vietnam's largest city and its primary hub for international education. The expat community has grown substantially over the past decade as foreign investment has increased, and with it, demand for international schooling. The British International School Ho Chi Minh City (BIS HCMC) is the city's flagship British curriculum school, operated by Nord Anglia Education.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Annual tuition at BIS HCMC is approximately VND 705 million (roughly USD 27,600 per year). The school follows the English National Curriculum through to IGCSE, then offers the IB Diploma in Sixth Form. It serves a diverse international student body drawn from HCMC's growing foreign professional community.
+        </p>
+        <p class="font-body text-black/70">
+          Vietnam's international school market is still developing compared to more established markets like Singapore or Hong Kong. However, HCMC's growth trajectory and comparatively lower cost of living are attracting more families to the city. Parents considering HCMC should be aware that the British curriculum market is narrow — BIS HCMC is effectively the primary option — but the quality of provision is consistent with Nord Anglia's broader network standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Ho Chi Minh City's British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Ho Chi Minh City's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Vietnam's international school sector is regulated by the Ministry of Education and Training (MOET). International schools must meet licensing requirements and maintain standards around curriculum delivery and staffing. The sector has grown rapidly in both Hanoi and HCMC as Vietnam's economy has expanded.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          BIS HCMC benefits from Nord Anglia's global network, which provides curriculum support, teacher recruitment pipelines, and co-curricular programmes including collaborations with institutions like MIT and Juilliard. This network effect is a differentiator in a market with fewer established British schools than Southeast Asian competitors.
+        </p>
+        <p class="font-body text-black/70">
+          Fee levels in HCMC are lower than Singapore, Hong Kong, or the Chinese cities, but higher than Kuala Lumpur. Parents should budget for annual tuition of approximately USD 27,600 plus registration and other one-off charges.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Ho Chi Minh City</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

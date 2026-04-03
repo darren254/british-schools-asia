@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import CityCard from '../../components/CityCard.astro';
+import schools from '../../data/schools.json';
+
+const cnSchools = schools
+  .filter((s) => s.countrySlug === 'china')
+  .sort((a, b) => a.asiaRank - b.asiaRank);
+
+const beijingCount = schools.filter((s) => s.citySlug === 'beijing').length;
+const shanghaiCount = schools.filter((s) => s.citySlug === 'shanghai').length;
+const shenzhenCount = schools.filter((s) => s.citySlug === 'shenzhen').length;
+---
+<BaseLayout title="British Schools in China — Country Guide" description="All British curriculum schools in China, ranked and reviewed. Fees, curricula, and city guides for Beijing, Shanghai, and Shenzhen.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Country</p>
+      <h1 class="mb-6">British Schools in China</h1>
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          China's international school market operates under tight regulatory constraints. Fully international schools are generally restricted to students holding foreign passports, which limits the addressable market. Despite being the world's second-largest economy, the number of British curriculum schools available to international families is smaller than one might expect.
+        </p>
+        <p class="font-body text-black/70">
+          The British Schools Asia index currently includes four British curriculum schools in China, spread across three cities: Beijing, Shanghai, and Shenzhen. Fee levels are among the highest in the region, with annual tuition ranging from approximately RMB 300,000 to RMB 342,000 (USD 41,400–47,200).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- CITIES -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Cities</p>
+      <h2 class="mb-10">Cities in China</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        <CityCard city="Beijing" slug="beijing" schoolCount={beijingCount} image="/images/beijing-hero.jpg" />
+        <CityCard city="Shanghai" slug="shanghai" schoolCount={shanghaiCount} image="/images/shanghai-hero.jpg" />
+        <CityCard city="Shenzhen" slug="shenzhen" schoolCount={shenzhenCount} image="/images/shenzhen-hero.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">All British schools in China</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {cnSchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- JOURNAL LINKS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">From the Journal</p>
+      <h2 class="mb-8">Related reading</h2>
+      <div class="flex flex-col gap-6 max-w-xl">
+        <a href="/rankings" class="group no-underline block" style="text-decoration:none;">
+          <p class="label text-black/40 mb-1">Rankings</p>
+          <p class="font-display text-xl group-hover:underline">Asia's Top British Schools — Full Index</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import CityCard from '../../components/CityCard.astro';
+import schools from '../../data/schools.json';
+
+const mySchools = schools
+  .filter((s) => s.countrySlug === 'malaysia')
+  .sort((a, b) => a.asiaRank - b.asiaRank);
+---
+<BaseLayout title="British Schools in Malaysia — Country Guide" description="All British curriculum schools in Malaysia, ranked and reviewed. Fees, curricula, and city guides.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Country</p>
+      <h1 class="mb-6">British Schools in Malaysia</h1>
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Malaysia has one of the most established British school markets in Asia. Alice Smith School, founded in 1946, is the oldest international school in Malaysia and among the oldest in Southeast Asia. Kuala Lumpur, the capital, is the primary hub for British curriculum schools in the country.
+        </p>
+        <p class="font-body text-black/70">
+          The British Schools Asia index currently includes three British curriculum schools in Malaysia, all based in Kuala Lumpur. Fees are significantly lower than in Singapore or Hong Kong, making Malaysia one of the most affordable markets for British education in the region.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- CITIES -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Cities</p>
+      <h2 class="mb-10">Cities in Malaysia</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        <CityCard city="Kuala Lumpur" slug="kuala-lumpur" schoolCount={mySchools.length} image="/images/kuala-lumpur-hero.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">All British schools in Malaysia</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        {mySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- JOURNAL LINKS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">From the Journal</p>
+      <h2 class="mb-8">Related reading</h2>
+      <div class="flex flex-col gap-6 max-w-xl">
+        <a href="/journal/best-british-schools-kuala-lumpur" class="group no-underline block" style="text-decoration:none;">
+          <p class="label text-black/40 mb-1">Cities</p>
+          <p class="font-display text-xl group-hover:underline">Best British Schools in Kuala Lumpur</p>
+        </a>
+        <a href="/rankings" class="group no-underline block" style="text-decoration:none;">
+          <p class="label text-black/40 mb-1">Rankings</p>
+          <p class="font-display text-xl group-hover:underline">Asia's Top British Schools — Full Index</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

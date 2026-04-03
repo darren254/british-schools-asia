@@ -7,7 +7,37 @@ import SchoolCard from '../components/SchoolCard.astro';
 import CityCard from '../components/CityCard.astro';
 import schools from '../data/schools.json';
 
-const rankedSchools = schools.sort((a, b) => a.asiaRank - b.asiaRank);
+// Top 20 logic: city champions first, then fill from global ranking
+const allSorted = [...schools].sort((a, b) => a.asiaRank - b.asiaRank);
+const cityChampions = new Map<string, typeof allSorted[0]>();
+for (const s of allSorted) {
+  if (!cityChampions.has(s.citySlug)) {
+    cityChampions.set(s.citySlug, s);
+  }
+}
+const champions = [...cityChampions.values()];
+const remaining = allSorted.filter((s) => !champions.includes(s));
+const top20 = [...champions, ...remaining].slice(0, 20);
+// Sort top 20 by asiaRank for display
+top20.sort((a, b) => a.asiaRank - b.asiaRank);
+
+// City data with school counts
+const cities = [
+  { name: 'Singapore', slug: 'singapore', image: '/images/singapore-hero.jpg' },
+  { name: 'Hong Kong', slug: 'hong-kong', image: '/images/hong-kong-hero.jpg' },
+  { name: 'Bangkok', slug: 'bangkok', image: '/images/bangkok-hero.jpg' },
+  { name: 'Kuala Lumpur', slug: 'kuala-lumpur', image: '/images/kuala-lumpur-hero.jpg' },
+  { name: 'Beijing', slug: 'beijing', image: '/images/beijing-hero.jpg' },
+  { name: 'Shanghai', slug: 'shanghai', image: '/images/shanghai-hero.jpg' },
+  { name: 'Shenzhen', slug: 'shenzhen', image: '/images/shenzhen-hero.jpg' },
+  { name: 'Tokyo', slug: 'tokyo', image: '/images/tokyo-hero.jpg' },
+  { name: 'Ho Chi Minh City', slug: 'ho-chi-minh-city', image: '/images/ho-chi-minh-city-hero.jpg' },
+  { name: 'Hanoi', slug: 'hanoi', image: '/images/hanoi-hero.jpg' },
+  { name: 'Jakarta', slug: 'jakarta', image: '/images/jakarta-hero.jpg' },
+].map((c) => ({
+  ...c,
+  count: schools.filter((s) => s.citySlug === c.slug).length,
+}));
 ---
 <BaseLayout title="British Schools Asia" description="The independent guide to British curriculum schools across Asia. Rankings, fees, and editorial reviews.">
   <UtilityRibbon slot="ribbon" />
@@ -37,13 +67,13 @@ const rankedSchools = schools.sort((a, b) => a.asiaRank - b.asiaRank);
   <!-- TOP RANKED SCHOOLS -->
   <section class="section">
     <div class="bsa-container">
-      <p class="label mb-4">Top Ranked Schools</p>
+      <p class="label mb-4">Top 20 Schools</p>
       <h2 class="mb-2">The leading British schools in Asia</h2>
       <p class="font-body text-black/60 mb-10 max-w-xl">
         Ranked by our research team based on fee positioning and editorial assessment.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
-        {rankedSchools.map((school) => (
+        {top20.map((school) => (
           <SchoolCard
             name={school.name}
             slug={school.slug}
@@ -70,9 +100,9 @@ const rankedSchools = schools.sort((a, b) => a.asiaRank - b.asiaRank);
       <p class="label mb-4">Browse by City</p>
       <h2 class="mb-10">Explore schools by location</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-        <CityCard city="Singapore" slug="singapore" schoolCount={4} image="/images/singapore-hero.jpg" />
-        <CityCard city="Hong Kong" slug="hong-kong" schoolCount={0} />
-        <CityCard city="Bangkok" slug="bangkok" schoolCount={0} />
+        {cities.map((city) => (
+          <CityCard city={city.name} slug={city.slug} schoolCount={city.count} image={city.image} />
+        ))}
       </div>
     </div>
   </section>

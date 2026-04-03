@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'jakarta')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much does the British School Jakarta cost?',
+    a: 'Annual tuition at BSJ is approximately IDR 328 million (roughly USD 20,000). Fees vary by year group, with senior school levels costing more. Additional charges for registration, uniforms, and examinations apply.'
+  },
+  {
+    q: 'How long has BSJ been operating?',
+    a: 'The British School Jakarta was founded in 1973, making it one of the longest-established British curriculum schools in Southeast Asia. The school has over 50 years of history in the city and is well known in Jakarta\'s expat community.'
+  },
+  {
+    q: 'What curriculum does BSJ follow?',
+    a: 'BSJ follows the English National Curriculum from Early Years through to IGCSE and offers A Levels or the IB Diploma in Sixth Form. The school provides a through-school education for students aged 3–18.'
+  }
+];
+---
+<BaseLayout title="British Schools in Jakarta" description="Guide to British curriculum schools in Jakarta, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/jakarta-hero.jpg"
+      alt="Jakarta skyline"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Jakarta</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Jakarta is Southeast Asia's largest city and Indonesia's economic capital. The British School Jakarta (BSJ) has been serving the city's international community since 1973, making it one of the longest-established British curriculum schools in the region. BSJ occupies a well-known position among Jakarta's expat families and has educated generations of internationally mobile children.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Annual tuition at BSJ is approximately IDR 328 million (roughly USD 20,000 per year). This positions Jakarta as one of the more affordable markets for British education in Asia, comparable to Kuala Lumpur and significantly below Singapore, Hong Kong, or the Chinese cities. Jakarta's lower cost of living further improves the value proposition for families.
+        </p>
+        <p class="font-body text-black/70">
+          The British school market in Jakarta is effectively a single-school market — BSJ is the established option for families seeking the English National Curriculum. The school follows the English National Curriculum from Early Years through to IGCSE and Sixth Form, serving students from a wide range of nationalities. Jakarta's large diplomatic and corporate expat community provides a steady demand base.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Jakarta's British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Jakarta's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Indonesia's international school sector is regulated by the Ministry of Education, Culture, Research, and Technology. International schools operate under the classification of Satuan Pendidikan Kerjasama (SPK), or cooperative education units. They must partner with Indonesian educational institutions and meet local regulatory requirements.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          BSJ's longevity is its primary advantage. Over five decades in Jakarta, the school has built a strong reputation and deep community ties. The school's history predates the modern wave of UK-branded school expansions that has characterised other markets like Bangkok and Shenzhen.
+        </p>
+        <p class="font-body text-black/70">
+          Parents should budget for annual tuition of approximately USD 20,000 plus registration, examination, and activity fees. Jakarta's traffic and geography mean that school location relative to residential areas is a practical consideration for daily commutes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Jakarta</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

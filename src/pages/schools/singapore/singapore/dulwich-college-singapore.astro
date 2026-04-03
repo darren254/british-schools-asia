@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import SchoolCard from '../../../../components/SchoolCard.astro';
+import schools from '../../../../data/schools.json';
+
+const school = schools.find((s) => s.slug === 'dulwich-college-singapore')!;
+const relatedSchools = schools
+  .filter((s) => s.citySlug === 'singapore' && s.slug !== school.slug)
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+function formatFee(amount: number): string {
+  return amount.toLocaleString('en-US');
+}
+
+function toUSD(local: number): string {
+  return Math.round(local * 0.7777).toLocaleString('en-US');
+}
+---
+<BaseLayout
+  title={`${school.name} — Fees, Rankings & Review`}
+  description={`${school.name} in ${school.city}: ${school.feeSummaryUSD}. Asia Rank #${school.asiaRank}. Full fee schedule and editorial review.`}
+>
+  <Header slot="header" />
+
+  <!-- HERO IMAGE -->
+  <section class="relative w-full h-[40vh] min-h-[300px] overflow-hidden">
+    <img
+      src={school.heroImage || '/images/singapore-hero.jpg'}
+      alt={school.name}
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+  </section>
+
+  <!-- BREADCRUMBS -->
+  <div class="bsa-container pt-6 pb-4">
+    <nav class="font-body text-xs text-black/50" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-black">Home</a>
+      <span class="mx-1">/</span>
+      <a href="/countries/singapore" class="hover:text-black">Singapore</a>
+      <span class="mx-1">/</span>
+      <a href="/cities/singapore" class="hover:text-black">Singapore</a>
+      <span class="mx-1">/</span>
+      <span class="text-black">{school.name}</span>
+    </nav>
+  </div>
+
+  <!-- SCHOOL HEADER -->
+  <section class="bsa-container pb-10">
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+      <div>
+        <p class="label text-black/50 mb-3">{school.city}, {school.country}</p>
+        <h1 class="mb-4">{school.name}</h1>
+        <p class="font-body text-black/60">{school.feeSummaryUSD}</p>
+      </div>
+      <div class="flex gap-4">
+        <div class="border border-black px-5 py-3 text-center">
+          <p class="label text-black/50 mb-1">Asia Rank</p>
+          <p class="font-display text-3xl">#{school.asiaRank}</p>
+        </div>
+        <div class="border border-black px-5 py-3 text-center">
+          <p class="label text-black/50 mb-1">City Rank</p>
+          <p class="font-display text-3xl">#{school.cityRank}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- QUICK FACTS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-6">Quick Facts</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-8">
+        <div>
+          <p class="label text-black/40 mb-1">Type</p>
+          <p class="font-body text-sm">{school.type}</p>
+        </div>
+        <div>
+          <p class="label text-black/40 mb-1">Ages</p>
+          <p class="font-body text-sm">{school.ageRange}</p>
+        </div>
+        <div>
+          <p class="label text-black/40 mb-1">Year Groups</p>
+          <p class="font-body text-sm">{school.yearRange}</p>
+        </div>
+        <div>
+          <p class="label text-black/40 mb-1">Founded</p>
+          <p class="font-body text-sm">{school.founded}</p>
+        </div>
+        <div>
+          <p class="label text-black/40 mb-1">Approx. Roll</p>
+          <p class="font-body text-sm">{school.roll ? school.roll.toLocaleString() : '—'}</p>
+        </div>
+        <div>
+          <p class="label text-black/40 mb-1">Curricula</p>
+          <p class="font-body text-sm">{school.curricula.join(', ')}</p>
+        </div>
+        <div>
+          <p class="label text-black/40 mb-1">Fees From</p>
+          <p class="font-body text-sm">{school.feeSummary}</p>
+        </div>
+        <div>
+          <p class="label text-black/40 mb-1">Website</p>
+          <a href={school.website} target="_blank" rel="noopener noreferrer" class="font-body text-sm">{school.website.replace('https://', '').replace('http://', '')}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- OVERVIEW -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Overview</p>
+        <h2 class="mb-6">About {school.name}</h2>
+        <p class="font-body text-black/70 leading-relaxed">{school.overview}</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- EDITORIAL ASSESSMENT -->
+  {school.hasEditorial && school.editorial ? (
+    <section class="section">
+      <div class="bsa-container">
+        <div class="max-w-2xl">
+          <p class="label mb-4">Editorial Assessment</p>
+          <h2 class="mb-6">Our assessment</h2>
+          <p class="font-body text-black/70 leading-relaxed">{school.editorial}</p>
+        </div>
+      </div>
+    </section>
+    <hr class="divider bsa-container" />
+  ) : (
+    <section class="section">
+      <div class="bsa-container">
+        <div class="max-w-2xl">
+          <p class="label mb-4">Editorial Assessment</p>
+          <p class="font-body text-black/50 italic">Editorial review not yet published. Our team is still completing its assessment of this school.</p>
+        </div>
+      </div>
+    </section>
+    <hr class="divider bsa-container" />
+  )}
+
+
+  <!-- ACADEMICS -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Academics</p>
+        <h2 class="mb-6">Curriculum and pathways</h2>
+        <p class="font-body text-black/70 mb-4">
+          {school.name} follows the {school.curricula.join(', ')} pathways. The school delivers the English National Curriculum from Early Years through to the senior years.
+        </p>
+        <div class="mt-6">
+          <p class="label text-black/40 mb-2">Exam Pathways</p>
+          <p class="font-body text-sm">{school.curricula.join(' · ')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- CAMPUS & LOCATION -->
+  {school.campus && (
+    <section class="section">
+      <div class="bsa-container">
+        <div class="max-w-2xl">
+          <p class="label mb-4">Campus &amp; Location</p>
+          <h2 class="mb-6">Where the school is</h2>
+          <div class="mb-4">
+            <p class="label text-black/40 mb-1">Address</p>
+            <p class="font-body text-sm">{school.campus.address}</p>
+          </div>
+          <div class="mb-4">
+            <p class="label text-black/40 mb-1">Area</p>
+            <p class="font-body text-sm">{school.campus.area}</p>
+          </div>
+          <p class="font-body text-black/70">{school.campus.context}</p>
+        </div>
+      </div>
+    </section>
+    <hr class="divider bsa-container" />
+  )}
+
+  <!-- WAITLIST NOTE -->
+  {school.waitlistNote && (
+    <section class="section">
+      <div class="bsa-container">
+        <div class="max-w-2xl">
+          <p class="label mb-4">Admissions Note</p>
+          <p class="font-body text-black/70">{school.waitlistNote}</p>
+        </div>
+      </div>
+    </section>
+    <hr class="divider bsa-container" />
+  )}
+
+  <!-- RELATED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Also in {school.city}</p>
+      <h2 class="mb-10">Other British schools in {school.city}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        {relatedSchools.map((s) => (
+          <SchoolCard
+            name={s.name}
+            slug={s.slug}
+            city={s.city}
+            citySlug={s.citySlug}
+            countrySlug={s.countrySlug}
+            feeSummary={s.feeSummaryUSD}
+            asiaRank={s.asiaRank}
+            heroImage={s.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- SOURCES -->
+  <section class="py-8">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label text-black/40 mb-3">About this profile</p>
+        <p class="font-body text-xs text-black/40 mb-2">
+          Rankings are produced by our research team. Fees are verified against school schedules. Editorial reviews reflect our team's assessment.
+        </p>
+        <p class="font-body text-xs text-black/40">
+          <a href="/methodology">Read full methodology</a>
+          &nbsp;&middot;&nbsp;
+          <a href={school.website} target="_blank" rel="noopener noreferrer">Visit school website</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

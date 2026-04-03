@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'shenzhen')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much does Harrow International School Shenzhen cost?',
+    a: 'Annual tuition at Harrow International School Shenzhen is approximately RMB 342,100 (roughly USD 47,200). This makes it one of the more expensive British schools in Asia. Boarding fees are charged separately for students who board.'
+  },
+  {
+    q: 'Is Harrow Shenzhen the only British school in the city?',
+    a: 'Harrow International School Shenzhen is the primary British curriculum school in Shenzhen and the only one currently included in the British Schools Asia index. The broader international school market in Shenzhen includes schools following other curricula.'
+  },
+  {
+    q: 'Does Harrow Shenzhen offer boarding?',
+    a: 'Yes. Harrow International School Shenzhen offers both day and boarding places. Boarding is available from Year 7, with separate boarding fees charged on top of annual tuition.'
+  }
+];
+---
+<BaseLayout title="British Schools in Shenzhen" description="Guide to British curriculum schools in Shenzhen, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/shenzhen-hero.jpg"
+      alt="Shenzhen skyline"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Shenzhen</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Shenzhen is one of China's newer megacities, and its international school market is correspondingly young. Harrow International School Shenzhen, which opened in 2020 in the Qianhai Co-operation Zone of Nanshan District, is the city's main British curriculum option. It is part of the Harrow family of international schools affiliated with Harrow School in London.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Annual tuition is approximately RMB 342,100 (roughly USD 47,200 per year), making Harrow Shenzhen one of the highest-fee British schools in the region. The school offers both day and boarding places, following the English National Curriculum through to IGCSE and A Levels. The campus was purpose-built and designed to accommodate over 900 students from Early Years to Year 13.
+        </p>
+        <p class="font-body text-black/70">
+          Shenzhen's proximity to Hong Kong — roughly 30 minutes by high-speed rail — means some families consider schools in both cities. However, cross-border schooling has practical complications, and most families choose to enrol in the city where they live. Harrow Shenzhen serves Shenzhen's growing population of international professionals, particularly those in the technology sector.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Shenzhen's British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Shenzhen's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Shenzhen has transformed from a fishing village to a city of over 17 million people in four decades. Its international school sector is growing but remains smaller than Beijing or Shanghai. The same Chinese regulatory restrictions apply: fully international schools primarily serve foreign passport holders.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Harrow's presence in Shenzhen reflects the broader trend of UK school brands expanding into China's major cities. The Harrow name carries brand recognition among both British and East Asian families, and the school's premium pricing reflects this positioning.
+        </p>
+        <p class="font-body text-black/70">
+          Parents should budget for annual tuition of approximately USD 47,200 plus boarding fees if applicable. As with other Chinese cities, the regulatory environment is an important consideration. Families should confirm eligibility before applying.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Shenzhen</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

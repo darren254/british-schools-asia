@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'bangkok')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much do British schools cost in Bangkok?',
+    a: 'Tuition fees at British curriculum schools in Bangkok range from approximately THB 550,000 to THB 1.2 million per year, depending on the school and year group. In USD terms, that is roughly USD 16,000–35,000 per year — significantly less than Singapore or Hong Kong for comparable UK-branded schools.'
+  },
+  {
+    q: 'Which UK schools have campuses in Bangkok?',
+    a: 'Bangkok hosts campuses of several well-known UK schools: Shrewsbury International School, Harrow International School, Wellington College International, and Brighton College. Each operates under licence or affiliation with its UK parent school.'
+  },
+  {
+    q: 'Do Bangkok British schools offer boarding?',
+    a: 'Harrow International School Bangkok offers full boarding for students from Year 7. Other British schools in Bangkok are primarily day schools, though some offer extended-day or flexi-boarding arrangements.'
+  },
+  {
+    q: 'What post-16 pathways are available in Bangkok?',
+    a: 'British schools in Bangkok typically offer IGCSE followed by either A Levels or the IB Diploma in Sixth Form. Shrewsbury and Harrow offer A Levels, while others may route through the IB. Parents should confirm the specific post-16 pathway at each school.'
+  }
+];
+---
+<BaseLayout title="British Schools in Bangkok" description="Ranked guide to British curriculum schools in Bangkok, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/bangkok-hero.jpg"
+      alt="Bangkok skyline at dusk"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Bangkok</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Bangkok has emerged as one of Southeast Asia's most active markets for British curriculum education. Over the past two decades, several high-profile UK school brands have opened campuses in the Thai capital, including Shrewsbury, Harrow, Wellington College, and Brighton College. This concentration of UK-affiliated schools is unusual in the region and gives Bangkok a distinctive market profile.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Tuition fees range from approximately THB 550,000 to THB 1.2 million per year (roughly USD 16,000–35,000). Bangkok is generally more affordable than Singapore or Hong Kong for equivalent UK-branded education. The cost of living is also lower, making the city attractive to families seeking British schooling without the expense of the region's more established financial centres.
+        </p>
+        <p class="font-body text-black/70">
+          The British Schools Asia index currently covers four British curriculum schools in Bangkok. The market is growing, with several schools still expanding their campuses and adding year groups. Parents considering Bangkok should research each school's stage of development and specific UK affiliation carefully.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Bangkok's top British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Bangkok's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Thailand's international school sector is overseen by the Ministry of Education. International schools must be registered and meet certain staffing and curriculum requirements. The market in Bangkok is competitive, with British schools sitting alongside American, international baccalaureate, and bilingual options.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          The presence of multiple UK brand-name schools distinguishes Bangkok from most other Asian cities. Shrewsbury, Harrow, Wellington, and Brighton all carry their UK school names and maintain formal links with their parent institutions. This branding comes with expectations around curriculum delivery, pastoral care, and co-curricular provision.
+        </p>
+        <p class="font-body text-black/70">
+          Bangkok's lower cost of living relative to Singapore and Hong Kong means that British schools here can offer comparable facilities and staffing at lower fee levels. Parents should expect annual tuition of USD 16,000–35,000 depending on year group, plus one-off registration and enrolment fees.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Bangkok</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

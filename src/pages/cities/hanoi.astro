@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'hanoi')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much does BIS Hanoi cost?',
+    a: 'Annual tuition at the British International School Hanoi is approximately VND 688 million (roughly USD 27,000). Fees vary by year group, with senior school years costing more than primary. Additional charges for registration and other services apply.'
+  },
+  {
+    q: 'What curriculum does BIS Hanoi follow?',
+    a: 'BIS Hanoi follows the English National Curriculum from Early Years through IGCSE, with the IB Diploma offered in Sixth Form. The school is part of the Nord Anglia Education group, the same operator as BIS Ho Chi Minh City.'
+  },
+  {
+    q: 'How does Hanoi compare to Ho Chi Minh City for British education?',
+    a: 'Both cities have a single primary British curriculum school, each operated by Nord Anglia Education. Fee levels are very similar (approximately VND 688–705 million per year). Hanoi is the smaller expat market of the two, but the quality of British curriculum provision is consistent across both cities.'
+  }
+];
+---
+<BaseLayout title="British Schools in Hanoi" description="Guide to British curriculum schools in Hanoi, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/hanoi-hero.jpg"
+      alt="Hanoi cityscape"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Hanoi</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Hanoi is Vietnam's capital and its second-largest city, with a smaller but growing international community compared to Ho Chi Minh City. The British International School Hanoi (BIS Hanoi) is the city's main British curriculum option, operated by Nord Anglia Education. Like its sister school in HCMC, BIS Hanoi follows the English National Curriculum through to IGCSE and offers the IB Diploma in Sixth Form.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Annual tuition at BIS Hanoi is approximately VND 688 million (roughly USD 27,000 per year). This is closely comparable to BIS HCMC and positions Hanoi in the mid-range of Asian British school fees — below Singapore, Hong Kong, and China, but above Kuala Lumpur. Hanoi's lower cost of living relative to many regional capitals makes the overall expense more manageable for families.
+        </p>
+        <p class="font-body text-black/70">
+          The British school market in Hanoi is a single-school market. Parents seeking the English National Curriculum specifically will find BIS Hanoi is their primary option. The school draws students from Hanoi's diplomatic, development-sector, and corporate expat communities, as well as from Vietnamese families seeking an international education for their children.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Hanoi's British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Hanoi's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Hanoi's international school sector has expanded significantly in the past decade, driven by growth in foreign direct investment and the city's expanding role as a regional business centre. The Ministry of Education and Training regulates international schools, requiring licensing and curriculum standards compliance.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Nord Anglia's operation of both BIS Hanoi and BIS HCMC gives families relocating within Vietnam curriculum continuity. The two schools share a common approach to the English National Curriculum and IB Diploma, and Nord Anglia's network provides teacher recruitment and professional development support.
+        </p>
+        <p class="font-body text-black/70">
+          Parents should budget for annual tuition of approximately USD 27,000 plus one-off registration charges. Hanoi's diplomatic and NGO community means the school has a particularly international student body, with a wide range of nationalities represented.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Hanoi</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import CityCard from '../../components/CityCard.astro';
+import schools from '../../data/schools.json';
+
+const hkSchools = schools
+  .filter((s) => s.countrySlug === 'hong-kong')
+  .sort((a, b) => a.asiaRank - b.asiaRank);
+---
+<BaseLayout title="British Schools in Hong Kong — Country Guide" description="All British curriculum schools in Hong Kong, ranked and reviewed. Fees, curricula, and city guides.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Country</p>
+      <h1 class="mb-6">British Schools in Hong Kong</h1>
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Hong Kong is both a city and a Special Administrative Region, functioning in practice as a single urban market for international schools. The British curriculum sector here includes independent schools affiliated with UK brands, as well as schools within the English Schools Foundation (ESF) system.
+        </p>
+        <p class="font-body text-black/70">
+          The British Schools Asia index currently includes four British curriculum schools in Hong Kong. Fee levels are comparable to Singapore, and the debenture system at some schools adds a significant one-off cost that families should factor into their planning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- CITIES IN THIS COUNTRY -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Cities</p>
+      <h2 class="mb-10">Cities in Hong Kong</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        <CityCard city="Hong Kong" slug="hong-kong" schoolCount={hkSchools.length} image="/images/hong-kong-hero.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">All British schools in Hong Kong</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {hkSchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- JOURNAL LINKS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">From the Journal</p>
+      <h2 class="mb-8">Related reading</h2>
+      <div class="flex flex-col gap-6 max-w-xl">
+        <a href="/journal/best-british-schools-hong-kong" class="group no-underline block" style="text-decoration:none;">
+          <p class="label text-black/40 mb-1">Cities</p>
+          <p class="font-display text-xl group-hover:underline">Best British Schools in Hong Kong</p>
+        </a>
+        <a href="/rankings" class="group no-underline block" style="text-decoration:none;">
+          <p class="label text-black/40 mb-1">Rankings</p>
+          <p class="font-display text-xl group-hover:underline">Asia's Top British Schools — Full Index</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

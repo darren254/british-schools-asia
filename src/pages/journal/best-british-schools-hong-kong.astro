@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Hong Kong — Journal" description="A guide to Hong Kong's top-ranked British curriculum schools, covering fees, debentures, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/hong-kong-hero.jpg"
+      alt="Victoria Harbour, Hong Kong"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Hong Kong</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 5 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Hong Kong hosts four British curriculum schools in the current British Schools Asia index. The market is dense and competitive, sitting alongside the English Schools Foundation (ESF) system and a wide range of international schools following other curricula. Annual tuition at independent British schools ranges from approximately HKD 143,500 to HKD 208,700 (USD 18,400–26,700), with debenture costs at some schools adding a significant one-off expense.
+        </p>
+
+        <p>
+          <a href="/schools/hong-kong/hong-kong/kellett-school">Kellett School</a> leads the city ranking. Kellett is an independent British school that has built a strong reputation in Hong Kong's international school community. Annual fees start from approximately USD 26,700, and the school follows the English National Curriculum through to IGCSE and A Levels.
+        </p>
+
+        <p>
+          <a href="/schools/hong-kong/hong-kong/harrow-international-school-hong-kong">Harrow International School Hong Kong</a>, ranked second in the city, is part of the Harrow family of schools affiliated with Harrow School in London. The school offers both day and boarding places and follows the English National Curriculum to A Levels. Annual tuition starts from approximately USD 25,800. Harrow's debenture system is a factor: families should expect a substantial one-off capital commitment in addition to annual fees.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees and debentures</h2>
+
+        <p>
+          Hong Kong's British school market has a fee range of approximately HKD 143,500 to HKD 208,700 per year (USD 18,400–26,700). This places Hong Kong roughly on par with Singapore in terms of annual tuition costs.
+        </p>
+
+        <p>
+          The critical difference is debentures. Several Hong Kong schools require or offer debentures — one-off payments that can range from HKD 500,000 to several million. These may provide priority admission, be refundable upon departure, or confer nomination rights for future students. Not all schools require them, and the terms vary. Parents should clarify the debenture position before committing to a school.
+        </p>
+
+        <p>
+          At the lower end of the fee scale, <a href="/schools/hong-kong/hong-kong/discovery-bay-international-school">Discovery Bay International School</a> offers British curriculum education at approximately USD 18,400 per year, making it the most affordable British school in Hong Kong. Its location on Lantau Island means it primarily serves families living in the Discovery Bay residential area.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          Hong Kong's compact geography means all four schools are accessible from the main residential areas, though travel times vary depending on whether the school is on Hong Kong Island, in Kowloon, or in the New Territories. Traffic and distance matter less than in a sprawling city like Jakarta or Bangkok, but parents should still consider the daily commute when choosing a school.
+        </p>
+
+        <p>
+          <a href="/schools/hong-kong/hong-kong/nord-anglia-international-school-hong-kong">Nord Anglia International School Hong Kong</a>, ranked third in the city, is part of the Nord Anglia Education group. The school follows the English National Curriculum through to IGCSE and offers the IB Diploma in Sixth Form — an alternative to the A Level pathway offered at Kellett and Harrow.
+        </p>
+
+        <p>
+          Waitlists are common at the more established schools, particularly for entry at popular year groups. Parents relocating to Hong Kong should begin their school search early and be prepared for the possibility that their first-choice school may not have immediate availability.
+        </p>
+
+        <p>
+          For a full breakdown of every school, visit the <a href="/cities/hong-kong">Hong Kong city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/hong-kong" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Hong Kong City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Kuala Lumpur — Journal" description="A guide to Kuala Lumpur's top-ranked British curriculum schools, covering fees, history, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/kuala-lumpur-hero.jpg"
+      alt="Petronas Towers, Kuala Lumpur"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Kuala Lumpur</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 4 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Kuala Lumpur has one of the longest-established British school markets in Asia. The British Schools Asia index includes three British curriculum schools in the city, two of which — Alice Smith School and Garden International School — have been operating for over 70 years. Annual tuition ranges from approximately RM 88,000 to RM 91,200 (USD 20,500–21,200), making KL one of the most affordable markets for British education in the region.
+        </p>
+
+        <p>
+          <a href="/schools/malaysia/kuala-lumpur/alice-smith-school">Alice Smith School</a> leads the city ranking. Founded in 1946, it is the oldest international school in Malaysia and one of the oldest in Southeast Asia. The school follows the English National Curriculum through to IGCSE and offers the IB Diploma in Sixth Form. Alice Smith operates as a not-for-profit institution with deep roots in KL's expat community. Annual fees start from approximately USD 21,200.
+        </p>
+
+        <p>
+          <a href="/schools/malaysia/kuala-lumpur/garden-international-school">Garden International School</a>, ranked second in the city, was established in 1951. Like Alice Smith, it has a long history in Kuala Lumpur and follows the English National Curriculum. The school serves students from Early Years through to Year 13. Fees start from approximately USD 21,100.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          Kuala Lumpur's British schools are considerably more affordable than their counterparts in most other Asian cities covered by the index. At approximately USD 20,500–21,200 per year, KL fees are roughly half what parents pay in Singapore and less than half the cost of British schools in China's major cities.
+        </p>
+
+        <p>
+          Malaysia's lower cost of living further improves the value equation. Housing, transport, domestic help, and daily expenses are substantially cheaper than in Singapore, Hong Kong, or Tokyo. Families relocating to Malaysia from more expensive Asian cities often find they can access comparable British curriculum education at a significantly reduced total cost.
+        </p>
+
+        <p>
+          The fee range in KL is notably tight — all three schools charge between RM 88,000 and RM 91,200, making cost a less decisive factor in school choice than in cities with wider fee dispersion. Families are more likely to differentiate between KL schools on the basis of location, ethos, and Sixth Form pathway.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          The longevity of Alice Smith and Garden International is a distinguishing feature of the KL market. Both schools have been operating for over seven decades, giving them established alumni networks, experienced teaching staff, and a depth of community ties that newer schools in other cities have not yet built.
+        </p>
+
+        <p>
+          <a href="/schools/malaysia/kuala-lumpur/british-international-school-kuala-lumpur">The British International School of Kuala Lumpur</a> (BISKL), ranked third, provides a more recent alternative. Part of the Nord Anglia Education group, BISKL offers the English National Curriculum with Nord Anglia's global network support, including co-curricular collaborations. Fees start from approximately USD 20,500.
+        </p>
+
+        <p>
+          All three schools follow the English National Curriculum to IGCSE. Post-16 pathways differ: parents should check whether each school offers A Levels, the IB Diploma, or both, as this varies. Families with a strong preference for a particular post-16 qualification should confirm availability before applying.
+        </p>
+
+        <p>
+          Demand for places at the most established schools is strong. Alice Smith, in particular, can have waitlists in popular year groups. Parents relocating to Kuala Lumpur should start their applications early, especially for primary school entry.
+        </p>
+
+        <p>
+          For a full breakdown of every school, visit the <a href="/cities/kuala-lumpur">Kuala Lumpur city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/kuala-lumpur" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Kuala Lumpur City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

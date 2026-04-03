@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import schools from '../../data/schools.json';
+
+const countries = [
+  { name: 'Singapore', slug: 'singapore', image: '/images/singapore-hero.jpg' },
+  { name: 'Hong Kong', slug: 'hong-kong', image: '/images/hong-kong-hero.jpg' },
+  { name: 'Thailand', slug: 'thailand', image: '/images/bangkok-hero.jpg' },
+  { name: 'Malaysia', slug: 'malaysia', image: '/images/kuala-lumpur-hero.jpg' },
+  { name: 'China', slug: 'china', image: '/images/shanghai-hero.jpg' },
+  { name: 'Japan', slug: 'japan', image: '/images/tokyo-hero.jpg' },
+  { name: 'Vietnam', slug: 'vietnam', image: '/images/hanoi-hero.jpg' },
+  { name: 'Indonesia', slug: 'indonesia', image: '/images/jakarta-hero.jpg' },
+];
+
+const countriesWithCounts = countries.map((c) => ({
+  ...c,
+  count: schools.filter((s) => s.countrySlug === c.slug).length,
+}));
+---
+<BaseLayout title="Countries — British Schools Asia" description="Browse British curriculum schools by country across Asia. Singapore, Hong Kong, Thailand, Malaysia, China, Japan, Vietnam, Indonesia.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container text-center">
+      <h1 class="mb-4">Browse by Country</h1>
+      <p class="font-body text-black/60 max-w-xl mx-auto">
+        British curriculum schools across 8 countries and territories in Asia. Select a country to see cities, ranked schools, and local context.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {countriesWithCounts.map((country) => (
+          <a href={`/countries/${country.slug}`} class="block group no-underline" style="text-decoration:none;">
+            <div class="overflow-hidden">
+              {country.image ? (
+                <img
+                  src={country.image}
+                  alt={`British schools in ${country.name}`}
+                  class="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <div class="w-full aspect-[3/2] bg-black/5 flex items-center justify-center">
+                  <span class="font-display text-2xl text-black/20">{country.name}</span>
+                </div>
+              )}
+            </div>
+            <div class="pt-3">
+              <h3 class="font-display text-xl mb-1">{country.name}</h3>
+              <p class="font-body text-sm text-black/50">{country.count} {country.count === 1 ? 'school' : 'schools'}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'hong-kong')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much do British schools cost in Hong Kong?',
+    a: 'Annual tuition at British curriculum schools in Hong Kong ranges from approximately HKD 160,000 to HKD 210,000, depending on the school and year group. At current exchange rates, that translates to roughly USD 20,500–27,000 per year. Debentures or nomination rights — one-off payments of HKD 500,000 or more — apply at some schools.'
+  },
+  {
+    q: 'What is the difference between ESF schools and independent British schools in Hong Kong?',
+    a: 'The English Schools Foundation (ESF) operates government-subsidised schools following the English National Curriculum at lower fees than independent international schools. Independent British schools such as Harrow and Kellett charge higher tuition but may offer smaller class sizes and additional boarding or co-curricular options.'
+  },
+  {
+    q: 'Do British schools in Hong Kong follow A Levels or IB?',
+    a: 'Most British schools in Hong Kong offer IGCSE at Year 10–11. Post-16 pathways vary: some schools offer A Levels, others the IB Diploma, and a few offer both. Parents should check the specific Sixth Form offering at each school.'
+  },
+  {
+    q: 'Are debentures required at Hong Kong British schools?',
+    a: 'Some schools in Hong Kong require or offer debentures (also called nomination rights or capital levies). These are one-off payments that can range from HKD 500,000 to several million. Debentures sometimes provide priority admission or are refundable upon departure. Not all schools require them.'
+  }
+];
+---
+<BaseLayout title="British Schools in Hong Kong" description="Ranked guide to British curriculum schools in Hong Kong, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/hong-kong-hero.jpg"
+      alt="Victoria Harbour, Hong Kong"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Hong Kong</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Hong Kong has one of the densest international school markets in Asia. British curriculum schools here range from the government-subsidised English Schools Foundation (ESF) system to fully independent schools affiliated with UK boarding school brands. The city's compact geography means most schools are accessible from the main residential areas on Hong Kong Island, in Kowloon, or in the New Territories.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Fees at independent British schools in Hong Kong typically fall between HKD 160,000 and HKD 210,000 per year (approximately USD 20,500–27,000). A distinguishing feature of the Hong Kong market is the debenture system: several schools require or offer one-off payments — sometimes exceeding HKD 500,000 — in exchange for priority admission or nomination rights. These can significantly affect the total cost of education.
+        </p>
+        <p class="font-body text-black/70">
+          The British Schools Asia index currently covers four British curriculum schools in Hong Kong. Demand for places is strong, particularly at schools with boarding options or established reputations. Parents considering Hong Kong should factor in both annual tuition and potential debenture costs when comparing schools.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Hong Kong's top British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Hong Kong's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          Hong Kong's international school sector is regulated by the Education Bureau (EDB). Schools serving primarily non-local students operate under a separate framework from local schools. The ESF system provides English-medium education at subsidised rates, while independent schools set their own fee structures.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Several UK brand-name schools have established campuses in Hong Kong, including Harrow. The presence of these schools, alongside established independent operators such as Kellett and Nord Anglia, gives parents a range of options at different price points and with different ethos.
+        </p>
+        <p class="font-body text-black/70">
+          Fee levels are comparable to Singapore. When debenture costs are included, Hong Kong can be one of the more expensive markets in Asia for British education. Parents should budget for annual tuition of USD 20,500–27,000 plus potential one-off capital costs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Hong Kong</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

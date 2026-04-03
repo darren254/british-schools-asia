@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import CityCard from '../../components/CityCard.astro';
+import schools from '../../data/schools.json';
+
+const vnSchools = schools
+  .filter((s) => s.countrySlug === 'vietnam')
+  .sort((a, b) => a.asiaRank - b.asiaRank);
+
+const hanoiCount = schools.filter((s) => s.citySlug === 'hanoi').length;
+const hcmcCount = schools.filter((s) => s.citySlug === 'ho-chi-minh-city').length;
+---
+<BaseLayout title="British Schools in Vietnam — Country Guide" description="All British curriculum schools in Vietnam, ranked and reviewed. Fees, curricula, and city guides for Hanoi and Ho Chi Minh City.">
+  <Header slot="header" />
+
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Country</p>
+      <h1 class="mb-6">British Schools in Vietnam</h1>
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Vietnam is a growing market for international education, driven by rising foreign direct investment and an expanding expat community. Both Hanoi and Ho Chi Minh City host British International Schools operated by Nord Anglia Education, providing consistency of curriculum and approach across the country's two main cities.
+        </p>
+        <p class="font-body text-black/70">
+          The British Schools Asia index includes two schools in Vietnam, one in each city. Fee levels are mid-range by regional standards (approximately VND 688–705 million, or USD 27,000–27,600 per year), and Vietnam's comparatively low cost of living makes the overall expense manageable for most expat families.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- CITIES -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Cities</p>
+      <h2 class="mb-10">Cities in Vietnam</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        <CityCard city="Hanoi" slug="hanoi" schoolCount={hanoiCount} image="/images/hanoi-hero.jpg" />
+        <CityCard city="Ho Chi Minh City" slug="ho-chi-minh-city" schoolCount={hcmcCount} image="/images/ho-chi-minh-city-hero.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">All British schools in Vietnam</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {vnSchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- JOURNAL LINKS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">From the Journal</p>
+      <h2 class="mb-8">Related reading</h2>
+      <div class="flex flex-col gap-6 max-w-xl">
+        <a href="/rankings" class="group no-underline block" style="text-decoration:none;">
+          <p class="label text-black/40 mb-1">Rankings</p>
+          <p class="font-display text-xl group-hover:underline">Asia's Top British Schools — Full Index</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

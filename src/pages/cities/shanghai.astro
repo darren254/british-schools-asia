@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SchoolCard from '../../components/SchoolCard.astro';
+import schools from '../../data/schools.json';
+
+const citySchools = schools
+  .filter((s) => s.citySlug === 'shanghai')
+  .sort((a, b) => a.cityRank - b.cityRank);
+
+const faqs = [
+  {
+    q: 'How much do British schools cost in Shanghai?',
+    a: 'Annual tuition at British curriculum schools in Shanghai is approximately RMB 300,000 (roughly USD 41,400). Fees vary by year group, with senior school years typically costing more than primary. Additional charges for registration, uniforms, and trips are standard.'
+  },
+  {
+    q: 'Can Chinese nationals attend British schools in Shanghai?',
+    a: 'Chinese regulations generally restrict fully international schools to students holding foreign passports. Chinese nationals may not be able to enrol in the international stream at these schools, though some schools operate separate bilingual or local-curriculum campuses.'
+  },
+  {
+    q: 'What curriculum does Britannica International School Shanghai follow?',
+    a: 'Britannica International School Shanghai follows the English National Curriculum from Early Years through IGCSE, with A Levels offered in Sixth Form. The school provides a through-school education for students aged 2–18.'
+  }
+];
+---
+<BaseLayout title="British Schools in Shanghai" description="Guide to British curriculum schools in Shanghai, with fees, curricula, and independent reviews.">
+  <Header slot="header" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[50vh] min-h-[350px] overflow-hidden">
+    <img
+      src="/images/shanghai-hero.jpg"
+      alt="Shanghai skyline along the Bund"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container">
+        <p class="label text-white/70 mb-3">City Guide</p>
+        <h1 class="text-white text-4xl md:text-5xl">British Schools in Shanghai</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="font-body text-black/70 mb-4">
+          Shanghai is China's largest city and its most significant market for international education. However, the regulatory environment for foreign schools in China is among the tightest in Asia. Schools serving international students operate under specific licensing requirements, and Chinese nationals are generally restricted from attending fully international curriculum schools. This regulatory framework limits the number and type of British schools operating in the city.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Britannica International School Shanghai is the primary British curriculum option in the index. Annual tuition is approximately RMB 300,000 (roughly USD 41,400 per year), placing Shanghai fees at the higher end of the regional range. The school follows the English National Curriculum through to A Levels and serves a diverse international student body.
+        </p>
+        <p class="font-body text-black/70">
+          Parents considering Shanghai should be aware of the regulatory constraints and confirm their child's eligibility for international school enrolment. The market is smaller than one might expect given the city's size, largely because of these regulations. Families with Chinese passports will need to explore alternative educational pathways.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- RANKED SCHOOLS -->
+  <section class="section">
+    <div class="bsa-container">
+      <p class="label mb-4">Ranked Schools</p>
+      <h2 class="mb-10">Shanghai's British schools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        {citySchools.map((school) => (
+          <SchoolCard
+            name={school.name}
+            slug={school.slug}
+            city={school.city}
+            citySlug={school.citySlug}
+            countrySlug={school.countrySlug}
+            feeSummary={school.feeSummaryUSD}
+            asiaRank={school.asiaRank}
+            heroImage={school.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- MARKET CONTEXT -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Market Context</p>
+        <h2 class="mb-6">Understanding Shanghai's British school market</h2>
+        <p class="font-body text-black/70 mb-4">
+          China's international school sector is regulated by the Ministry of Education and local education bureaux. Foreign-owned schools must hold specific licences and are limited in their ability to admit Chinese passport holders. Recent regulatory changes have tightened requirements further, affecting how schools operate and market themselves.
+        </p>
+        <p class="font-body text-black/70 mb-4">
+          Shanghai's international school market is large by absolute numbers, but British curriculum schools represent a smaller share than in cities like Singapore or Hong Kong. The market includes schools following American, IB, and other curricula alongside British options.
+        </p>
+        <p class="font-body text-black/70">
+          Fee levels in Shanghai are comparable to the upper end of the Asian market. Parents should budget for annual tuition of approximately USD 41,400 plus additional charges. The regulatory environment adds a layer of complexity that is less of a factor in Southeast Asian markets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider bsa-container" />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="bsa-container">
+      <div class="max-w-2xl">
+        <p class="label mb-4">Frequently Asked Questions</p>
+        <h2 class="mb-10">Common questions about British schools in Shanghai</h2>
+        {faqs.map((faq, i) => (
+          <div class:list={['pb-8', { 'mb-8 border-b border-border': i < faqs.length - 1 }]}>
+            <h3 class="text-xl mb-3">{faq.q}</h3>
+            <p class="font-body text-black/70">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
