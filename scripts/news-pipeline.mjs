@@ -8,7 +8,7 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { join, dirname, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -18,7 +18,9 @@ const DRY_RUN = process.env.NEWS_DRY_RUN === '1';
 const SEEN_FILE = join(repoRoot, 'research/news-seen.json');
 const NEWS_DIR = join(repoRoot, 'src/data/news');
 const PROMPT_FILE = join(repoRoot, 'prompts/news-brief.md');
+const NEWS_IMG_DIR = join(repoRoot, 'public/images/news');
 const DEFAULT_AUTHOR = 'marcus-chen';
+const MAX_IMG_BYTES = 5 * 1024 * 1024; // 5 MB safety cap
 
 const KICKER_TO_HERO = {
   'Singapore': '/images/singapore-hero.jpg',
@@ -43,6 +45,79 @@ const KICKER_TO_HERO_ALT = {
 };
 
 const today = () => new Date().toISOString().slice(0, 10);
+
+// =================== SOURCE IMAGE ===================
+
+async function fetchSourceImage(sourceUrl, slug) {
+  // 1. Fetch source HTML
+  // 2. Extract best image candidate (og:image > twitter:image > first article <img>)
+  // 3. Download and save to public/images/news/<slug>.<ext>
+  try {
+    const res = await fetch(sourceUrl, {
+      redirect: 'follow',
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml',
+      },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!res.ok) return null;
+    const finalUrl = res.url || sourceUrl;
+    const html = await res.text();
+
+    // Pick the best image URL
+    const og = html.match(/<meta\s+property=["']og:image(?::secure_url|:url)?["']\s+content=["']([^"']+)["']/i);
+    const tw = html.match(/<meta\s+name=["']twitter:image["']\s+content=["']([^"']+)["']/i);
+    const link = html.match(/<link\s+rel=["']image_src["']\s+href=["']([^"']+)["']/i);
+    let imgUrl = og?.[1] || tw?.[1] || link?.[1];
+    if (!imgUrl) {
+      // Fallback: first <img> with reasonable size hints
+      const m = html.match(/<img[^>]+src=["']([^"']+\.(?:jpg|jpeg|png|webp|avif))["']/i);
+      imgUrl = m?.[1];
+    }
+    if (!imgUrl) return null;
+
+    // Resolve relative URLs
+    if (imgUrl.startsWith('//')) imgUrl = 'https:' + imgUrl;
+    else if (imgUrl.startsWith('/')) {
+      const u = new URL(finalUrl);
+      imgUrl = `${u.protocol}//${u.host}${imgUrl}`;
+    } else if (!/^https?:/i.test(imgUrl)) {
+      imgUrl = new URL(imgUrl, finalUrl).toString();
+    }
+
+    // Download the image
+    const imgRes = await fetch(imgUrl, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; BSA-NewsBot/1.0)', 'Referer': finalUrl },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!imgRes.ok) return null;
+    const ct = imgRes.headers.get('content-type') || '';
+    if (!ct.startsWith('image/')) return null;
+
+    const ab = await imgRes.arrayBuffer();
+    if (ab.byteLength > MAX_IMG_BYTES) return null;
+    const buf = Buffer.from(ab);
+
+    // Determine extension
+    let ext = (extname(new URL(imgUrl).pathname).toLowerCase().replace('.', '')) || '';
+    if (!ext || !['jpg','jpeg','png','webp','avif','gif'].includes(ext)) {
+      if (ct.includes('jpeg')) ext = 'jpg';
+      else if (ct.includes('png')) ext = 'png';
+      else if (ct.includes('webp')) ext = 'webp';
+      else if (ct.includes('avif')) ext = 'avif';
+      else ext = 'jpg';
+    }
+
+    if (!existsSync(NEWS_IMG_DIR)) mkdirSync(NEWS_IMG_DIR, { recursive: true });
+    const filename = `${slug}.${ext}`;
+    const outPath = join(NEWS_IMG_DIR, filename);
+    writeFileSync(outPath, buf);
+    return { localPath: `/images/news/${filename}`, sourceImgUrl: imgUrl, bytes: buf.length };
+  } catch (e) {
+    return null;
+  }
+}
 
 function loadRecentContext() {
   // Pass last 14 days of slugs + source URLs to Claude so it doesn't repeat.
@@ -153,6 +228,24 @@ async function main() {
   const written = [];
   for (const a of out.articles) {
     const finalSlug = `${todayStr}-${a.slug}`.replace(/[^a-z0-9-]/gi, '-').toLowerCase();
+
+    // Try to fetch source image; fall back to city hero
+    let heroImage = KICKER_TO_HERO[a.kicker] || '/images/homepage-hero.jpg';
+    let heroCredit = '';
+    let heroAlt = KICKER_TO_HERO_ALT[a.kicker] || '';
+    if (a.sourceUrl) {
+      console.log(`  fetching source image for "${finalSlug}"…`);
+      const img = await fetchSourceImage(a.sourceUrl, finalSlug);
+      if (img) {
+        heroImage = img.localPath;
+        heroCredit = `Photograph: ${a.sourceName || 'source'}`;
+        heroAlt = a.headline;
+        console.log(`    got ${img.bytes} bytes → ${img.localPath}`);
+      } else {
+        console.log(`    no source image; falling back to city hero`);
+      }
+    }
+
     const record = {
       slug: finalSlug,
       kicker: a.kicker,
@@ -160,9 +253,9 @@ async function main() {
       dek: a.dek,
       author: DEFAULT_AUTHOR,
       date: todayStr,
-      heroImage: KICKER_TO_HERO[a.kicker] || '/images/homepage-hero.jpg',
-      heroAlt: KICKER_TO_HERO_ALT[a.kicker] || '',
-      heroCredit: '',
+      heroImage,
+      heroAlt,
+      heroCredit,
       body: a.body,
       sourceUrl: a.sourceUrl,
       sourceName: a.sourceName,
