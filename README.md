@@ -12,11 +12,10 @@ Schools are ranked by fees with reputation-based adjustments derived from at lea
 
 ## Documentation
 
-All project documentation lives in the `docs/` folder:
-
 | Document | Purpose |
 |---|---|
-| `PLAN.md` | Overall project plan and strategy |
+| `PLAN.md` | Master plan and FROZEN project rules — every AI run re-reads this first |
+| `CLAUDE.md` | Claude operational notes — GitHub/Cloudflare/API access for this repo |
 | `docs/brand.md` | Brand identity (Net-a-Porter-inspired) |
 | `docs/style.md` | Tailwind/CSS implementation |
 | `docs/tech-stack.md` | Framework and project structure |

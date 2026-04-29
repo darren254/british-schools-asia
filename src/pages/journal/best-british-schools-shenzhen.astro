@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Shenzhen — Journal" description="A guide to Shenzhen's top-ranked British curriculum schools, covering fees, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/journal-shenzhen.jpg"
+      alt="Shenzhen skyline viewed from the Hong Kong border"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Shenzhen</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 4 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Shenzhen's international school market is small, premium, and concentrated. One school in the city qualifies for the British Schools Asia index — and it tops the entire Asia ranking.
+        </p>
+
+        <p>
+          <a href="/schools/china/shenzhen/harrow-international-school-shenzhen">Harrow International School Shenzhen</a> ranks first in the city and first in Asia. Opened in 2020 and part of the Harrow family of international schools affiliated with Harrow School in London, the campus sits on a 40,000 square-metre site in the Qianhai Co-operation Zone — Shenzhen's flagship free-trade and innovation district in western Nanshan. The school takes students from Pre-Nursery through Year 13, with both day and boarding places available.
+        </p>
+
+        <p>
+          The curriculum is the English National Curriculum from Early Years through to A Level, with IGCSE in Years 10–11. There is no IB pathway — Harrow Shenzhen is unambiguously a British curriculum school, all the way through.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          Annual tuition for Year 3 in 2025–26 is RMB 342,100 — roughly USD 47,000 at current rates — making Harrow Shenzhen the most expensive British school in mainland China and the fee leader across the Asia index. Boarding is charged separately for families taking that option. The school is firmly positioned at the top of the premium tier, both locally and regionally.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          Qianhai is where this school's positioning lives. The zone is purpose-built for foreign business and finance, and Harrow Shenzhen anchors the educational offer for senior expat hires and Hong Kong cross-border families relocating north. If your work base is in central Shenzhen or further east in Luohu, expect a meaningful commute.
+        </p>
+
+        <p>
+          Boarding is the second consideration. Harrow Shenzhen is one of very few British schools in mainland China offering boarding — including for cross-border families whose children study here while parents remain in Hong Kong. If boarding is part of your decision, Harrow Shenzhen is one of the only games in the region.
+        </p>
+
+        <p>
+          For a full breakdown, visit the <a href="/cities/shenzhen">Shenzhen city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/shenzhen" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Shenzhen City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

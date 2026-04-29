@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Shanghai — Journal" description="A guide to Shanghai's top-ranked British curriculum schools, covering fees, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/journal-shanghai.jpg"
+      alt="Shanghai Pudong skyline at night, viewed from the Bund"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Shanghai</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Updated April 2026 &middot; 5 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Shanghai is the deepest British curriculum market in Asia. Seven schools sit in the British Schools Asia index — more than any other city — with annual top-year tuition ranging from approximately USD 41,000 to USD 58,500.
+        </p>
+
+        <p>
+          <a href="/schools/china/shanghai/harrow-international-school-shanghai">Harrow International School Shanghai</a> ranks first in the city. Opened in 2016 in the Waigaoqiao Free Trade Zone in northern Pudong, the school runs the English National Curriculum through IGCSE to A Levels — unusual within Shanghai's premium British school segment, where the IB Diploma dominates. AP courses were added alongside A Levels in 2025.
+        </p>
+
+        <p>
+          <a href="/schools/china/shanghai/dulwich-college-shanghai-pudong">Dulwich College Shanghai Pudong</a> ranks second. Established in 2003, it was the first international campus in the Dulwich College International network and remains the network's flagship in mainland China. The Jinqiao campus enrols approximately 1,600 students and posted an average of 38.6 points in the 2025 IB Diploma — the highest mean in China.
+        </p>
+
+        <p>
+          <a href="/schools/china/shanghai/dulwich-college-shanghai-puxi">Dulwich College Shanghai Puxi</a> opened in 2016 to serve the western side of the city. The Maqiao campus enrols around 1,400 students and follows the same curriculum model as Pudong, with admission restricted to foreign passport holders.
+        </p>
+
+        <p>
+          <a href="/schools/china/shanghai/harrow-international-school-shanghai">Harrow International School Shanghai</a> sits in the Waigaoqiao Free Trade Zone in northern Pudong. Opened in 2016, the school is unusual in the Shanghai market for running A Levels rather than the IB Diploma — a deliberate positioning that mirrors Harrow's UK heritage. AP courses were added alongside A Levels in 2025.
+        </p>
+
+        <p>
+          <a href="/schools/china/shanghai/wellington-college-international-shanghai">Wellington College International Shanghai</a> opened in 2014 on a riverside site in the Qiantan (New Bund) financial district. Forbes ranked it second among China's international schools in 2025. The school is the largest international school site in downtown Shanghai and runs ENC through to the IB Diploma.
+        </p>
+
+        <p>
+          <a href="/schools/china/shanghai/nord-anglia-international-school-shanghai-pudong">Nord Anglia International School Shanghai, Pudong</a> and <a href="/schools/china/shanghai/british-international-school-shanghai-puxi">The British International School Shanghai, Puxi</a> are operated by Nord Anglia Education and serve the Kangqiao (Pudong) and Huacao (Puxi) areas respectively. Both run ENC through IGCSE and the IB Diploma; both give students access to Nord Anglia's global collaboration programmes with MIT and Juilliard. <a href="/schools/china/shanghai/britannica-international-school-shanghai">Britannica International School Shanghai</a> rounds out the index — a smaller school that, unusually for the city, runs A Levels rather than IB.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          Shanghai is the most expensive city in Asia for British schooling. Year 3 tuition starts at around USD 41,000 (Britannica) and rises to USD 50,000 (Dulwich and Harrow). Most schools also charge a one-off capital development fee or refundable enrolment deposit on top of annual tuition. Fees are billed in RMB; foreign-currency payments are converted at the bank's middle rate at the time of payment.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          Pudong or Puxi is the first decision. Pudong (eastern Shanghai) has the largest concentration of English-medium British schools — Dulwich Pudong, Harrow, Wellington, NAIS Pudong, Britannica — clustered around different residential expat zones. Puxi (western Shanghai) is served by Dulwich Puxi and BISS Puxi. Cross-river commutes for primary children are best avoided.
+        </p>
+
+        <p>
+          Pathway choice is the second. Most Shanghai British schools route students to the IB Diploma in sixth form. If you want A Levels specifically, the choice narrows to Harrow Shanghai or Britannica.
+        </p>
+
+        <p>
+          Mainland regulation is the third. International schools in China are typically restricted to foreign passport holders only, and that applies to most schools in the index. Confirm passport eligibility early in the admissions process.
+        </p>
+
+        <p>
+          For a full breakdown of every school, visit the <a href="/cities/shanghai">Shanghai city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/shanghai" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Shanghai City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

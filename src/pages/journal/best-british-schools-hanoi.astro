@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Hanoi — Journal" description="A guide to Hanoi's top-ranked British curriculum schools, covering fees, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/journal-hanoi.jpg"
+      alt="Hanoi cityscape from above"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Hanoi</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 4 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Hanoi's expat education market is dominated by a small number of premium international schools, most of them clustered around the gated residential developments east and west of the centre. One school in the city qualifies for the British Schools Asia index.
+        </p>
+
+        <p>
+          <a href="/schools/vietnam/hanoi/british-international-school-hanoi">British International School Hanoi (BIS Hanoi)</a> ranks first in the city. Founded in 2012 and operated by Nord Anglia Education, the school sits inside the Vinhomes Riverside development in Long Bien District, on the eastern bank of the Red River. Around 1,100 students from 31 nationalities are enrolled across Foundation through Year 13.
+        </p>
+
+        <p>
+          The school runs the English National Curriculum and International Primary Curriculum at primary level, IGCSE in Years 10–11, and the IB Diploma in Years 12–13. Families seeking A Levels in Hanoi will need to look outside the city — BIS does not offer that pathway.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          Year 3 tuition for 2026–27 is VND 715,500,000 — roughly USD 27,500 at current rates — placing Hanoi mid-pack on cost alongside Ho Chi Minh City and ahead of Kuala Lumpur. Notably, BIS fees are inclusive: school uniform, daily lunch, snacks for Early Years and Primary, learning materials, day trips, and mandatory secondary external examinations are all bundled. That is unusual in the region and worth factoring into any cross-city comparison.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          Location decides convenience. Vinhomes Riverside is the largest gated expat residential development in Hanoi, and BIS is built into it — many families live and school inside the same compound. Families based in Tay Ho (West Lake), the traditional expat heartland, face a 30–45 minute commute across the Red River, which can be punishing in monsoon season.
+        </p>
+
+        <p>
+          Curriculum continuity is the second consideration. If you are committed to A Levels through to university, BIS's IB-only sixth form may not fit. If the IB Diploma is your goal, the pathway is well-established and well-resourced.
+        </p>
+
+        <p>
+          For a full breakdown, visit the <a href="/cities/hanoi">Hanoi city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/hanoi" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Hanoi City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

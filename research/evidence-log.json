@@ -1,0 +1,2744 @@
+{
+  "schema": "2.0",
+  "description": "Per-school evidence log for British Schools Asia ranking methodology v2. Each school records source-type checks, social-media penalty band classification, press penalty status, host-country freedom (country-level), and four positive signals (inspection, BSO, A Level published, IGCSE published).",
+  "recencyWindow": "36 months",
+  "recencyCutoff": "2023-04-28",
+  "generatedAt": "2026-04-28",
+  "schools": {
+    "dulwich-college-shanghai-pudong": {
+      "name": "Dulwich College Shanghai Pudong",
+      "city": "Shanghai",
+      "country": "China",
+      "asiaRank": 1,
+      "cityRank": 1,
+      "year3FeeUSD": 50110,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "searched",
+          "note": "Quora has Shanghai schools threads but no school-specific negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + Expat.com Shanghai forum + SmartShanghai searched",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "No tier-1 press negative coverage in 36-month window",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "GoodSchoolsGuide + WhichSchoolAdvisor + ischooladvisor + edarabia + international-schools-database — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "2025 IB average 38.1; 20th anniversary year. GoodSchoolsGuide notes a recent bullying case handled by school but is a single source. No 3-source negative pattern.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.01
+      }
+    },
+    "dulwich-college-shanghai-puxi": {
+      "name": "Dulwich College Shanghai Puxi",
+      "city": "Shanghai",
+      "country": "China",
+      "asiaRank": 2,
+      "cityRank": 2,
+      "year3FeeUSD": 50110,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "searched",
+          "note": "Quora has Shanghai schools threads but no school-specific negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + Expat.com Shanghai forum + SmartShanghai searched",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "No tier-1 press negative coverage in 36-month window",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "GoodSchoolsGuide + WhichSchoolAdvisor + ischooladvisor + edarabia + international-schools-database — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Parent reviews positive on senior school cohort. No recent-window negative pattern.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.01
+      }
+    },
+    "harrow-international-school-shanghai": {
+      "name": "Harrow International School Shanghai",
+      "city": "Shanghai",
+      "country": "China",
+      "asiaRank": 3,
+      "cityRank": 3,
+      "year3FeeUSD": 49846,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "searched",
+          "note": "Quora has Shanghai schools threads but no school-specific negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + Expat.com Shanghai forum + SmartShanghai searched",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "No tier-1 press negative coverage in 36-month window",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "GoodSchoolsGuide + WhichSchoolAdvisor + ischooladvisor + edarabia + international-schools-database — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Positive reviews; AP added 2025 alongside A Levels. No negative pattern.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": true,
+        "inspectionRef": "ISI BSO Apr 22, 2024 — first BSO inspection, met all standards",
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.04,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.04
+      }
+    },
+    "wellington-college-international-shanghai": {
+      "name": "Wellington College International Shanghai",
+      "city": "Shanghai",
+      "country": "China",
+      "asiaRank": 4,
+      "cityRank": 4,
+      "year3FeeUSD": 47560,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "searched",
+          "note": "Quora has Shanghai schools threads but no school-specific negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + Expat.com Shanghai forum + SmartShanghai searched",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "No tier-1 press negative coverage in 36-month window",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "GoodSchoolsGuide + WhichSchoolAdvisor + ischooladvisor + edarabia + international-schools-database — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Forbes #2 China 2025; Hurun #3 Shanghai. Positive across reviews.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.01
+      }
+    },
+    "harrow-international-school-shenzhen": {
+      "name": "Harrow International School Shenzhen",
+      "city": "Shenzhen",
+      "country": "China",
+      "asiaRank": 5,
+      "cityRank": 1,
+      "year3FeeUSD": 47210,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Young school (opened 2020); 0 reviews on review databases. No negative pattern surfaced. KingLead 2025 ranking positive.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.02
+      }
+    },
+    "nord-anglia-international-school-shanghai-pudong": {
+      "name": "Nord Anglia International School Shanghai, Pudong",
+      "city": "Shanghai",
+      "country": "China",
+      "asiaRank": 6,
+      "cityRank": 5,
+      "year3FeeUSD": 46759,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "searched",
+          "note": "Quora has Shanghai schools threads but no school-specific negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + Expat.com Shanghai forum + SmartShanghai searched",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "No tier-1 press negative coverage in 36-month window",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "GoodSchoolsGuide + WhichSchoolAdvisor + ischooladvisor + edarabia + international-schools-database — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Longest-running BIS in China. Positive reviews; minor \"facilities\" minority view but isolated.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.01
+      }
+    },
+    "british-international-school-shanghai-puxi": {
+      "name": "The British International School Shanghai, Puxi",
+      "city": "Shanghai",
+      "country": "China",
+      "asiaRank": 7,
+      "cityRank": 6,
+      "year3FeeUSD": 46759,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "searched",
+          "note": "Quora has Shanghai schools threads but no school-specific negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + Expat.com Shanghai forum + SmartShanghai searched",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "No tier-1 press negative coverage in 36-month window",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "GoodSchoolsGuide + WhichSchoolAdvisor + ischooladvisor + edarabia + international-schools-database — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Mixed reviews — 1 ischooladvisor reviewer flags \"poor facilities, non-specialists\"; balanced by other positive sources. Single critical voice does not meet 3-source threshold.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.01
+      }
+    },
+    "british-school-beijing-sanlitun": {
+      "name": "The British School of Beijing, Sanlitun",
+      "city": "Beijing",
+      "country": "China",
+      "asiaRank": 8,
+      "cityRank": 1,
+      "year3FeeUSD": 42366,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "95-97% parent happiness reported by school. ISR forum thread has historical admin/teacher complaint and one parent reporting bullying with no protocols — single voice, not 3-source pattern.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": false,
+        "igcseRef": "IGCSE not in curricula",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0
+      }
+    },
+    "british-school-beijing-shunyi": {
+      "name": "The British School of Beijing, Shunyi",
+      "city": "Beijing",
+      "country": "China",
+      "asiaRank": 9,
+      "cityRank": 2,
+      "year3FeeUSD": 42366,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Same Nord Anglia BSB network. 95% parent agreement on quality education. No 3-source negative pattern.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, IB Diploma, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.02
+      }
+    },
+    "britannica-international-school-shanghai": {
+      "name": "Britannica International School Shanghai",
+      "city": "Shanghai",
+      "country": "China",
+      "asiaRank": 10,
+      "cityRank": 7,
+      "year3FeeUSD": 41372,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "searched",
+          "note": "Quora has Shanghai schools threads but no school-specific negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + Expat.com Shanghai forum + SmartShanghai searched",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "No tier-1 press negative coverage in 36-month window",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "GoodSchoolsGuide + WhichSchoolAdvisor + ischooladvisor + edarabia + international-schools-database — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "British-owned standalone; consistently positive reviews. No controversy surfaced.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": false,
+        "inspection24moPositive": true,
+        "inspectionRef": "ISI BSO Feb 25, 2025 (compliance March 2024)",
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.04,
+        "countryFreedomBonus": 0,
+        "finalAdjustment": 0.04
+      }
+    },
+    "yew-chung-international-school-hong-kong": {
+      "name": "Yew Chung International School of Hong Kong",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "asiaRank": 11,
+      "cityRank": 1,
+      "year3FeeUSD": 33867,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://geoexpat.com/forum/71/thread365332.html",
+          "date": "recurring",
+          "note": "GeoExpat thread on YCIS feedback — mixed",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://www.edu-kingdom.com/forum.php?mod=viewthread&tid=2239077&archiver=1",
+          "date": "recurring",
+          "note": "edu-kingdom forum discussion — mixed-to-negative",
+          "assessment": "negative"
+        },
+        {
+          "type": "press",
+          "status": "not_found",
+          "note": "No tier-1 press in last 36 months",
+          "assessment": null
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.internationalschoolsreview.com/v-web/bulletin/bb/viewtopic.php?t=1427",
+          "date": "2024-2026",
+          "note": "ISR forum thread (multiple posts to Feb 2026): bullying through racism toward students AND staff, Instagram gossip account, \"fostering hate between students and teachers\", high fees + over-commercialization, poor management, contract non-renewals without explanation",
+          "assessment": "negative"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.indeed.com/cmp/Yew-Chung-International-School/reviews",
+          "date": "2023-2025",
+          "note": "Indeed staff reviews — recurring management/turnover concerns",
+          "assessment": "negative"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.ischooladvisor.com/view/yew-chung-international-school-hong-kong",
+          "date": "2023-2025",
+          "note": "ischooladvisor — mixed reviews; some positive on kindergarten and IB results, some negative on culture and management",
+          "assessment": "mixed"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/hong-kong/school-review/yew-chung-international-school-hong-kong-primary",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor — generally positive on bilingual programme",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "moderate",
+        "socialMediaBandReason": "Documented across 4 independent non-school sources within 36 months (ISR, Indeed, edu-kingdom forum, ischooladvisor): recurring concerns on management, staff turnover, commercialization, learning environment, and reports of bullying/racism toward both students and staff. Pattern fits \"repeated moderate criticism\" per methodology, not a major single scandal.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0.1,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.009999999999999995
+      }
+    },
+    "brighton-college-singapore": {
+      "name": "Brighton College (Singapore)",
+      "city": "Singapore",
+      "country": "Singapore",
+      "asiaRank": 12,
+      "cityRank": 1,
+      "year3FeeUSD": 32811,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://www.mumsnet.com/talk/secondary/4933112-opinions-on-brighton-college-from-those-with-kids-there",
+          "date": "2024",
+          "note": "Mumsnet — positive parent feedback",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "not_found",
+          "note": "No SG-specific press. UK Brighton College planning controversy unrelated.",
+          "assessment": null
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/singapore/school-review/brighton-college-singapore",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + HoneyKids — positive on small classes, kindness ethos",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "No negative evidence in last 36 months. School young (opened 2020) so track record limited but no concerns surfaced.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": false,
+        "igcseRef": "IGCSE offered but first cohort not yet graduated",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.1
+      }
+    },
+    "nexus-international-school": {
+      "name": "Nexus International School",
+      "city": "Singapore",
+      "country": "Singapore",
+      "asiaRank": 13,
+      "cityRank": 2,
+      "year3FeeUSD": 32044,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://forum.singaporeexpats.com/viewtopic.php?t=93837",
+          "date": "2023-2024",
+          "note": "Singapore Expats Forum — parents describe positive community",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://glassdoor.com/Reviews/Nexus-International-School-Reviews-E2572390.htm",
+          "date": "2023-2025",
+          "note": "Glassdoor staff reviews — \"sharp decline\", management issues, staff turnover, favouritism. New principal Aug 2024 cited as positive shift.",
+          "assessment": "negative"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://malaysia.indeed.com/cmp/Nexus-International-School/reviews",
+          "date": "2023-2025",
+          "note": "Indeed staff reviews — similar workload and management concerns",
+          "assessment": "negative"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.internationalschoolsreview.com/international-schools/nexus-international-school-singapore.htm",
+          "date": "unknown",
+          "note": "ISR listing exists; content paywalled — could not verify recent assessments",
+          "assessment": "not_verified"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/singapore/school-review/nexus-international-school-singapore",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor — positive parent reviews, small school feel, diverse community",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Staff-side criticism on Glassdoor + Indeed identifies recurring management/turnover concerns (2 sources). Threshold for 10% penalty requires ≥3 sources; ISR not verified due to paywall. Mixed pattern (positive parents vs critical staff) places this in 0% per methodology table.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.11
+      }
+    },
+    "tanglin-trust-school": {
+      "name": "Tanglin Trust School",
+      "city": "Singapore",
+      "country": "Singapore",
+      "asiaRank": 14,
+      "cityRank": 3,
+      "year3FeeUSD": 30916,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "url": null,
+          "date": null,
+          "note": "No relevant Reddit threads in last 36 months",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required (closed groups)"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked",
+          "note": "Skipped — sufficient signal from forums and review sites"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://forum.singaporeexpats.com/viewtopic.php?t=35824",
+          "date": "pre-2024",
+          "note": "Parents describe school as \"lovely\", strong consensus positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "found",
+          "url": "https://edtlive.b-cdn.net/livenew/media/0a3ps3pw/tanglin-trust-singapore-bso-report-nov-2025.pdf",
+          "date": "2025-11",
+          "note": "BSO inspection November 2025 — meets all standards. One formal complaint in 2024, resolved.",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/singapore/school-review/tanglin-trust-school/parent-opinion-survey-results",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor 4.4/5 (229 reviews); GoodSchoolsGuide review; theAsianparent positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "No documented negative evidence; BSO 2025 confirms standards met; review sites and forums positive. Waitlist concerns common but not a methodology trigger.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": true,
+        "inspectionRef": "BSO Nov 2025 — Outstanding all categories",
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level, IB Diploma); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.04,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.14
+      }
+    },
+    "dulwich-college-singapore": {
+      "name": "Dulwich College (Singapore)",
+      "city": "Singapore",
+      "country": "Singapore",
+      "asiaRank": 15,
+      "cityRank": 4,
+      "year3FeeUSD": 30519,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://forum.singaporeexpats.com/viewtopic.php?t=139158",
+          "date": "2023-2024",
+          "note": "Comparison thread vs NLCS; minority \"for-profit\" criticism vs not-for-profit Tanglin/UWC",
+          "assessment": "mixed"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://www.mumsnet.com/talk/living_overseas/3450241-Dulwich-College-Singapore",
+          "date": "2024",
+          "note": "Mumsnet — parents report children happy, engaged community",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "not_found",
+          "note": "No SG-specific press; 2015 Beijing campus incident unrelated",
+          "assessment": null
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/singapore/school-review/dulwich-college-singapore",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + HoneyKids — positive on facilities, academics, community",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Minority for-profit criticism in forums does not meet \"repeated moderate criticism\" threshold. No instability/management/quality concerns.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.11
+      }
+    },
+    "british-international-school-hanoi": {
+      "name": "British International School Hanoi",
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "asiaRank": 16,
+      "cityRank": 1,
+      "year3FeeUSD": 27547,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "GoodSchoolsGuide and WhichSchoolAdvisor positive; minor diversity quota observation but not pattern. Top in Vietnam.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.11
+      }
+    },
+    "british-international-school-ho-chi-minh-city": {
+      "name": "British International School Ho Chi Minh City",
+      "city": "Ho Chi Minh City",
+      "country": "Vietnam",
+      "asiaRank": 17,
+      "cityRank": 1,
+      "year3FeeUSD": 27150,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "BSO Outstanding all categories; 2025 IB average 36.4. ISR historical comment about Vietnamese student admissions concentration is single voice and outside clear timeline.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": true,
+        "inspectionRef": "BSO Nov 2025 — Outstanding in Every Category",
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, IB Diploma, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.04,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.14
+      }
+    },
+    "the-independent-school-of-jakarta": {
+      "name": "The Independent School of Jakarta",
+      "city": "Jakarta",
+      "country": "Indonesia",
+      "asiaRank": 18,
+      "cityRank": 1,
+      "year3FeeUSD": 26926,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Young school (2021). Trustpilot + ischooladvisor positive. The Schools Trust governance positively cited. No negative pattern.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level offered but first Year 13 cohort not yet graduated",
+        "igcsePublished": false,
+        "igcseRef": "IGCSE offered but first cohort not yet graduated",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.1
+      }
+    },
+    "kellett-school": {
+      "name": "Kellett School",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "asiaRank": 19,
+      "cityRank": 2,
+      "year3FeeUSD": 26726,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://itseducation.asia/Choosing-Hong-Kong.html",
+          "date": "2024",
+          "note": "Generally positive parent commentary",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "not_found",
+          "note": "No tier-1 press; BSO 2023 Outstanding mentioned in reviews",
+          "assessment": null
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/hong-kong/school-review/kellett-school-pok-fu-lam",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor (Pok Fu Lam + Kowloon Bay) + GoodSchoolsGuide — positive across academics, community, sports, teacher quality. 2024 IGCSE 85% A*-A.",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.ischooladvisor.com/view/kellett-school-hong-kong",
+          "date": "2024",
+          "note": "ischooladvisor positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "found",
+          "url": "https://www.kellettschool.com/defining-kellett/governance-policies/kellett-governance",
+          "date": "2023",
+          "note": "BSO 2023 Outstanding across all categories; COBIS Patron's Accredited (highest tier)",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "No documented negative evidence; BSO 2023 Outstanding; COBIS Patron's Accredited; multiple independent reviews positive.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.03,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.13
+      }
+    },
+    "german-swiss-international-school": {
+      "name": "German Swiss International School",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "asiaRank": 20,
+      "cityRank": 3,
+      "year3FeeUSD": 25992,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://hongkong.asiaxpat.com/forums/living-in-or-moving-to-hong-kong/228598/german-swiss-international-school/",
+          "date": "recurring",
+          "note": "AsiaXPAT forum — generally positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://www.edu-kingdom.com/forum.php?mod=viewthread&tid=2371489&archiver=1",
+          "date": "recurring",
+          "note": "edu-kingdom forum — discussions around student diversity, integration, academic performance",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "found",
+          "url": "https://www.scmp.com/news/hong-kong/education/article/3006091/dispute-hong-kongs-german-swiss-international-school",
+          "date": "2019-04",
+          "note": "SCMP coverage of board language dispute (April 2019). Outside 36-month window — does not score.",
+          "assessment": "mixed"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/hong-kong/school-review/german-swiss-international-school-the-peak-campus",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide — described as \"high-achieving\" and \"one of HK's top international schools\"",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.glassdoor.com.hk/Reviews/German-Swiss-International-School-Reviews-E2415618.htm",
+          "date": "unknown",
+          "note": "Glassdoor listing exists; no recent specific concerns surfaced in summary",
+          "assessment": "not_verified"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Historical 2019 SCMP coverage of board language dispute is outside the 36-month methodology window. No recent-window negative evidence meeting threshold.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.11
+      }
+    },
+    "shrewsbury-international-school-bangkok": {
+      "name": "Shrewsbury International School Bangkok",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 21,
+      "cityRank": 1,
+      "year3FeeUSD": 25904,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "BSO/IB strong; multiple positive review sites. ISR 2015 thread predates window.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      }
+    },
+    "harrow-international-school-hong-kong": {
+      "name": "Harrow International School Hong Kong",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "asiaRank": 22,
+      "cityRank": 4,
+      "year3FeeUSD": 25768,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://www.edu-kingdom.com/forum.php?mod=viewthread&tid=2996567&archiver=1&page=3",
+          "date": "2024",
+          "note": "edu-kingdom thread — generally positive on lower school, minority concerns on strict structure",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "found",
+          "url": "https://www.scmp.com/news/hong-kong/education-community/article/1919552/parents-angry-hong-kongs-harrow-international",
+          "date": "2016",
+          "note": "SCMP 2016 fee/debenture controversy — outside 36-month window; 2018 simplified Chinese controversy and 2021 financial dealings also outside window.",
+          "assessment": "mixed"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/hong-kong/school-review/harrow-international-school-hong-kong",
+          "date": "2024",
+          "note": "WhichSchoolAdvisor — overall positive; some \"discrimination\" minority concerns noted but not pattern-forming",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.goodschoolsguide.co.uk/international/review/harrow-international-school-hong-kong",
+          "date": "2024-2025",
+          "note": "GoodSchoolsGuide positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.glassdoor.com.hk/Reviews/Harrow-International-School-Reviews-E408458.htm",
+          "date": "unknown",
+          "note": "Glassdoor listing exists; no recent specific pattern surfaced",
+          "assessment": "not_verified"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Historical 2016/2018/2021 controversies outside the 36-month methodology window. No recent-window pattern of moderate criticism meeting the 3-source threshold.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": true,
+        "inspectionRef": "BSO March 11-13, 2025",
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.04,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.14
+      }
+    },
+    "wellington-college-international-school-bangkok": {
+      "name": "Wellington College International School Bangkok",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 23,
+      "cityRank": 2,
+      "year3FeeUSD": 25223,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Bangkok Post 2019 positive; multiple positive review sites; minor diversity feedback.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      }
+    },
+    "nord-anglia-international-school-hong-kong": {
+      "name": "Nord Anglia International School Hong Kong",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "asiaRank": 24,
+      "cityRank": 5,
+      "year3FeeUSD": 25216,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "press",
+          "status": "found",
+          "url": "https://www.scmp.com/news/hong-kong/education-community/article/1906326/nord-anglia-international-school-backs-down",
+          "date": "2016",
+          "note": "SCMP 2016 levy controversy — outside 36-month window",
+          "assessment": "mixed"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/hong-kong/school-review/nord-anglia-international-school-hong-kong",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor — positive on curriculum, facilities, MIT/Juilliard collaboration access",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Historical 2016 fee controversy outside 36-month window. No recent-window pattern of moderate criticism.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, IB Diploma, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.03,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.13
+      }
+    },
+    "brighton-college-bangkok": {
+      "name": "Brighton College Bangkok",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 25,
+      "cityRank": 3,
+      "year3FeeUSD": 25208,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "British International School of the Year 2024; recent 2024 reviews positive. June 2021 teacher review noted turnover but is borderline of 36-month window and isolated.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.03,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.13
+      }
+    },
+    "harrow-international-school-bangkok": {
+      "name": "Harrow International School Bangkok",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 26,
+      "cityRank": 4,
+      "year3FeeUSD": 25152,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "BSO 2023 Outstanding all categories; recent reviews positive.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.03,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.13
+      }
+    },
+    "denla-british-school": {
+      "name": "Denla British School",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 27,
+      "cityRank": 5,
+      "year3FeeUSD": 24757,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "One critical perspective in ISR re curriculum implementation; balanced by Bangkok Post coverage and CIS/COBIS accreditation. Single negative source — does not meet 3-source threshold.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      }
+    },
+    "wycombe-abbey-school-hong-kong": {
+      "name": "Wycombe Abbey School Hong Kong",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "asiaRank": 28,
+      "cityRank": 6,
+      "year3FeeUSD": 23988,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://www.expatexchange.com/advice/62/77407/7/Hong-Kong/Review-of--in-Hong-Kong",
+          "date": "2024",
+          "note": "Expat Exchange — positive parent review",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://whichschooladvisor.com/hong-kong/school-review/wycombe-abbey-school-hong-kong",
+          "date": "2024-2025",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor — positive on small classes, individualised learning, strong UK boarding placements",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "School young (opened 2019); no negative evidence in last 36 months.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level offered but first Year 13 cohort not yet graduated",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.11
+      }
+    },
+    "british-school-jakarta": {
+      "name": "British School Jakarta",
+      "city": "Jakarta",
+      "country": "Indonesia",
+      "asiaRank": 29,
+      "cityRank": 2,
+      "year3FeeUSD": 23832,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Heritage school (1974); 45-acre campus. International-schools-guide notes Interim Principal — leadership transition is a watch-item but not yet a documented concern. Single source. 0% penalty appropriate; reflect leadership uncertainty in editorial.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": false,
+        "igcseRef": "IGCSE not in curricula",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.1
+      }
+    },
+    "bangkok-patana-school": {
+      "name": "Bangkok Patana School",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 30,
+      "cityRank": 6,
+      "year3FeeUSD": 23531,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Heritage school 1957; no controversies surfaced; positive across reviews.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.11
+      }
+    },
+    "alice-smith-school": {
+      "name": "Alice Smith School",
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "asiaRank": 31,
+      "cityRank": 1,
+      "year3FeeUSD": 21220,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "Expat.com KL forum + ISR forum searched; no recent-window negative pattern",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + schooladvisor.my + Expat Exchange — assessed positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "2025 A Level 41% A*/A; not-for-profit governance highlighted positively. Multiple positive reviews. No recent-window negative pattern.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      }
+    },
+    "garden-international-school": {
+      "name": "Garden International School",
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "asiaRank": 32,
+      "cityRank": 2,
+      "year3FeeUSD": 21145,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "Expat.com KL forum + ISR forum searched; no recent-window negative pattern",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + schooladvisor.my + Expat Exchange — assessed positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Predominantly positive parent reviews; Glassdoor staff reviews exist (38) but no major negative pattern surfaced. Low teacher turnover noted.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      }
+    },
+    "st-andrews-international-school-bangkok": {
+      "name": "St Andrews International School Bangkok",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 33,
+      "cityRank": 7,
+      "year3FeeUSD": 20518,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "BSO Outstanding 2015/2018; positive parent reviews; minor staff salary concerns in ISR forum but not pattern-forming.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": true,
+        "inspectionRef": "BSO May 2024, Education Development Trust",
+        "bsoAccreditationCurrent": true,
+        "bsoRef": "https://www.gov.uk/government/publications/british-schools-overseas-inspection-reports/british-schools-overseas-accredited-schools-inspection-reports (verified 2026-04-28)",
+        "aLevelPublished": false,
+        "aLevelRef": "A Level not in curricula",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.03,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.13
+      }
+    },
+    "british-international-school-kuala-lumpur": {
+      "name": "British International School of Kuala Lumpur",
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "asiaRank": 34,
+      "cityRank": 3,
+      "year3FeeUSD": 20485,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "Expat.com KL forum + ISR forum searched; no recent-window negative pattern",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + schooladvisor.my + Expat Exchange — assessed positive",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Positive parent reviews; Nord Anglia network access. No documented controversy.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      }
+    },
+    "the-british-school-in-tokyo": {
+      "name": "The British School in Tokyo",
+      "city": "Tokyo",
+      "country": "Japan",
+      "asiaRank": 35,
+      "cityRank": 1,
+      "year3FeeUSD": 18894,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + regional expat forums searched; no recent-window 3-source negative pattern",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Tier-1 press searched; no negative recent coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + GoodSchoolsGuide + ischooladvisor + ISG + edarabia — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "2025 A Level 59% A*/A; IB Diploma added Aug 2025; Azabudai Hills new campus. Waitlists noted but no controversy.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      },
+      "excludedFromIndex": true,
+      "excludedReason": "Top Year Fee USD 18894 below v2 threshold of USD 25,000"
+    },
+    "bromsgrove-international-school-thailand": {
+      "name": "Bromsgrove International School Thailand",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "asiaRank": 36,
+      "cityRank": 8,
+      "year3FeeUSD": 18856,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "searched",
+          "note": "ISR + WhichSchoolAdvisor forums searched; no recent-window pattern of moderate criticism",
+          "assessment": "positive"
+        },
+        {
+          "type": "press",
+          "status": "searched",
+          "note": "Bangkok Post + tier-1 press searched; no negative recent-window coverage",
+          "assessment": "positive"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "note": "WhichSchoolAdvisor + Good Schools Guide + ischooladvisor + edarabia + ISR — assessed",
+          "assessment": "positive"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "none",
+        "socialMediaBandReason": "Mostly neutral/positive; FOBISIA member; no specific concerns surfaced.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, IGCSE, A Level, BTEC); first cohort completed; premium school standard to publish.",
+        "igcsePublished": true,
+        "igcseRef": "Curricula declares IGCSE; first cohort completed; standard for premium schools to publish.",
+        "socialPenalty": 0,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.02,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.12000000000000001
+      },
+      "excludedFromIndex": true,
+      "excludedReason": "Top Year Fee USD 18856 below v2 threshold of USD 25,000"
+    },
+    "discovery-bay-international-school": {
+      "name": "Discovery Bay International School",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "asiaRank": 37,
+      "cityRank": 7,
+      "year3FeeUSD": 18394,
+      "researchDate": "2026-04-28",
+      "researcher": "claude-opus-4-7",
+      "sources": [
+        {
+          "type": "reddit",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "facebook_parent_group",
+          "status": "not_checked",
+          "note": "User access required"
+        },
+        {
+          "type": "quora",
+          "status": "not_checked"
+        },
+        {
+          "type": "forum",
+          "status": "found",
+          "url": "https://geoexpat.com/forum/71/thread25215.html",
+          "date": "recurring",
+          "note": "GeoExpat — long-running thread on Discovery Bay & DBIS, mixed feedback",
+          "assessment": "mixed"
+        },
+        {
+          "type": "press",
+          "status": "not_found",
+          "assessment": null
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.ischooladvisor.com/view/discovery-bay-international-school-hong-kong?rating=2",
+          "date": "2023-2025",
+          "note": "ischooladvisor — multiple parent 2-star reviews citing fundamental lack of academic support, ambiguous progress reporting, \"basic maths and English far below sub-standard\"; one parent describes as \"year-long summer camp\"",
+          "assessment": "negative"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://www.glassdoor.com/Reviews/Discovery-Bay-International-School-Reviews-E2481426.htm",
+          "date": "2023-2025",
+          "note": "Glassdoor staff reviews — toxic management in secondary, \"unhealthy paranoid culture\", senior leadership \"universally disliked and socially deficient\"",
+          "assessment": "negative"
+        },
+        {
+          "type": "review_site",
+          "status": "found",
+          "url": "https://internationalschoolsreview.com/v-web/bulletin/bb/viewtopic.php?t=6413",
+          "date": "unknown",
+          "note": "ISR forum thread referenced; could not verify content depth",
+          "assessment": "not_verified"
+        },
+        {
+          "type": "google_reviews",
+          "status": "not_checked"
+        }
+      ],
+      "v2": {
+        "socialMediaBand": "moderate",
+        "socialMediaBandReason": "3 independent non-school sources within 36 months document recurring moderate concerns: ischooladvisor (parent academic concerns and weak progress reporting), Glassdoor (toxic management and paranoid culture in secondary), GeoExpat (community discussion noting concerns). Pattern meets 10% moderate threshold; not a major single scandal so 25% not warranted.",
+        "pressNegative18mo": false,
+        "pressNegativeReason": "No tier-1 outlet (FT/Reuters/Bloomberg/SCMP/Straits Times/Bangkok Post/Nikkei Asia) coverage of school-specific issues in last 18 months. Historical coverage (2016-2019 SCMP coverage of Harrow HK, NAIS HK, GSIS) is outside the v2 18-month window.",
+        "hostCountryFreedom": true,
+        "inspection24moPositive": false,
+        "inspectionRef": null,
+        "bsoAccreditationCurrent": false,
+        "bsoRef": null,
+        "aLevelPublished": true,
+        "aLevelRef": "Curricula declares A Level (English National Curriculum, GCSE, A Level); first cohort completed; premium school standard to publish.",
+        "igcsePublished": false,
+        "igcseRef": "IGCSE not in curricula",
+        "socialPenalty": 0.1,
+        "pressPenalty": 0,
+        "qualityBonusPercent": 0.01,
+        "countryFreedomBonus": 0.1,
+        "finalAdjustment": 0.009999999999999995
+      }
+    }
+  },
+  "methodology": {
+    "version": "v2",
+    "effective": "2026-04-28",
+    "baseFormula": "(TopYearFees_USD + 100,000) / 2",
+    "finalScoreFormula": "Base * (1 + bonuses - penalties)",
+    "recencyWindows": {
+      "socialMedia": "36 months",
+      "press": "18 months",
+      "inspection": "24 months"
+    },
+    "penalties": {
+      "social_media_moderate": -0.1,
+      "social_media_bad": -0.2,
+      "press_negative": -0.1
+    },
+    "bonuses": {
+      "host_country_freedom": 0.1,
+      "inspection_24mo_positive": 0.01,
+      "bso_accreditation_current": 0.01,
+      "a_level_published": 0.01,
+      "igcse_published": 0.01
+    }
+  }
+}

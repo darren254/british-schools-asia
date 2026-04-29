@@ -1,0 +1,57 @@
+name: News — daily
+
+on:
+  schedule:
+    # 01:00 UTC daily = 09:00 SGT / 08:00 BKK / 09:00 HKT
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run news pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/news-pipeline.mjs
+
+      - name: Commit new articles
+        id: commit
+        run: |
+          git config user.name "British Schools Asia bot"
+          git config user.email "bot@britishschoolsasia.com"
+          git add src/data/news/ research/news-seen.json
+          if git diff --cached --quiet; then
+            echo "No changes — exiting cleanly."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "news: daily pipeline run $(date -u +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build site
+        if: steps.commit.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler@latest pages deploy dist --project-name british-schools-asia --branch main

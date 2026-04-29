@@ -31,7 +31,7 @@ const rankedSchools = [...schools].sort((a, b) => a.asiaRank - b.asiaRank);
               <th class="label py-3 pr-4">School</th>
               <th class="label py-3 pr-4 hidden sm:table-cell">City</th>
               <th class="label py-3 pr-4 hidden md:table-cell">Curricula</th>
-              <th class="label py-3 text-right">Fees From</th>
+              <th class="label py-3 text-right">Top Year Fees</th>
             </tr>
           </thead>
           <tbody>
@@ -46,7 +46,7 @@ const rankedSchools = [...schools].sort((a, b) => a.asiaRank - b.asiaRank);
                 </td>
                 <td class="py-5 pr-4 font-body text-sm text-black/60 hidden sm:table-cell">{school.city}</td>
                 <td class="py-5 pr-4 font-body text-sm text-black/60 hidden md:table-cell">{school.curricula.join(', ')}</td>
-                <td class="py-5 font-body text-sm text-right whitespace-nowrap">{school.feeSummaryUSD.replace('Fees from ', '')}</td>
+                <td class="py-5 font-body text-sm text-right whitespace-nowrap">USD {school.topYearFeeUSD.toLocaleString('en-US')}</td>
               </tr>
             ))}
           </tbody>

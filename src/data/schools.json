@@ -20,11 +20,7 @@
     "feeSummary": "Fees from RMB 342,100 per year",
     "feeSummaryUSD": "Fees from USD 47,210 per year",
     "feeCurrency": "CNY",
-    "year3Fee": 342100,
-    "year3FeeUSD": 47210,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 47210,
-    "asiaRank": 1,
+    "asiaRank": 15,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/harrow-shenzhen-campus.jpg",
@@ -62,7 +58,15 @@
       "https://www.harrowshenzhen.cn/admissions/fees/",
       "https://uk.linkedin.com/company/harrow-shenzhen",
       "https://www.sz.gov.cn/en_szgov/life/education/international/content/post_9927247.html"
-    ]
+    ],
+    "topYearFeeUSD": 47858,
+    "baseScore": 73929,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.02,
+    "finalScore": 75408
   },
   {
     "name": "The British School of Beijing, Sanlitun",
@@ -83,12 +87,8 @@
     "feeSummary": "Fees from RMB 307,000 per year",
     "feeSummaryUSD": "Fees from USD 42,366 per year",
     "feeCurrency": "CNY",
-    "year3Fee": 307000,
-    "year3FeeUSD": 42366,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 42366,
-    "asiaRank": 2,
-    "cityRank": 1,
+    "asiaRank": 26,
+    "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/bsb-sanlitun-campus.jpg",
     "overview": "The British School of Beijing, Sanlitun is a co-educational day school for students from age 1 through Year 6 (ages 1–11), located at No. 5 Sanlitun Road in the Chaoyang District of Beijing. It is operated by Nord Anglia Education and opened in 2009. The school is a primary-only campus, accommodating approximately 700 students. Families wishing to continue through secondary education typically transfer to the Shunyi campus.\n\nThe school follows the English National Curriculum throughout, delivered in line with the English Early Years Foundation Stage (EYFS) from Nursery through Reception, and progressing through Key Stages 1 and 2. Annual tuition fees for Year 3 in the 2025–26 academic year are RMB 307,000 (an early-bird discount reduces this to RMB 297,790 if the full year fee is paid in advance). Fees are listed in RMB and payments in foreign currency are converted at the Bank of China middle rate at the time of payment.",
@@ -124,7 +124,15 @@
     "sources": [
       "https://www.nordangliaeducation.com/bsb-sanlitun/-/media/bsb-sanlitun/pdf/2025-26/bsb-sanlitun-2025-26-tuition-fees.pdf",
       "https://www.nordangliaeducation.com/bsb-sanlitun/admissions/tuition-fees"
-    ]
+    ],
+    "topYearFeeUSD": 42973,
+    "baseScore": 71487,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0,
+    "totalAdjustment": 0,
+    "finalScore": 71487
   },
   {
     "name": "The British School of Beijing, Shunyi",
@@ -139,7 +147,8 @@
     "curricula": [
       "English National Curriculum",
       "IGCSE",
-      "IB Diploma"
+      "IB Diploma",
+      "A Level"
     ],
     "founded": 2003,
     "roll": 1500,
@@ -147,12 +156,8 @@
     "feeSummary": "Fees from RMB 307,000 per year",
     "feeSummaryUSD": "Fees from USD 42,366 per year",
     "feeCurrency": "CNY",
-    "year3Fee": 307000,
-    "year3FeeUSD": 42366,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 42366,
-    "asiaRank": 3,
-    "cityRank": 2,
+    "asiaRank": 22,
+    "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/bsb-shunyi-campus.jpg",
     "overview": "The British School of Beijing, Shunyi is a co-educational day school operated by Nord Anglia Education, located in the Shunyi District of Beijing near the Capital International Airport. Opened in 2003, it is the larger and older of the two British School of Beijing campuses, accommodating approximately 1,500 students from Pre-Nursery through Year 13 (ages 2–18). The school serves a significant proportion of diplomatic and corporate expatriate families based in the Shunyi area.\n\nThe Shunyi campus follows the English National Curriculum throughout primary years, transitioning to IGCSE in secondary and offering either the IB Diploma Programme or A Levels in the Sixth Form. Annual tuition fees for Year 3 in the 2025–26 academic year are RMB 307,000, identical to those at the Sanlitun campus. Fees are published annually in advance and payable in RMB. An optional school bus service is available at additional cost depending on distance from school.",
@@ -188,7 +193,15 @@
     "sources": [
       "https://www.nordangliaeducation.com/bsb-shunyi/-/media/bsb-shunyi/admissions/bsb-shunyi-fees-and-bank-details-2025-26.pdf",
       "https://www.nordangliaeducation.com/bsb-shunyi/admissions/tuition-fees"
-    ]
+    ],
+    "topYearFeeUSD": 42973,
+    "baseScore": 71487,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.02,
+    "finalScore": 72916
   },
   {
     "name": "Britannica International School Shanghai",
@@ -211,12 +224,8 @@
     "feeSummary": "Fees from RMB 299,800 per year",
     "feeSummaryUSD": "Fees from USD 41,372 per year",
     "feeCurrency": "CNY",
-    "year3Fee": 299800,
-    "year3FeeUSD": 41372,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 41372,
-    "asiaRank": 4,
-    "cityRank": 1,
+    "asiaRank": 19,
+    "cityRank": 7,
     "hasEditorial": false,
     "heroImage": "/images/britannica-shanghai-campus.jpg",
     "overview": "Britannica International School Shanghai is a co-educational British international day school established in 2013 by Orbital Education, and is located at No. 1988 Gubei Road in the Minhang District of Shanghai. The school serves students from Early Years through Year 13 (ages 2–18) and has approximately 410 students enrolled. It is one of a small number of schools in Shanghai that explicitly follows the English National Curriculum throughout all year groups.\n\nStudents in secondary years sit IGCSE and progress to A Levels, with no International Baccalaureate track offered. The school's location in the Gubei area of Minhang District makes it accessible to families living in the Former French Concession, Jing'an, Zhongshan Park and Gubei neighbourhoods. Annual tuition fees for the 2024–25 academic year were RMB 299,800 for Year 3; fees for 2025–26 are expected to be similar, subject to annual review. The school's relatively small size reflects the limited demand for a pure English National Curriculum offering in Shanghai's competitive international school market.",
@@ -238,7 +247,15 @@
       "https://www.britannicashanghai.com/admissions/fees",
       "https://en.namu.wiki/w/Britannica%20International%20School%20Shanghai",
       "https://www.schrole.com/schools/britannica-international-school-shanghai/"
-    ]
+    ],
+    "topYearFeeUSD": 41372,
+    "baseScore": 70686,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.04,
+    "totalAdjustment": 0.04,
+    "finalScore": 73513
   },
   {
     "name": "Brighton College (Singapore)",
@@ -260,15 +277,11 @@
     "feeSummary": "Fees from SGD 34,740 per year",
     "feeSummaryUSD": "Fees from USD 27,012 per year",
     "feeCurrency": "SGD",
-    "year3Fee": 42186,
-    "year3FeeUSD": 32811,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 32811,
-    "asiaRank": 5,
-    "cityRank": 1,
+    "asiaRank": 9,
+    "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/brighton-college-campus.jpg",
-    "overview": "Brighton College (Singapore) is a co-educational day school offering the English National Curriculum, operated by Cognita under the Brighton College UK brand. The Singapore campus opened in August 2020 at the Early Learning Village in Serangoon. The school currently serves approximately 504 students from Pre-Nursery through Year 10, with Year 11 opening in August 2026. IGCSE first examinations are expected in 2027, with Sixth Form to follow.",
+    "overview": "Brighton College (Singapore) is a co-educational day school offering the English National Curriculum, operated by Cognita under the Brighton College UK brand. The Singapore campus opened in August 2020 at the Early Learning Village in Serangoon.\n\nThe school currently serves approximately 504 students from Pre-Nursery through Year 10, with Year 11 opening in August 2026. IGCSE first examinations are expected in 2027, with Sixth Form to follow.",
     "editorial": null,
     "fees": [
       {
@@ -308,7 +321,15 @@
       "context": "Located in the Early Learning Village (ELV), a shared campus facility near Lorong Chuan MRT on the Circle Line. The campus includes shared sports fields, pools, a 300-seat theatre, and a 25m swimming pool. Brighton College occupies its own dedicated teaching spaces within the ELV complex."
     },
     "waitlistNote": null,
-    "sources": []
+    "sources": [],
+    "topYearFeeUSD": 41865,
+    "baseScore": 70933,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0,
+    "totalAdjustment": 0.1,
+    "finalScore": 78026
   },
   {
     "name": "Nexus International School",
@@ -332,15 +353,11 @@
     "feeSummary": "Fees from SGD 32,400 per year",
     "feeSummaryUSD": "Fees from USD 25,197 per year",
     "feeCurrency": "SGD",
-    "year3Fee": 41200,
-    "year3FeeUSD": 32044,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 32044,
-    "asiaRank": 6,
-    "cityRank": 2,
+    "asiaRank": 11,
+    "cityRank": 4,
     "hasEditorial": false,
     "heroImage": "/images/nexus-international-campus.jpg",
-    "overview": "Nexus International School is a co-educational day school in central Singapore, owned by Malaysia's Taylor's Education Group. The school opened in 2011 and operates from a purpose-built 12-storey campus in Aljunied. It serves approximately 1,500 students from over 60 nationalities, from Nursery through Year 13. The school follows the IB Primary Years Programme and Middle Years Programme before transitioning to IGCSEs and the IB Diploma in Sixth Form.",
+    "overview": "Nexus International School is a co-educational day school in central Singapore, owned by Malaysia's Taylor's Education Group. The school opened in 2011 and operates from a purpose-built 12-storey campus in Aljunied.\n\nIt serves approximately 1,500 students from over 60 nationalities, from Nursery through Year 13. The school follows the IB Primary Years Programme and Middle Years Programme before transitioning to IGCSEs and the IB Diploma in Sixth Form.",
     "editorial": null,
     "fees": [
       {
@@ -404,7 +421,15 @@
       "context": "Purpose-built 12-storey campus in the Aljunied area of central Singapore. Facilities include an Olympic-size pool with Omega timing system, two air-conditioned sports halls, a FINA-certified Astroturf pitch, two black-box theatres, 12 sound-isolated music practice rooms, and a double-storey library."
     },
     "waitlistNote": null,
-    "sources": []
+    "sources": [],
+    "topYearFeeUSD": 39464,
+    "baseScore": 69732,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.11,
+    "finalScore": 77403
   },
   {
     "name": "Tanglin Trust School",
@@ -428,16 +453,12 @@
     "feeSummary": "Fees from SGD 28,950 per year",
     "feeSummaryUSD": "Fees from USD 22,510 per year",
     "feeCurrency": "SGD",
-    "year3Fee": 39750,
-    "year3FeeUSD": 30916,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 30916,
-    "asiaRank": 7,
-    "cityRank": 3,
-    "hasEditorial": true,
+    "asiaRank": 2,
+    "cityRank": 1,
+    "hasEditorial": false,
     "heroImage": "/images/tanglin-trust-campus.jpg",
-    "overview": "Tanglin Trust School is a co-educational day school in Singapore, established in 1925. It is the oldest British school in Southeast Asia. The school follows the English National Curriculum and is the only school in Singapore to offer both A Level and IB Diploma pathways in Sixth Form. Tanglin operates as a not-for-profit trust, with all tuition fees directed back into the school. Approximately 2,800 students from over 50 nationalities are enrolled across Infant, Junior, and Senior schools on its Portsdown Road campus.",
-    "editorial": "Tanglin Trust is widely regarded as the strongest British school in Singapore. Parents on Reddit and expat forums consistently cite high academic standards, particularly at A Level and IB. The school regularly achieves strong university placement to Russell Group and Ivy League institutions. Some parents note that demand significantly exceeds supply, with waitlists common in popular year groups. A small number of forum posts mention high fees and a competitive social environment, but these are minority views and do not constitute a pattern of serious concern.",
+    "overview": "Tanglin Trust School is a co-educational day school in Singapore, established in 1925. It is the oldest British school in Southeast Asia.\n\nThe school follows the English National Curriculum and is the only school in Singapore to offer both A Level and IB Diploma pathways in Sixth Form. Tanglin operates as a not-for-profit trust, with all tuition fees directed back into the school.\n\nApproximately 2,800 students from over 50 nationalities are enrolled across Infant, Junior, and Senior schools on its Portsdown Road campus.",
+    "editorial": null,
     "fees": [
       {
         "year": "Nursery",
@@ -541,7 +562,15 @@
       "https://www.internationalschoolfinder.com/school-fees/tanglin-trust-singapore",
       "https://en.wikipedia.org/wiki/Tanglin_Trust_School",
       "https://www.internationalschoolparent.com/schools/tanglin-trust-school-singapore/"
-    ]
+    ],
+    "topYearFeeUSD": 43344,
+    "baseScore": 71672,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.04,
+    "totalAdjustment": 0.14,
+    "finalScore": 81706
   },
   {
     "name": "Dulwich College (Singapore)",
@@ -564,15 +593,11 @@
     "feeSummary": "Fees from SGD 31,650 per year",
     "feeSummaryUSD": "Fees from USD 24,610 per year",
     "feeCurrency": "SGD",
-    "year3Fee": 39240,
-    "year3FeeUSD": 30519,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 30519,
-    "asiaRank": 8,
-    "cityRank": 4,
+    "asiaRank": 10,
+    "cityRank": 3,
     "hasEditorial": false,
     "heroImage": "/images/dulwich-college-campus.jpg",
-    "overview": "Dulwich College (Singapore) is a co-educational day school in Bukit Batok, western Singapore. Part of the Dulwich College International network affiliated with Dulwich College London, the school opened in August 2014. It serves approximately 2,600 students from over 50 nationalities across three sub-schools: DUCKS (Early Years), Junior School, and Senior School. The campus spans five hectares and includes a 742-seat theatre, three swimming pools, and extensive sports facilities.",
+    "overview": "Dulwich College (Singapore) is a co-educational day school in Bukit Batok, western Singapore. Part of the Dulwich College International network affiliated with Dulwich College London, the school opened in August 2014.\n\nIt serves approximately 2,600 students from over 50 nationalities across three sub-schools: DUCKS (Early Years), Junior School, and Senior School. The campus spans five hectares and includes a 742-seat theatre, three swimming pools, and extensive sports facilities.",
     "editorial": null,
     "fees": [
       {
@@ -618,7 +643,15 @@
       "context": "Purpose-built five-hectare campus in western Singapore. Facilities include a 742-seat performing arts centre, pipe organ, three swimming pools, a multi-purpose pitch, two gymnasiums, and a dedicated IB Centre. The DUCKS Early Years section offers a bilingual English-Chinese programme."
     },
     "waitlistNote": null,
-    "sources": []
+    "sources": [],
+    "topYearFeeUSD": 40036,
+    "baseScore": 70018,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.11,
+    "finalScore": 77720
   },
   {
     "name": "British International School Hanoi",
@@ -641,11 +674,7 @@
     "feeSummary": "Fees from VND 715,500,000 per year",
     "feeSummaryUSD": "Fees from USD 27,547 per year",
     "feeCurrency": "VND",
-    "year3Fee": 715500000,
-    "year3FeeUSD": 27547,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 27547,
-    "asiaRank": 9,
+    "asiaRank": 12,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/bis-hanoi-campus.jpg",
@@ -693,7 +722,15 @@
       "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees",
       "https://en.wikipedia.org/wiki/British_International_School_Hanoi",
       "https://whichschooladvisor.com/vietnam/school-review/british-international-school-hanoi/fees-and-availability"
-    ]
+    ],
+    "topYearFeeUSD": 38032,
+    "baseScore": 69016,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.11,
+    "finalScore": 76608
   },
   {
     "name": "British International School Ho Chi Minh City",
@@ -708,7 +745,8 @@
     "curricula": [
       "English National Curriculum",
       "IGCSE",
-      "IB Diploma"
+      "IB Diploma",
+      "A Level"
     ],
     "founded": 1997,
     "roll": 2300,
@@ -716,11 +754,7 @@
     "feeSummary": "Fees from VND 705,200,000 per year",
     "feeSummaryUSD": "Fees from USD 27,150 per year",
     "feeCurrency": "VND",
-    "year3Fee": 705200000,
-    "year3FeeUSD": 27150,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 27150,
-    "asiaRank": 10,
+    "asiaRank": 8,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/bis-hcmc-campus.jpg",
@@ -768,7 +802,15 @@
       "https://theinternationalschools.com/vn/school/british-international-school-hcmc/",
       "https://www.nordangliaeducation.com/bis-hcmc/admissions/tuition-fees",
       "https://www.nordangliaeducation.com/bis-hcmc/news/2022/08/19/celebrating-25-years-of-bis-hcmc"
-    ]
+    ],
+    "topYearFeeUSD": 37487,
+    "baseScore": 68744,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.04,
+    "totalAdjustment": 0.14,
+    "finalScore": 78368
   },
   {
     "name": "Kellett School",
@@ -791,11 +833,7 @@
     "feeSummary": "Fees from HKD 208,800 per year",
     "feeSummaryUSD": "Fees from USD 26,726 per year",
     "feeCurrency": "HKD",
-    "year3Fee": 208800,
-    "year3FeeUSD": 26726,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 26726,
-    "asiaRank": 12,
+    "asiaRank": 13,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/kellett-school-campus.jpg",
@@ -829,7 +867,15 @@
       "https://www.kellettschool.com/defining-kellett/our-history",
       "https://en.wikipedia.org/wiki/Kellett_School",
       "https://www.kellettschool.com/userfiles/kellettv2mvc/Document/Sixth%20Form/2025-2026%20Kellett%20School%20Profile.pdf"
-    ]
+    ],
+    "topYearFeeUSD": 34242,
+    "baseScore": 67121,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.03,
+    "totalAdjustment": 0.13,
+    "finalScore": 75847
   },
   {
     "name": "Shrewsbury International School Bangkok",
@@ -852,12 +898,8 @@
     "feeSummary": "Fees from THB 878,100 per year",
     "feeSummaryUSD": "Fees from USD 25,904 per year",
     "feeCurrency": "THB",
-    "year3Fee": 878100,
-    "year3FeeUSD": 25904,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 25904,
-    "asiaRank": 13,
-    "cityRank": 1,
+    "asiaRank": 32,
+    "cityRank": 7,
     "hasEditorial": false,
     "heroImage": "/images/shrewsbury-bangkok-campus.jpg",
     "overview": "Shrewsbury International School Bangkok is a co-educational British international school affiliated with Shrewsbury School in England. It was founded in 2003 and operates from two campuses: the Riverside Campus on Charoen Krung Road in Bang Kho Laem District, which sits beside the Chao Phraya River and provides education from Year 7 through Year 13 including boarding, and the City Campus in Huai Khwang District, which opened in 2018 for primary students in Years 1–6. Total enrolment across both campuses is approximately 1,900 students aged 3–18, drawn from around 40 nationalities.\n\nThe school follows the English National Curriculum in primary and lower secondary years, with students progressing to IGCSE in Years 10–11 and A Levels. For the 2025–26 academic year, Pre-Prep (Years 3–4) tuition fees are THB 878,100 per year, payable in three terms at THB 292,700 per term. Tuition includes lunch, morning and afternoon snacks, all books and library use. Boarding is available for secondary-age students at the Riverside Campus.",
@@ -904,7 +946,15 @@
       "https://www.shrewsbury.ac.th/admissions/fees/overview/",
       "https://en.wikipedia.org/wiki/Shrewsbury_International_School",
       "https://www.doris.school/schools/thailand/shrewsbury-international-school-bangkok-riverside/fees"
-    ]
+    ],
+    "topYearFeeUSD": 26407,
+    "baseScore": 63204,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.12000000000000001,
+    "finalScore": 70788
   },
   {
     "name": "Harrow International School Hong Kong",
@@ -927,11 +977,7 @@
     "feeSummary": "Fees from HKD 201,314 per year",
     "feeSummaryUSD": "Fees from USD 25,768 per year",
     "feeCurrency": "HKD",
-    "year3Fee": 201314,
-    "year3FeeUSD": 25768,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 25768,
-    "asiaRank": 14,
+    "asiaRank": 16,
     "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/harrow-hk-campus.jpg",
@@ -974,7 +1020,15 @@
       "https://www.harrowhongkong.hk/his/admissions/fees/",
       "https://en.wikipedia.org/wiki/Harrow_International_School_Hong_Kong",
       "https://www.schrole.com/schools/the-british-international-school-of-kuala-lumpur/"
-    ]
+    ],
+    "topYearFeeUSD": 30649,
+    "baseScore": 65325,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.04,
+    "totalAdjustment": 0.14,
+    "finalScore": 74470
   },
   {
     "name": "Wellington College International School Bangkok",
@@ -997,12 +1051,8 @@
     "feeSummary": "Fees from THB 855,000 per year",
     "feeSummaryUSD": "Fees from USD 25,223 per year",
     "feeCurrency": "THB",
-    "year3Fee": 855000,
-    "year3FeeUSD": 25223,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 25223,
-    "asiaRank": 15,
-    "cityRank": 2,
+    "asiaRank": 14,
+    "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/wellington-bangkok-campus.jpg",
     "overview": "Wellington College International School Bangkok is a co-educational day school that opened in September 2018 following the Wellington College family of schools, which traces its origins to the founding of Wellington College in England in 1859. The school is located at 18 Krungthep Kreetha Road in the Saphan Sung District of eastern Bangkok and accommodates students from Pre-Nursery through Year 13 (ages 2–18). Enrolment is approximately 1,100 students.\n\nThe school follows the English National Curriculum throughout, with students progressing to IGCSE in Years 10–11 and A Levels in the Sixth Form. Annual tuition fees for Year 3 are THB 855,000 for the 2025–26 academic year. The campus is purpose-built on a 10-acre site in the Krungthep Kreetha area, approximately 20 kilometres east of the city centre near the On Nut district.",
@@ -1064,7 +1114,15 @@
       "https://www.wellingtoncollege.ac.th/admissions/fees",
       "https://www.edarabia.com/lf/?id=393760&ins=wellington-college-bangkok",
       "https://www.internationalschoolsearch.com/listing/wellington-college-international-school-bangkok-thailand"
-    ]
+    ],
+    "topYearFeeUSD": 34832,
+    "baseScore": 67416,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.12000000000000001,
+    "finalScore": 75506
   },
   {
     "name": "Nord Anglia International School Hong Kong",
@@ -1079,7 +1137,8 @@
     "curricula": [
       "English National Curriculum",
       "IGCSE",
-      "IB Diploma"
+      "IB Diploma",
+      "A Level"
     ],
     "founded": 2014,
     "roll": 1500,
@@ -1087,12 +1146,8 @@
     "feeSummary": "Fees from HKD 197,000 per year",
     "feeSummaryUSD": "Fees from USD 25,216 per year",
     "feeCurrency": "HKD",
-    "year3Fee": 197000,
-    "year3FeeUSD": 25216,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 25216,
-    "asiaRank": 16,
-    "cityRank": 3,
+    "asiaRank": 23,
+    "cityRank": 4,
     "hasEditorial": false,
     "heroImage": "/images/nais-hk-campus.jpg",
     "overview": "Nord Anglia International School Hong Kong (NAIS HK) is operated by Nord Anglia Education and opened in 2014. The school runs across multiple campuses in Lam Tin, Kwun Tong and Sai Kung, with the main campus located at 11 On Tin Street, Lam Tin. It caters to students from Nursery through Year 13 (ages 3–18) and has approximately 1,500 students enrolled across its sites. NAIS HK follows the English National Curriculum in primary years, with students progressing to IGCSE and either A Level or the International Baccalaureate Diploma Programme.\n\nFor the 2025–26 academic year, tuition fees for Years 1–6 (which includes Year 3) are HKD 197,000 annually. New students are additionally required to pay a non-refundable, non-transferable Capital Enrolment Fee of HKD 100,000 on acceptance. The school is part of Nord Anglia's global network, which provides students with access to collaborative programmes with universities including MIT and Juilliard.",
@@ -1134,7 +1189,15 @@
       "https://www.nordangliaeducation.com/nais-hong-kong/admissions/tuition-fees",
       "https://goodschoolsguide.scmp.com/schools/nord-anglia-international-school-hong-kong",
       "https://en.wikipedia.org/wiki/Nord_Anglia_International_School_Hong_Kong"
-    ]
+    ],
+    "topYearFeeUSD": 28525,
+    "baseScore": 64263,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.03,
+    "totalAdjustment": 0.13,
+    "finalScore": 72617
   },
   {
     "name": "Brighton College Bangkok",
@@ -1157,12 +1220,8 @@
     "feeSummary": "Fees from THB 854,500 per year",
     "feeSummaryUSD": "Fees from USD 25,208 per year",
     "feeCurrency": "THB",
-    "year3Fee": 854500,
-    "year3FeeUSD": 25208,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 25208,
-    "asiaRank": 17,
-    "cityRank": 3,
+    "asiaRank": 30,
+    "cityRank": 6,
     "hasEditorial": false,
     "heroImage": "/images/brighton-bangkok-campus.jpg",
     "overview": "Brighton College Bangkok is a co-educational British international day school that opened in 2016, affiliated with Brighton College in East Sussex, England. The school is located in the Krungthep Kreetha area of Bangkok and caters to students from Pre-Nursery through Year 13 (ages 2–18). Current enrolment is approximately 700 students. In 2024, the school announced plans to open a second campus, Brighton College Bangkok Vibhavadi, at 998 Vibhavadi Rangsit Road in Chatuchak District.\n\nThe school follows the English National Curriculum, with students progressing to IGCSE in Years 10–11 and A Levels in the Sixth Form. Tuition fees for the 2025–26 academic year are THB 854,500 for Year 3. The fee schedule is published annually in advance as a formal PDF, and includes all tuition. Meals, uniform, examination fees and other extras are charged separately.",
@@ -1209,7 +1268,15 @@
       "https://brightoncollege.ac.th/file/8/1754890111/bcb-tuition-fee-2025.pdf",
       "https://www.edarabia.com/lf/?id=393760&ins=wellington-college-bangkok",
       "https://spears500.com/school/25230/brighton-college-bangkok"
-    ]
+    ],
+    "topYearFeeUSD": 26009,
+    "baseScore": 63005,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.03,
+    "totalAdjustment": 0.13,
+    "finalScore": 71195
   },
   {
     "name": "Harrow International School Bangkok",
@@ -1232,12 +1299,8 @@
     "feeSummary": "Fees from THB 852,600 per year",
     "feeSummaryUSD": "Fees from USD 25,152 per year",
     "feeCurrency": "THB",
-    "year3Fee": 852600,
-    "year3FeeUSD": 25152,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 25152,
     "asiaRank": 18,
-    "cityRank": 4,
+    "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/harrow-bangkok-campus.jpg",
     "overview": "Harrow International School Bangkok is a co-educational British international school offering both day and boarding places. It is part of the Harrow family of international schools, affiliated with Harrow School in London. Located in the Lad Yao area of Bangkok's Chatuchak District, the school accommodates students from Pre-Nursery through Year 13 (ages 2–18). Founded in 2009, Harrow Bangkok is one of the earlier premium British-curriculum boarding schools established in Southeast Asia.\n\nThe school follows the English National Curriculum throughout primary and lower secondary, with students taking IGCSE in Years 10–11 and A Levels in Years 12–13. Annual tuition for Years 1–5 (including Year 3) is THB 852,600 for the 2025–26 academic year. Boarding is available for students in Year 6 and above, with full and weekly boarding options. The school reports some of the highest average fees among Bangkok's British schools, reflecting its dual day-and-boarding structure and extensive facilities.",
@@ -1273,7 +1336,15 @@
     "sources": [
       "https://www.harrowschool.ac.th/admissions/tuition-fees",
       "https://www.doris.school/schools/thailand/harrow-international-school-bangkok/fees"
-    ]
+    ],
+    "topYearFeeUSD": 30148,
+    "baseScore": 65074,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.03,
+    "totalAdjustment": 0.13,
+    "finalScore": 73534
   },
   {
     "name": "British School Jakarta",
@@ -1296,11 +1367,7 @@
     "feeSummary": "Fees from IDR 387,504,000 per year",
     "feeSummaryUSD": "Fees from USD 23,832 per year",
     "feeCurrency": "IDR",
-    "year3Fee": 387504000,
-    "year3FeeUSD": 23832,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 23832,
-    "asiaRank": 19,
+    "asiaRank": 33,
     "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/bsj-jakarta-campus.jpg",
@@ -1343,7 +1410,15 @@
       "https://www.bsj.sch.id/admissions",
       "https://www.edarabia.com/lf/?id=181079",
       "https://alchetron.com/British-School-Jakarta"
-    ]
+    ],
+    "topYearFeeUSD": 25098,
+    "baseScore": 62549,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0,
+    "totalAdjustment": 0.1,
+    "finalScore": 68804
   },
   {
     "name": "Alice Smith School",
@@ -1366,12 +1441,8 @@
     "feeSummary": "Fees from RM 93,480 per year",
     "feeSummaryUSD": "Fees from USD 21,220 per year",
     "feeCurrency": "MYR",
-    "year3Fee": 93480,
-    "year3FeeUSD": 21220,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 21220,
-    "asiaRank": 20,
-    "cityRank": 1,
+    "asiaRank": 29,
+    "cityRank": 3,
     "hasEditorial": false,
     "heroImage": "/images/alice-smith-campus.jpg",
     "overview": "The Alice Smith School is a co-educational British international school in Kuala Lumpur, established in 1946 and named after its founder, Alice Smith, who started the school to provide British-style education for expatriate families during the post-war period. It is one of the oldest British schools in Southeast Asia. The school operates from two campuses: the Primary campus in Taman U-Thant and the Senior campus in Jalan Bellamy, both in central Kuala Lumpur.\n\nAlice Smith follows the English National Curriculum throughout, with students progressing to IGCSE in Years 10–11 and A Levels in the Sixth Form. Annual tuition fees for Years 3–6 are RM 93,480 for the 2025–26 academic year, billed termly at RM 31,160 per term. Fees are subject to a 6% Service Tax for students whose annual fees exceed RM 60,000. Fees cover all books and materials; meals, transport and uniform are charged separately. The school is governed by the Alice Smith Schools Association, a registered not-for-profit body.",
@@ -1422,7 +1493,15 @@
     "sources": [
       "https://www.alice-smith.edu.my/join/tuition-and-fees",
       "https://www.edarabia.com/lf/?id=164518&ins=the-alice-smith-school"
-    ]
+    ],
+    "topYearFeeUSD": 27298,
+    "baseScore": 63649,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.12000000000000001,
+    "finalScore": 71287
   },
   {
     "name": "Garden International School",
@@ -1445,11 +1524,7 @@
     "feeSummary": "Fees from RM 93,150 per year",
     "feeSummaryUSD": "Fees from USD 21,145 per year",
     "feeCurrency": "MYR",
-    "year3Fee": 93150,
-    "year3FeeUSD": 21145,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 21145,
-    "asiaRank": 21,
+    "asiaRank": 27,
     "cityRank": 2,
     "hasEditorial": false,
     "heroImage": "/images/garden-intl-kl-campus.jpg",
@@ -1517,7 +1592,15 @@
       "https://www.gardenschool.edu.my/admissions/school-fees/",
       "https://en.wikipedia.org/wiki/Garden_International_School",
       "https://www.gardenschool.edu.my/about-gis/gis-history/"
-    ]
+    ],
+    "topYearFeeUSD": 27577,
+    "baseScore": 63789,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.12000000000000001,
+    "finalScore": 71443
   },
   {
     "name": "British International School of Kuala Lumpur",
@@ -1540,35 +1623,46 @@
     "feeSummary": "Fees from RM 90,240 per year",
     "feeSummaryUSD": "Fees from USD 20,485 per year",
     "feeCurrency": "MYR",
-    "year3Fee": 90240,
-    "year3FeeUSD": 20485,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 20485,
-    "asiaRank": 22,
-    "cityRank": 3,
+    "asiaRank": 21,
+    "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/bskl-campus.jpg",
     "overview": "The British International School of Kuala Lumpur (BSKL) is a co-educational day school operated by Nord Anglia Education. It opened in 2009 and is located at No. 1 Changkat Bukit Utama in Bandar Utama, Petaling Jaya, a western suburb of Kuala Lumpur. The school accommodates approximately 1,510 students from Pre-Nursery through Year 13 (ages 2–18) from a wide range of nationalities.\n\nBSKL follows the English National Curriculum, with secondary students sitting IGCSE and progressing to A Levels. Annual tuition fees for Year 3 are RM 90,240 for the 2025–26 academic year, payable termly at RM 32,343 per term. Fees are subject to a 6% Service Tax for students whose annual fees exceed RM 60,000. As part of Nord Anglia's network, the school provides students with access to global collaboration programmes, including partnerships with MIT and Juilliard.",
     "editorial": null,
     "fees": [
       {
-        "yearGroup": "Pre-Nursery/Nursery",
-        "annualFee": 56395,
+        "yearGroup": "Pre-Nursery / Nursery",
+        "annualFee": 61308,
         "currency": "MYR"
       },
       {
         "yearGroup": "Reception",
-        "annualFee": 68180,
+        "annualFee": 74123,
         "currency": "MYR"
       },
       {
         "yearGroup": "Year 1",
-        "annualFee": 69255,
+        "annualFee": 75288,
         "currency": "MYR"
       },
       {
-        "yearGroup": "Year 2–6",
-        "annualFee": 90240,
+        "yearGroup": "Years 2–6",
+        "annualFee": 98103,
+        "currency": "MYR"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 111095,
+        "currency": "MYR"
+      },
+      {
+        "yearGroup": "Years 10–11",
+        "annualFee": 130483,
+        "currency": "MYR"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 132753,
         "currency": "MYR"
       }
     ],
@@ -1582,67 +1676,15 @@
       "https://www.nordangliaeducation.com/bskl-kuala-lumpur/admissions/tuition-fees",
       "https://www.schrole.com/schools/the-british-international-school-of-kuala-lumpur/",
       "https://schooladvisor.my/schools/british-international-school-kuala-lumpur"
-    ]
-  },
-  {
-    "name": "The British School in Tokyo",
-    "slug": "the-british-school-in-tokyo",
-    "city": "Tokyo",
-    "citySlug": "tokyo",
-    "country": "Japan",
-    "countrySlug": "japan",
-    "type": "Day",
-    "ageRange": "3–18",
-    "yearRange": "Nursery–Year 13",
-    "curricula": [
-      "English National Curriculum",
-      "IGCSE",
-      "A Level"
     ],
-    "founded": 1989,
-    "roll": 1300,
-    "website": "https://www.bst.ac.jp",
-    "feeSummary": "Fees from JPY 2,820,000 per year",
-    "feeSummaryUSD": "Fees from USD 18,894 per year",
-    "feeCurrency": "JPY",
-    "year3Fee": 2820000,
-    "year3FeeUSD": 18894,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 18894,
-    "asiaRank": 23,
-    "cityRank": 1,
-    "hasEditorial": false,
-    "heroImage": "/images/bst-tokyo-campus.jpg",
-    "overview": "The British School in Tokyo (BST) is a co-educational British international school officially opened in September 1989 with 63 students, established as a trust to serve families seeking British-style education in Tokyo. The school has since grown to approximately 1,300 students from over 65 nationalities. BST operates from two campuses: the Azabudai Hills campus in Minato Ward for Nursery through Year 6, and the Showa campus located within Showa Women's University in Setagaya Ward for Years 7 through 13.\n\nThe school follows the English National Curriculum throughout, with students in Years 10–11 sitting IGCSE and progressing to A Levels in the Sixth Form. Annual primary school tuition fees for the 2025–26 academic year are JPY 2,820,000, covering Nursery through all primary year groups including Year 3. An additional annual Capital Development levy of JPY 100,000 applies to all students. BST is rated across all eight areas examined by the Independent Schools Inspectorate (ISI).",
-    "editorial": null,
-    "fees": [
-      {
-        "yearGroup": "Primary (Nursery–Year 6)",
-        "annualFee": 2820000,
-        "currency": "JPY"
-      },
-      {
-        "yearGroup": "Secondary (Year 7–9)",
-        "annualFee": 2840000,
-        "currency": "JPY"
-      },
-      {
-        "yearGroup": "Secondary (Year 10–13)",
-        "annualFee": 2930000,
-        "currency": "JPY"
-      }
-    ],
-    "campus": {
-      "address": "1-3-3 Azabudai, Minato-ku, Tokyo (Primary); Showa Women's University, 1-7-57 Taishido, Setagaya-ku, Tokyo (Secondary)",
-      "area": "Azabudai, Minato Ward / Setagaya Ward",
-      "context": "Primary campus at Azabudai Hills in central Tokyo's Minato Ward; secondary campus at Showa Women's University in Setagaya Ward."
-    },
-    "waitlistNote": null,
-    "sources": [
-      "https://www.bst.ac.jp/admissions/fees",
-      "https://en.wikipedia.org/wiki/The_British_School_in_Tokyo",
-      "https://www.bst.ac.jp/uniquely-bst/the-bst-difference/our-story"
-    ]
+    "topYearFeeUSD": 30880,
+    "baseScore": 65440,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.12000000000000001,
+    "finalScore": 73293
   },
   {
     "name": "Discovery Bay International School",
@@ -1665,12 +1707,8 @@
     "feeSummary": "Fees from HKD 143,700 per year",
     "feeSummaryUSD": "Fees from USD 18,394 per year",
     "feeCurrency": "HKD",
-    "year3Fee": 143700,
-    "year3FeeUSD": 18394,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 18394,
-    "asiaRank": 24,
-    "cityRank": 4,
+    "asiaRank": 35,
+    "cityRank": 7,
     "hasEditorial": false,
     "heroImage": "/images/dbis-hk-campus.jpg",
     "overview": "Discovery Bay International School (DBIS) is a co-educational day school located in Discovery Bay on Lantau Island, Hong Kong. It opened in January 1983 when Hong Kong Resorts International identified a need to serve the growing residential community in Discovery Bay. The school operates across three campuses within the Discovery Bay estate: an Early Years campus, a combined Primary and Secondary campus, and a Sixth Form campus in the North Plaza. Student numbers are approximately 1,000.\n\nDBIS follows the English National Curriculum, with students progressing to GCSE and A Level examinations. Annual tuition fees for Years 1–6 (including Year 3) are HKD 143,700 for the 2025–26 academic year, placing it at the lower end of the premium British school segment in Hong Kong. The school serves primarily the residential community of Discovery Bay, which is accessible from central Hong Kong by ferry, and draws students from a wide range of nationalities.",
@@ -1707,7 +1745,15 @@
       "https://goodschoolsguide.scmp.com/schools/discovery-bay-international-school",
       "https://en.wikipedia.org/wiki/Discovery_Bay_International_School",
       "https://internationalschools.edb.gov.hk/en/schools/10.html"
-    ]
+    ],
+    "topYearFeeUSD": 25243,
+    "baseScore": 62622,
+    "socialPenalty": 0.1,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.009999999999999995,
+    "finalScore": 63248
   },
   {
     "name": "The Independent School of Jakarta",
@@ -1717,26 +1763,24 @@
     "country": "Indonesia",
     "countrySlug": "indonesia",
     "type": "Day",
-    "ageRange": "2–13",
-    "yearRange": "Pre-Nursery–Year 8",
+    "ageRange": "2–18",
+    "yearRange": "Pre-Nursery–Year 13",
     "curricula": [
-      "English National Curriculum"
+      "English National Curriculum",
+      "IGCSE",
+      "A Level"
     ],
     "founded": 2021,
     "roll": 180,
-    "website": "https://international-school-jakarta.id",
+    "website": "https://isj.id",
     "feeSummary": "Fees from IDR 148,524,000 per year",
     "feeSummaryUSD": "Fees from USD 9,135 per year",
     "feeCurrency": "IDR",
-    "year3Fee": 437819200,
-    "year3FeeUSD": 26926,
-    "reputationPenalty": 0,
-    "adjustedFeeScore": 26926,
-    "asiaRank": 11,
+    "asiaRank": 25,
     "cityRank": 1,
     "hasEditorial": false,
     "heroImage": "/images/isj-campus.jpg",
-    "overview": "The Independent School of Jakarta is a co-educational day school in Pondok Indah, South Jakarta, operated by The Schools Trust, a UK-registered charity running 16 schools across 11 countries. The school opened in September 2021 and follows the English National Curriculum exclusively, with plans to offer GCSEs and A Levels when a new secondary campus opens in September 2028. The school currently serves approximately 180 students from over 35 nationalities, from Pre-Nursery through Year 8, with a staff-to-pupil ratio of 1:9.",
+    "overview": "The Independent School of Jakarta (ISJ) is a co-educational day school in Pondok Indah, South Jakarta, operated by The Schools Trust — a UK-registered charity running 16 schools across 11 countries. The school opened in September 2021 and follows the English National Curriculum exclusively, with students progressing to IGCSE and A Level.\n\nISJ is structured around three sub-schools: Pre-Prep (ages 2–6), Prep School (ages 7–13), and Senior School (ages 14–18). All teachers are UK-qualified, and the school maintains a 1:9 staff-to-pupil ratio with class sizes of around 15 in Pre-Prep. Students come from over 30 nationalities.\n\nISJ is accredited by British Schools Overseas, recognised by the UK Department for Education and the Indonesian Ministry of Education, and listed in The Good Schools Guide. A purpose-built Senior Campus is scheduled to open in Pondok Indah in 2028. Eileen Fisher — a former ISI inspector with 31 years' experience — joined as Head in 2024.",
     "editorial": null,
     "fees": [
       {
@@ -1746,12 +1790,12 @@
       },
       {
         "yearGroup": "Nursery",
-        "annualFee": 226148000,
+        "annualFee": 173277795,
         "currency": "IDR"
       },
       {
         "yearGroup": "Reception",
-        "annualFee": 332737600,
+        "annualFee": 289357440,
         "currency": "IDR"
       },
       {
@@ -1770,17 +1814,935 @@
         "currency": "IDR"
       },
       {
-        "yearGroup": "Years 7–8",
+        "yearGroup": "Years 7–11",
         "annualFee": 484733600,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Year 12",
+        "annualFee": 493787700,
+        "currency": "IDR"
+      },
+      {
+        "yearGroup": "Year 13",
+        "annualFee": 504957600,
         "currency": "IDR"
       }
     ],
     "campus": {
-      "address": "Jl. TB Simatupang No. 12, Pondok Indah, South Jakarta 12310",
+      "address": "Jl. R.A. Kartini No. Kav. 12, Pondok Indah, South Jakarta 12310",
       "area": "Pondok Indah, South Jakarta",
-      "context": "Located in the affluent Pondok Indah district of South Jakarta. The campus features a 25-metre swimming pool, full-size synthetic football pitch, theatre, science and art labs, and a bouldering wall. A new secondary campus is planned to open in September 2028, extending the school to Year 13 with GCSEs and A Levels."
+      "context": "Located in the affluent Pondok Indah district of South Jakarta. The campus features a 25-metre swimming pool, a full-size football pitch, a theatre, dedicated science and creative arts spaces, and residential programmes at Woolverstone Hall in Suffolk. A purpose-built Senior Campus is scheduled to open in Pondok Indah in 2028."
     },
     "waitlistNote": null,
-    "sources": []
+    "sources": [],
+    "topYearFeeUSD": 30802,
+    "baseScore": 65401,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0,
+    "totalAdjustment": 0.1,
+    "finalScore": 71941
+  },
+  {
+    "name": "Dulwich College Shanghai Pudong",
+    "slug": "dulwich-college-shanghai-pudong",
+    "city": "Shanghai",
+    "citySlug": "shanghai",
+    "country": "China",
+    "countrySlug": "china",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Toddlers–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 2003,
+    "roll": 1600,
+    "website": "https://shanghai-pudong.dulwich.org",
+    "feeSummary": "Fees from RMB 363,097 per year",
+    "feeSummaryUSD": "Fees from USD 50,110 per year",
+    "feeCurrency": "CNY",
+    "asiaRank": 3,
+    "cityRank": 2,
+    "hasEditorial": false,
+    "heroImage": "/images/dulwich-shanghai-pudong-campus.jpg",
+    "overview": "Dulwich College Shanghai Pudong opened in 2003 in the Jinqiao area of Pudong New District. It is part of the Dulwich College International network, affiliated with Dulwich College in London, and was the first international campus in the network.\n\nThe school enrols approximately 1,600 students and runs the English National Curriculum from Early Years through Year 11 (IGCSE), then transitions to the International Baccalaureate Diploma Programme in Years 12–13. Mandarin Chinese is taught from Year 1 onwards as a core part of the curriculum.\n\nAdmission is restricted to foreign passport holders only, in line with mainland Chinese regulations governing international schools.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Toddlers",
+        "annualFee": 290905,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Nursery–Reception",
+        "annualFee": 323816,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 1–2",
+        "annualFee": 359380,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 3–6",
+        "annualFee": 363097,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 388842,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 10–11",
+        "annualFee": 414587,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 424405,
+        "currency": "CNY"
+      }
+    ],
+    "campus": {
+      "address": "266 Lan'An Road, Jinqiao, Pudong New District, Shanghai 201206",
+      "area": "Jinqiao, Pudong",
+      "context": "Located in the Jinqiao expat residential area of Pudong New District, eastern Shanghai. The campus serves the large foreign community based around Jinqiao, Lianyang, and Biyun. Mandarin is taught from Year 1."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 58568,
+    "baseScore": 79284,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.01,
+    "finalScore": 80077
+  },
+  {
+    "name": "Dulwich College Shanghai Puxi",
+    "slug": "dulwich-college-shanghai-puxi",
+    "city": "Shanghai",
+    "citySlug": "shanghai",
+    "country": "China",
+    "countrySlug": "china",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Toddlers–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 2016,
+    "roll": 1400,
+    "website": "https://shanghai-puxi.dulwich.org",
+    "feeSummary": "Fees from RMB 363,097 per year",
+    "feeSummaryUSD": "Fees from USD 50,110 per year",
+    "feeCurrency": "CNY",
+    "asiaRank": 4,
+    "cityRank": 3,
+    "hasEditorial": false,
+    "heroImage": "/images/dulwich-shanghai-puxi-campus.jpg",
+    "overview": "Dulwich College Shanghai Puxi opened in 2016 as the second Dulwich campus in the city, serving the western (Puxi) side of Shanghai. It sits in the Maqiao area of Minhang District.\n\nThe school enrols approximately 1,400 students and follows the same Dulwich International model as its Pudong sister school: English National Curriculum through Year 11 with IGCSE, then the IB Diploma Programme in sixth form.\n\nAdmission is restricted to foreign passport holders only.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Toddlers",
+        "annualFee": 290905,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Nursery–Reception",
+        "annualFee": 323816,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 1–2",
+        "annualFee": 359380,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 3–6",
+        "annualFee": 363097,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 388842,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 10–11",
+        "annualFee": 414587,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 424405,
+        "currency": "CNY"
+      }
+    ],
+    "campus": {
+      "address": "2000 Qian Pu Jing Road, Maqiao, Minhang District, Shanghai",
+      "area": "Maqiao, Minhang",
+      "context": "Located in the Maqiao area of Minhang District, on the western (Puxi) side of Shanghai. Serves families based in Hongqiao, Gubei, and the Puxi suburbs."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 58568,
+    "baseScore": 79284,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.01,
+    "finalScore": 80077
+  },
+  {
+    "name": "Harrow International School Shanghai",
+    "slug": "harrow-international-school-shanghai",
+    "city": "Shanghai",
+    "citySlug": "shanghai",
+    "country": "China",
+    "countrySlug": "china",
+    "type": "Day",
+    "ageRange": "1–18",
+    "yearRange": "Cubs–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "A Level"
+    ],
+    "founded": 2016,
+    "roll": 800,
+    "website": "https://www.harrowshanghai.cn",
+    "feeSummary": "Fees from RMB 361,184 per year",
+    "feeSummaryUSD": "Fees from USD 49,846 per year",
+    "feeCurrency": "CNY",
+    "asiaRank": 1,
+    "cityRank": 1,
+    "hasEditorial": false,
+    "heroImage": "/images/harrow-shanghai-campus.jpg",
+    "overview": "Harrow International School Shanghai opened in 2016 in the Waigaoqiao Free Trade Zone in northern Pudong. It is part of the Harrow family of international schools, affiliated with Harrow School in London.\n\nThe school enrols approximately 800 students and runs the English National Curriculum from Early Years through Year 11 (IGCSE), then offers A Levels in the Sixth Form. AP courses were added in 2025 alongside the A Level pathway.\n\nThe school's location in the Free Trade Zone places it within reach of expat residential areas in northern Pudong including Jiading and Yangpu.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Cubs & Pre-Nursery",
+        "annualFee": 292173,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Nursery & Reception",
+        "annualFee": 301303,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 1–5",
+        "annualFee": 361184,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Year 6",
+        "annualFee": 368829,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 393994,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 10–11",
+        "annualFee": 422978,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 423616,
+        "currency": "CNY"
+      }
+    ],
+    "campus": {
+      "address": "No. 588 Gaoxi Road, Pudong New District, Shanghai 200137",
+      "area": "Waigaoqiao, Pudong",
+      "context": "Located in the Waigaoqiao Free Trade Zone in northern Pudong, near the international port. The campus serves expat families based across northern Shanghai."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 58459,
+    "baseScore": 79230,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.04,
+    "totalAdjustment": 0.04,
+    "finalScore": 82399
+  },
+  {
+    "name": "Wellington College International Shanghai",
+    "slug": "wellington-college-international-shanghai",
+    "city": "Shanghai",
+    "citySlug": "shanghai",
+    "country": "China",
+    "countrySlug": "china",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Pre-Nursery–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 2014,
+    "roll": 1660,
+    "website": "https://www.wellingtoncollege.cn/shanghai",
+    "feeSummary": "Fees from RMB 344,620 per year",
+    "feeSummaryUSD": "Fees from USD 47,560 per year",
+    "feeCurrency": "CNY",
+    "asiaRank": 5,
+    "cityRank": 4,
+    "hasEditorial": false,
+    "heroImage": "/images/wellington-shanghai-campus.jpg",
+    "overview": "Wellington College International Shanghai opened in 2014 on a riverside site in the Qiantan (New Bund) development of Pudong New District. It is part of the Wellington College family, affiliated with Wellington College in Berkshire, England.\n\nThe school enrols approximately 1,660 students from over 50 nationalities and runs the English National Curriculum (with International Primary Curriculum elements) through Year 9, IGCSE in Years 10–11, and the IB Diploma in Years 12–13.\n\nWellington Shanghai is described as the largest international school site in downtown Shanghai. Forbes ranked it second among China's international schools in 2025; Hurun ranked it third in Shanghai.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Pre-Nursery–Reception",
+        "annualFee": 310433,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 1–5",
+        "annualFee": 344620,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Year 6",
+        "annualFee": 362887,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 378705,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 10–11",
+        "annualFee": 403762,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 415116,
+        "currency": "CNY"
+      }
+    ],
+    "campus": {
+      "address": "No. 1500 Yao Long Road, Qiantan International Business Zone, Shanghai 200124",
+      "area": "Qiantan, Pudong",
+      "context": "Riverside site in Qiantan (New Bund), Pudong, the city's newest financial and commercial district. Houses 50+ nationalities. Admission is restricted to foreign passport holders."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 57286,
+    "baseScore": 78643,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.01,
+    "finalScore": 79429
+  },
+  {
+    "name": "Nord Anglia International School Shanghai, Pudong",
+    "slug": "nord-anglia-international-school-shanghai-pudong",
+    "city": "Shanghai",
+    "citySlug": "shanghai",
+    "country": "China",
+    "countrySlug": "china",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Pre-Nursery–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 2002,
+    "roll": 700,
+    "website": "https://www.nordangliaeducation.com/nais-shanghai-pudong",
+    "feeSummary": "Fees from RMB 338,816 per year",
+    "feeSummaryUSD": "Fees from USD 46,759 per year",
+    "feeCurrency": "CNY",
+    "asiaRank": 6,
+    "cityRank": 5,
+    "hasEditorial": false,
+    "heroImage": "/images/nais-shanghai-pudong-campus.jpg",
+    "overview": "Nord Anglia International School Shanghai, Pudong (formerly The British International School Shanghai, Pudong) opened in 2002 in the Kangqiao area of Pudong New District. It rebranded under the Nord Anglia name as part of the group's global rebranding.\n\nThe school enrols approximately 700 students and follows the English National Curriculum at primary, IGCSE in Years 10–11, and the IB Diploma Programme in Years 12–13. As part of Nord Anglia's network, students have access to global collaborative programmes including partnerships with MIT and Juilliard.\n\nAdmission is restricted to foreign passport holders only.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Pre-Nursery–Reception",
+        "annualFee": 288355,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 1–6",
+        "annualFee": 338816,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 375886,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 10–11",
+        "annualFee": 401639,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 408841,
+        "currency": "CNY"
+      }
+    ],
+    "campus": {
+      "address": "2888 Junmin Road, Pudong New District, Shanghai 201315",
+      "area": "Kangqiao, Pudong",
+      "context": "Located in the Kangqiao area of Pudong New District, southern Shanghai, in a quieter expat residential area distinct from the Jinqiao or Qiantan hubs."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 56420,
+    "baseScore": 78210,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.01,
+    "finalScore": 78992
+  },
+  {
+    "name": "The British International School Shanghai, Puxi",
+    "slug": "british-international-school-shanghai-puxi",
+    "city": "Shanghai",
+    "citySlug": "shanghai",
+    "country": "China",
+    "countrySlug": "china",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Pre-Nursery–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 2005,
+    "roll": 1000,
+    "website": "https://www.nordangliaeducation.com/biss-puxi",
+    "feeSummary": "Fees from RMB 338,816 per year",
+    "feeSummaryUSD": "Fees from USD 46,759 per year",
+    "feeCurrency": "CNY",
+    "asiaRank": 7,
+    "cityRank": 6,
+    "hasEditorial": false,
+    "heroImage": "/images/biss-puxi-campus.jpg",
+    "overview": "The British International School Shanghai, Puxi (BISS Puxi) opened in 2005 in the Huacao area of Minhang District, on the western (Puxi) side of Shanghai. It is part of the Nord Anglia Education network.\n\nThe school enrols approximately 1,000 students and follows the English National Curriculum at primary, IGCSE in Years 10–11, and the IB Diploma in Years 12–13. The 2024 IB Diploma average was 34.5 points.\n\nA Dutch international school is co-located on the same campus, an unusual setup that reflects the school's international community. As part of Nord Anglia, students have access to global collaboration programmes with MIT and Juilliard.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Pre-Nursery–Reception",
+        "annualFee": 288355,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 1–6",
+        "annualFee": 338816,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 375886,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 10–11",
+        "annualFee": 401639,
+        "currency": "CNY"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 408841,
+        "currency": "CNY"
+      }
+    ],
+    "campus": {
+      "address": "111 Jinguang Road, Huacao Town, Minhang District, Shanghai 201107",
+      "area": "Huacao, Minhang",
+      "context": "Located in Huacao, Minhang District, on the western (Puxi) side of Shanghai. Serves families based in Hongqiao, Gubei, and the western suburbs."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 56420,
+    "baseScore": 78210,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.01,
+    "finalScore": 78992
+  },
+  {
+    "name": "Yew Chung International School of Hong Kong",
+    "slug": "yew-chung-international-school-hong-kong",
+    "city": "Hong Kong",
+    "citySlug": "hong-kong",
+    "country": "Hong Kong",
+    "countrySlug": "hong-kong",
+    "type": "Day",
+    "ageRange": "1–18",
+    "yearRange": "Twos–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 1932,
+    "roll": 2200,
+    "website": "https://www.ycis-hk.com",
+    "feeSummary": "Fees from HKD 264,163 per year",
+    "feeSummaryUSD": "Fees from USD 33,867 per year",
+    "feeCurrency": "HKD",
+    "asiaRank": 34,
+    "cityRank": 6,
+    "hasEditorial": false,
+    "heroImage": "/images/ycis-hk-campus.jpg",
+    "overview": "Yew Chung International School of Hong Kong (YCIS) was founded in 1932, making it one of the longest-established international schools in Hong Kong. The school operates across three campuses in Kowloon Tong and enrols approximately 2,200 students from age 1 through Year 13.\n\nYCIS follows the English National Curriculum from Early Years through Year 11 (IGCSE), then offers the IB Diploma Programme in Years 12–13. The school's distinctive feature is its bilingual co-teacher model — pairing Western and Chinese educators in the same classroom — which delivers genuine immersion in English and Mandarin from the earliest years.\n\nDebenture fees apply on enrolment in addition to annual tuition.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Twos Whole Day",
+        "annualFee": 221980,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Threes Whole Day",
+        "annualFee": 239663,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Fours Whole Day",
+        "annualFee": 248040,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Fives Whole Day",
+        "annualFee": 260302,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Years 1–6",
+        "annualFee": 264163,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Years 7–11",
+        "annualFee": 260980,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 267368,
+        "currency": "HKD"
+      }
+    ],
+    "campus": {
+      "address": "3 To Fuk Road, Kowloon Tong, Kowloon, Hong Kong (primary office; nine campuses across Kowloon Tong and Tseung Kwan O)",
+      "area": "Kowloon Tong",
+      "context": "Three campuses across Kowloon Tong, the established Kowloon expat residential area. The school's bilingual co-teacher model is unusual in Hong Kong's premium British school market."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 34277,
+    "baseScore": 67139,
+    "socialPenalty": 0.1,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.009999999999999995,
+    "finalScore": 67810
+  },
+  {
+    "name": "German Swiss International School",
+    "slug": "german-swiss-international-school",
+    "city": "Hong Kong",
+    "citySlug": "hong-kong",
+    "country": "Hong Kong",
+    "countrySlug": "hong-kong",
+    "type": "Day",
+    "ageRange": "3–18",
+    "yearRange": "Kindergarten–Upper Secondary",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 1969,
+    "roll": 1300,
+    "website": "https://www.gsis.edu.hk",
+    "feeSummary": "Fees from HKD 202,738 per year",
+    "feeSummaryUSD": "Fees from USD 25,992 per year",
+    "feeCurrency": "HKD",
+    "asiaRank": 17,
+    "cityRank": 3,
+    "hasEditorial": false,
+    "heroImage": "/images/gsis-campus.jpg",
+    "overview": "The German Swiss International School (GSIS) opened in 1969 and operates two parallel streams under one roof: an English International Stream and a German International Stream. The English Stream follows the English National Curriculum through to IGCSE and the IB Diploma Programme; the German Stream follows the eight-year Gymnasium curriculum, culminating in the German International Abitur.\n\nThe main campus sits at 11 Guildford Road on The Peak, with a separate Kindergarten campus in Pok Fu Lam. Total enrolment is approximately 1,300 students.\n\nThe English Stream is the relevant track for British curriculum families. Year 3 fees sit in the lower band of Hong Kong's premium school segment.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Kindergarten",
+        "annualFee": 196069,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Primary (Years 1–6)",
+        "annualFee": 202738,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Lower Secondary",
+        "annualFee": 241652,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Upper Secondary",
+        "annualFee": 255481,
+        "currency": "HKD"
+      }
+    ],
+    "campus": {
+      "address": "11 Guildford Road, The Peak, Hong Kong (main campus); Pok Fu Lam Campus (Kindergarten)",
+      "area": "The Peak / Pok Fu Lam",
+      "context": "Main campus on The Peak with a separate Kindergarten campus in Pok Fu Lam. Suits families based in Mid-Levels, The Peak, and the southern district. The school runs both English and German streams."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 32753,
+    "baseScore": 66377,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.11,
+    "finalScore": 73678
+  },
+  {
+    "name": "Wycombe Abbey School Hong Kong",
+    "slug": "wycombe-abbey-school-hong-kong",
+    "city": "Hong Kong",
+    "citySlug": "hong-kong",
+    "country": "Hong Kong",
+    "countrySlug": "hong-kong",
+    "type": "Day",
+    "ageRange": "5–18",
+    "yearRange": "Year 1–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "A Level"
+    ],
+    "founded": 2019,
+    "roll": 250,
+    "website": "https://www.wycombeabbey.hk",
+    "feeSummary": "Fees from HKD 187,106 per year",
+    "feeSummaryUSD": "Fees from USD 23,988 per year",
+    "feeCurrency": "HKD",
+    "asiaRank": 31,
+    "cityRank": 5,
+    "hasEditorial": false,
+    "heroImage": "/images/wycombe-abbey-hk-campus.jpg",
+    "overview": "Wycombe Abbey School Hong Kong opened in 2019 as a girls-only British curriculum school, affiliated with the historic Wycombe Abbey School in Buckinghamshire, England. Located in Aberdeen on the southern side of Hong Kong Island, the school enrols approximately 250 students.\n\nThe curriculum is the English National Curriculum integrated with Chinese language and cultural elements. Students progress through IGCSE and on to A Levels in the Sixth Form, with the school recently expanding to a new senior campus to deliver education through Year 13.\n\nWycombe Abbey is one of the few all-girls British curriculum options in Hong Kong.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Years 1–5",
+        "annualFee": 187106,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Years 6–8",
+        "annualFee": 197059,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Years 9–11",
+        "annualFee": 207012,
+        "currency": "HKD"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 216965,
+        "currency": "HKD"
+      }
+    ],
+    "campus": {
+      "address": "Prep School: 17 Tin Wan Street, Tin Wan, Aberdeen. Senior School: 83 Sa Po Road, Kowloon City, Hong Kong.",
+      "area": "Aberdeen",
+      "context": "Located in Aberdeen on the southern side of Hong Kong Island. Convenient for families based in Aberdeen, Pokfulam, and Repulse Bay. One of Hong Kong's few all-girls British curriculum schools."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 27815,
+    "baseScore": 63908,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.11,
+    "finalScore": 70937
+  },
+  {
+    "name": "Bangkok Patana School",
+    "slug": "bangkok-patana-school",
+    "city": "Bangkok",
+    "citySlug": "bangkok",
+    "country": "Thailand",
+    "countrySlug": "thailand",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Nursery–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 1957,
+    "roll": 2300,
+    "website": "https://www.patana.ac.th",
+    "feeSummary": "Fees from THB 809,466 per year",
+    "feeSummaryUSD": "Fees from USD 23,531 per year",
+    "feeCurrency": "THB",
+    "asiaRank": 24,
+    "cityRank": 4,
+    "hasEditorial": false,
+    "heroImage": "/images/bangkok-patana-campus.jpg",
+    "overview": "Bangkok Patana School opened in 1957 and is the longest-established British international school in Thailand. The school enrols approximately 2,300 students from age 2 through Year 13 on its single campus on La Salle Road in the Bang Na District of eastern Bangkok.\n\nPatana follows the English National Curriculum from Foundation Stage through Year 11, with students sitting IGCSE in Years 10–11 and progressing to the IB Diploma Programme in Years 12–13. The school's scale and heritage make it the default British curriculum choice for many long-term Bangkok expat families.\n\nIn addition to annual tuition, families pay a one-off entrance fee on enrolment plus a refundable deposit.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Nursery",
+        "annualFee": 527214,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Foundation Stage 1–2",
+        "annualFee": 655010,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 1–2",
+        "annualFee": 766845,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 3–6",
+        "annualFee": 809466,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 862718,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Year 10",
+        "annualFee": 979884,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Year 12",
+        "annualFee": 1038467,
+        "currency": "THB"
+      }
+    ],
+    "campus": {
+      "address": "643 La Salle Road (Sukhumvit 105), Bang Na, Bangkok 10260",
+      "area": "Bang Na",
+      "context": "Single campus on La Salle Road (Sukhumvit 105) in Bang Na District, eastern Bangkok. Established in 1957, the school anchors the Bang Na expat community."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 30188,
+    "baseScore": 65094,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.01,
+    "totalAdjustment": 0.11,
+    "finalScore": 72254
+  },
+  {
+    "name": "St Andrews International School Bangkok",
+    "slug": "st-andrews-international-school-bangkok",
+    "city": "Bangkok",
+    "citySlug": "bangkok",
+    "country": "Thailand",
+    "countrySlug": "thailand",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Foundation Stage 1–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "IB Diploma"
+    ],
+    "founded": 1997,
+    "roll": 2300,
+    "website": "https://www.standrews.ac.th",
+    "feeSummary": "Fees from THB 705,819 per year",
+    "feeSummaryUSD": "Fees from USD 20,518 per year",
+    "feeCurrency": "THB",
+    "asiaRank": 28,
+    "cityRank": 5,
+    "hasEditorial": false,
+    "heroImage": "/images/st-andrews-bangkok-campus.jpg",
+    "overview": "St Andrews International School Bangkok was founded in 1997 and now enrols approximately 2,300 students across its primary and secondary campuses in central Bangkok. The school is part of the Cognita group.\n\nSt Andrews follows the English National Curriculum from Foundation Stage through Year 11 (IGCSE), then offers the IB Diploma Programme in Years 12–13. The Primary campus is on Sukhumvit 71 in Phra Khanong; the Secondary campus is at Sukhumvit 1020.\n\nThe school is among the more accessible British curriculum options in Bangkok, sitting at the lower end of the premium fee tier.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Foundation Stage 1",
+        "annualFee": 426766,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Foundation Stage 2–Year 2",
+        "annualFee": 677611,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 3–6",
+        "annualFee": 705819,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 7–9",
+        "annualFee": 783598,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Year 10",
+        "annualFee": 852501,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Year 12",
+        "annualFee": 904376,
+        "currency": "THB"
+      }
+    ],
+    "campus": {
+      "address": "Primary: Sukhumvit 71, Phra Khanong, Bangkok. Secondary: Sukhumvit 1020, Bangkok.",
+      "area": "Phra Khanong / Sukhumvit",
+      "context": "Two campuses in central Bangkok along Sukhumvit Road. Convenient for families based in Phra Khanong, On Nut, and the broader Sukhumvit corridor."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 26290,
+    "baseScore": 63145,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.03,
+    "totalAdjustment": 0.13,
+    "finalScore": 71354
+  },
+  {
+    "name": "Denla British School",
+    "slug": "denla-british-school",
+    "city": "Bangkok",
+    "citySlug": "bangkok",
+    "country": "Thailand",
+    "countrySlug": "thailand",
+    "type": "Day",
+    "ageRange": "2–18",
+    "yearRange": "Mini Dragons–Year 13",
+    "curricula": [
+      "English National Curriculum",
+      "IGCSE",
+      "A Level"
+    ],
+    "founded": 1979,
+    "roll": 900,
+    "website": "https://www.denla.ac.th",
+    "feeSummary": "Fees from THB 851,641 per year",
+    "feeSummaryUSD": "Fees from USD 24,757 per year",
+    "feeCurrency": "THB",
+    "asiaRank": 20,
+    "cityRank": 3,
+    "hasEditorial": false,
+    "heroImage": "/images/denla-british-campus.jpg",
+    "overview": "Denla British School (DBS) is a British curriculum school in Nonthaburi, on the western edge of Bangkok. The school traces its founding back several decades but now operates as Denla British under its current ownership, enrolling approximately 900 students from age 2 through Year 13.\n\nDBS follows an enhanced English National Curriculum with specialist subject teaching from primary onwards, IGCSE in Years 10–11, and A Levels in Sixth Form. Thai curriculum components run alongside the British programme. Headmaster Jonny Liddell is a Cambridge graduate with NPQH qualifications.\n\nDBS is accredited by the Council of International Schools (CIS), the Council of British International Schools (COBIS), and Cambridge International. ONESQA-accredited locally.",
+    "editorial": null,
+    "fees": [
+      {
+        "yearGroup": "Mini Dragons",
+        "annualFee": 565226,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Nursery",
+        "annualFee": 627009,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Reception",
+        "annualFee": 715520,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 1–5",
+        "annualFee": 851641,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 6–8",
+        "annualFee": 937538,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 9–11",
+        "annualFee": 995226,
+        "currency": "THB"
+      },
+      {
+        "yearGroup": "Years 12–13",
+        "annualFee": 1074897,
+        "currency": "THB"
+      }
+    ],
+    "campus": {
+      "address": "58 Moo 2 Ratchapruek Road, Om Kret, Pak Kret, Nonthaburi 11120, Thailand",
+      "area": "Nonthaburi",
+      "context": "Located in Nonthaburi Province on the western edge of Greater Bangkok. Suits families based in the western and northern suburbs; less convenient for central Sukhumvit."
+    },
+    "waitlistNote": null,
+    "sources": [],
+    "topYearFeeUSD": 31247,
+    "baseScore": 65624,
+    "socialPenalty": 0,
+    "pressPenalty": 0,
+    "countryFreedomBonus": 0.1,
+    "qualityBonus": 0.02,
+    "totalAdjustment": 0.12000000000000001,
+    "finalScore": 73498
   }
 ]

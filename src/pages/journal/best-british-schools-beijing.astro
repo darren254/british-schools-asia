@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Beijing — Journal" description="A guide to Beijing's top-ranked British curriculum schools, covering fees, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/journal-beijing.jpg"
+      alt="Beijing CBD skyline at sunset"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Beijing</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 4 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Beijing has two British curriculum schools in the British Schools Asia index. Both are operated by Nord Anglia Education under the British School of Beijing brand, but they sit in different districts and serve very different stages of school life.
+        </p>
+
+        <p>
+          <a href="/schools/china/beijing/british-school-beijing-sanlitun">The British School of Beijing, Sanlitun</a> ranks first in the city. Opened in 2009, it is a primary-only campus running Nursery through Year 6, with around 700 students. Its location at No. 5 Sanlitun Road puts it walking distance from the embassy district and Sanlitun's commercial core — convenient for diplomatic and corporate families based in central Chaoyang. Fees for Year 3 in 2025–26 are RMB 307,000.
+        </p>
+
+        <p>
+          <a href="/schools/china/beijing/british-school-beijing-shunyi">The British School of Beijing, Shunyi</a> ranks second. Opened in 2003, the Shunyi campus is the larger and older of the two, with approximately 1,500 students from Pre-Nursery through Year 13. Sanlitun students typically transition here for secondary, where the school offers IGCSE, then either A Levels or the IB Diploma. Year 3 fees are identical to Sanlitun at RMB 307,000.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          Both BSB campuses sit at the top of the Beijing British school market on price, with annual tuition for Year 3 of RMB 307,000 — equivalent to roughly USD 42,000 at current rates. That puts Beijing among the most expensive Asian cities for British schooling alongside Shenzhen and Singapore. Fees are billed in RMB; foreign-currency payments are converted at the Bank of China middle rate at the time of payment.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          The Sanlitun-or-Shunyi decision is mostly a location decision. Sanlitun suits families based in central Chaoyang, the embassy zone, or near the major hospitals. Shunyi suits families in the gated compounds north-east of the city, near the airport — a much longer commute from the centre but a more contained expat environment.
+        </p>
+
+        <p>
+          Curriculum continuity matters too. If you have a primary-aged child and expect to be in Beijing through secondary, consider whether you'd want them to switch campuses at Year 7 or transfer cities. Sanlitun graduates do not automatically receive a place at Shunyi; standard admissions still apply.
+        </p>
+
+        <p>
+          For a full breakdown of both schools, visit the <a href="/cities/beijing">Beijing city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/beijing" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Beijing City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

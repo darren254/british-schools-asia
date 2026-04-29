@@ -10,7 +10,6 @@ const countries = [
   { name: 'Thailand', slug: 'thailand', image: '/images/bangkok-hero.jpg' },
   { name: 'Malaysia', slug: 'malaysia', image: '/images/kuala-lumpur-hero.jpg' },
   { name: 'China', slug: 'china', image: '/images/shanghai-hero.jpg' },
-  { name: 'Japan', slug: 'japan', image: '/images/tokyo-hero.jpg' },
   { name: 'Vietnam', slug: 'vietnam', image: '/images/hanoi-hero.jpg' },
   { name: 'Indonesia', slug: 'indonesia', image: '/images/jakarta-hero.jpg' },
 ];
@@ -20,14 +19,14 @@ const countriesWithCounts = countries.map((c) => ({
   count: schools.filter((s) => s.countrySlug === c.slug).length,
 }));
 ---
-<BaseLayout title="Countries — British Schools Asia" description="Browse British curriculum schools by country across Asia. Singapore, Hong Kong, Thailand, Malaysia, China, Japan, Vietnam, Indonesia.">
+<BaseLayout title="Countries — British Schools Asia" description="Browse British curriculum schools by country across Asia. Singapore, Hong Kong, Thailand, Malaysia, China, Vietnam, Indonesia.">
   <Header slot="header" />
 
   <section class="section">
     <div class="bsa-container text-center">
       <h1 class="mb-4">Browse by Country</h1>
       <p class="font-body text-black/60 max-w-xl mx-auto">
-        British curriculum schools across 8 countries and territories in Asia. Select a country to see cities, ranked schools, and local context.
+        British curriculum schools across 7 countries and territories in Asia. Select a country to see cities, ranked schools, and local context.
       </p>
     </div>
   </section>

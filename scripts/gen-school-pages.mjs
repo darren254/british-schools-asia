@@ -9,7 +9,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-const BASE = '/home/user/workspace/british-schools-asia';
+const BASE = process.cwd();
 const schools = JSON.parse(readFileSync(join(BASE, 'src/data/schools.json'), 'utf-8'));
 
 const CURRENCY_INFO = {
@@ -242,7 +242,9 @@ function toUSD(local: number): string {
       <div class="max-w-2xl">
         <p class="label mb-4">Overview</p>
         <h2 class="mb-6">About {school.name}</h2>
-        <p class="font-body text-black/70 leading-relaxed">{school.overview}</p>
+        {school.overview.split('\\n\\n').map((para) => (
+          <p class="font-body text-black/70 leading-relaxed mb-4 last:mb-0">{para}</p>
+        ))}
       </div>
     </div>
   </section>
@@ -256,7 +258,9 @@ function toUSD(local: number): string {
         <div class="max-w-2xl">
           <p class="label mb-4">Editorial Assessment</p>
           <h2 class="mb-6">Our assessment</h2>
-          <p class="font-body text-black/70 leading-relaxed">{school.editorial}</p>
+          {school.editorial.split('\\n\\n').map((para) => (
+            <p class="font-body text-black/70 leading-relaxed mb-4 last:mb-0">{para}</p>
+          ))}
         </div>
       </div>
     </section>

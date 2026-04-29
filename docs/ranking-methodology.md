@@ -1,116 +1,149 @@
-# Ranking Methodology (INTERNAL ONLY)
+# Ranking Methodology v2 (INTERNAL ONLY)
 
-This document is internal. It must never be published or shared publicly. The public methodology page will present a simplified, high-level version.
+**Effective:** 2026-04-28
+**Supersedes:** v1 (Year 3 fee × penalty model — superseded)
 
-## FROZEN RULES
+This document is internal. It must never be published or shared publicly.
+
+The public methodology page presents the ranking as "data and judgement based", with no exposure of formula, weights, bands, evidence log, or source mechanics.
+
+---
+
+## FROZEN RULES (v2)
 
 The following rules cannot be changed without an explicit decision from the project owner.
 
 ## Inclusion criteria
 
-- School uses the English National Curriculum.
-- Located in one of the top 100 commercial cities in Asia.
-- Year 3 tuition >= USD 18,000 equivalent.
-- School publishes fee information publicly. If fees are not available, the school is not included.
-- No exceptions.
+A school is in the index if and only if all four are true:
 
-## Eligibility for ranking
+- **Open > 12 months** as of the index date.
+- **English National Curriculum primary track** — IB / IGCSE / A Level alongside ENC is fine; IB-PYP-only or non-British primary tracks are excluded.
+- **Located in a top-100 Asian commercial city.**
+- **Top Year Fees ≥ USD 25,000** equivalent at the documented FX rate.
 
-- School must have been open since 2025 or earlier (at least one full academic year of operation).
-- Opening-soon or pre-launch schools may be listed on the site but CANNOT appear in any ranked list.
+A school missing any criterion is excluded entirely (not listed at all).
 
-## Base ranking
+## Base score
 
-- All qualifying schools are ranked by Year 3 fee in USD equivalent, highest to lowest.
-- Year 3 fee is the internal benchmark only. It is never shown publicly as "Year 3 fee" on the site.
-- Currency conversion: use a consistent, recent exchange rate. Document the rate and date used.
+```
+Base Score = (Top Year Fees in USD + 100,000) / 2
+```
 
-## Reputation penalty (downward only)
+Top Year Fees = the highest single year-group annual tuition in the school's published schedule, in USD at the documented rate.
 
-Reputation is NOT a positive scoring component. It only acts as a downward adjustment when serious negative evidence exists.
+The +100,000 / 2 transform compresses the fee distribution: a $25,000 school scores 62,500; a $60,000 school scores 80,000. Premium schools cluster near the top while lower-fee schools remain meaningfully above zero — quality signals can then move ranks materially.
 
-### Penalty levels
+## Adjustments
 
-| Penalty | When to apply |
-|---|---|
-| 0% | No clear serious negative evidence found, OR evidence is mixed/thin/vague/old/trivial/promotional, OR fewer than 3 independent sources found. |
-| 10% | At least 3 independent non-school sources within 36 months showing repeated moderate criticism: instability, weak management, quality concerns, parent dissatisfaction, recurring complaints. Not a major scandal. |
-| 25% | At least 3 independent non-school sources within 36 months showing serious negative coverage: safeguarding concerns, severe regulatory issues, major financial distress, major governance crisis, strong mainstream press reporting of serious problems. |
+Final Score = Base Score × (1 + sum of bonuses − sum of penalties)
 
-### Adjusted Fee Score
+### Penalties (multiplicative, downward)
 
-Adjusted Fee Score = Year 3 fee in USD * (1 - penalty percentage)
+| # | Trigger | Penalty | Evidence threshold |
+|---|---|---|---|
+| 1 | Social media — moderate | −10% | ≥3 independent non-school sources within 36 months citing recurring concerns: management instability, staff turnover, parent dissatisfaction, communication failures |
+| 2 | Social media — bad | −20% | ≥3 independent non-school sources within 36 months alleging safeguarding failures, severe regulatory issues, financial distress, governance crisis, or mainstream-press-confirmed scandal |
+| 3 | Negative press | −10% | Any tier-1 outlet within 18 months reporting a school-specific issue (not generic sector reporting). Tier-1 = FT, Reuters, Bloomberg, SCMP, Straits Times, Bangkok Post, Nikkei Asia |
 
-Example: School with $23,500 Year 3 fee and 10% penalty = $23,500 * 0.90 = $21,150 adjusted score.
+A school cannot receive both moderate and bad social media simultaneously — apply the most serious that applies.
 
-Schools are ranked by Adjusted Fee Score, highest to lowest.
+Maximum combined penalty: 30% (bad social + press).
 
-## Evidence rules
+### Positive signals (additive bonuses)
 
-### Allowed sources for reputation
-- Reddit
-- Facebook parent groups
-- Quora
-- Forums
-- Press coverage
-- School review sites (e.g. ISR, Glassdoor for staff perspective)
-- Google reviews (where available; note Google has largely disabled reviews for schools)
+| # | Signal | Bonus |
+|---|---|---|
+| 1 | Host country freedom from political interference in the curriculum (country-level flag) | +10% |
+| 2 | Independent inspection within the last 24 months with positive outcome (BSO / ISI / equivalent) | +1% |
+| 3 | BSO Accreditation current (school listed on the BSO register) | +1% |
+| 4 | A Level results published on the school's own website | +1% |
+| 5 | IGCSE results published on the school's own website | +1% |
 
-### Banned sources for reputation
-- School website copy
-- Admissions pages
-- Generic directory blurbs
-- Promotional content
-- Marketing materials
-- Any content clearly authored by or paid for by the school
+Maximum combined bonus: 14%.
+
+#### Host country freedom — country-level call
+
+Applied uniformly per country. Country either qualifies for the +10% or it doesn't. Reviewed when relevant policy changes.
+
+| Country | Freedom bonus | Reason |
+|---|---|---|
+| Singapore | +10% | No political constraints on ENC delivery |
+| Hong Kong | +10% | International curriculum freedom retained as of 2026 |
+| Thailand | +10% | No restrictions on ENC delivery |
+| Malaysia | +10% | No restrictions on ENC delivery |
+| Japan | +10% | No restrictions on ENC delivery |
+| Vietnam | +10% | No material restrictions on international school curriculum |
+| Indonesia | +10% | No material restrictions on international school curriculum |
+| China (mainland) | 0 (excluded from bonus) | Restrictions on local-citizen enrolment, content of certain subjects, and admissions; widely considered a constraint on independent curriculum delivery |
+
+## Final score and ranking
+
+```
+Final Score = Base Score × (1 + bonuses − penalties)
+```
+
+- All schools sorted globally by Final Score, descending → `asiaRank` (1 to N)
+- Schools sorted within each city → `cityRank`
+
+## Evidence requirements
+
+### Source types to check (per school)
+
+1. Reddit
+2. Facebook parent groups (where accessible)
+3. Quora
+4. Forums (regional expat forums, ISR)
+5. Press / news (Google News + tier-1 outlets explicitly)
+6. School review sites (ISR, Glassdoor, Indeed, WhichSchoolAdvisor, GoodSchoolsGuide, ischooladvisor)
+7. Google reviews (where available)
 
 ### Recency window
-- Only consider evidence from the last 36 months.
-- Anything older is ignored for scoring purposes.
+
+- Social media penalty evidence: last 36 months
+- Press penalty evidence: last 18 months
+- Inspection bonus: last 24 months
 
 ### Minimum evidence threshold
-- A penalty can ONLY be applied if there are at least 3 independent non-school sources.
-- If fewer than 3 sources exist: 0% penalty, factual listing only, editorial assessment not published.
+
+- Social media penalty (10% or 20%) requires ≥3 independent non-school sources
+- Press penalty requires ≥1 tier-1 outlet
+- Bonuses require objective verification (inspection report visible, BSO list lookup, school's own results page)
 
 ### Evidence log
-For every school, maintain a log:
-- Source type (Reddit / forum / press / review site / etc.)
-- Status: found / not found / inaccessible
-- URL
-- Date of content
-- Brief note on what it says
-- Overall assessment: positive / neutral / negative / mixed
 
-No silent skipping. Every source type must be marked.
-
-## Homepage Top 20 logic
-
-1. Build global master ranking by Adjusted Fee Score.
-2. Pass 1 (City Champions): for each city, take its highest-ranked school. Sort those champions by Adjusted Fee Score. Take top 8 into the Top 20 pool.
-3. Pass 2 (Global Fill): fill remaining 12 spots from the global master ranking, skipping schools already in Pass 1.
-4. Result: Top 20 is fee-driven but structurally diverse across cities.
-5. N (city champion slots) starts at 8. Can be tuned later.
+Maintained in `research/evidence-log.json`. Per school: source-type checks, dates, URLs, assessments. No silent skipping — every source type must be marked (`found` / `not_found` / `inaccessible` / `not_checked` with reason).
 
 ## Public presentation
 
 - Show Asia rank and city rank on every school profile.
-- Show fee summary and expandable fee table publicly.
-- Never expose Year 3 as a named benchmark publicly.
-- Never expose the penalty percentages or adjusted scores publicly.
-- Never expose the evidence log publicly.
-- Public methodology page: explain that ranking considers fees and independent public information, with adjustments for serious independently evidenced issues.
+- Show fee summary and expandable fee table.
+- Public methodology page describes the system as **"data and judgement based"** without exposing the formula, weights, bands, or evidence log.
+- Never label any number publicly as "Year 3 fee" or "adjusted fee score".
 
-## Schools with insufficient evidence
+## Currency conversion
 
-- Factual profile published: yes.
-- Editorial assessment: no.
-- Ranking: yes (with 0% penalty, since no evidence to justify a penalty).
-- Note on profile: "Independent review not yet published. We have listed this school because it meets our published inclusion criteria, but we do not yet have enough independent source material to publish an editorial assessment."
+Documented in `research/currency-rates.json`. Updated when materially out of date (>5% drift on any major fee currency for >3 months).
 
 ## Legal guardrails
 
 - Never make speculative allegations.
 - Never repeat unverified accusations.
 - Stick to summarising what multiple public sources say.
-- Do not add new accusations or editorial opinions beyond what the evidence supports.
-- If in doubt, apply 0% penalty and note insufficient evidence.
+- Where in doubt, apply 0% penalty.
+- Editorial assessments must cite the documented evidence; if evidence floor is not met, no editorial — show the placeholder note.
+
+## Methodology versioning
+
+Changes to this document require explicit project-owner approval. When changed:
+
+- Bump version number
+- Date the change
+- Mark the previous version as superseded
+- Re-run the full evidence + compute pipeline
+- Document the rank deltas in the change log
+
+### Change log
+
+- **v2 — 2026-04-28** — replaced Year 3 fee × penalty model with `(Top Year Fees + 100,000) / 2 × (1 + bonuses − penalties)` formula. Added positive signals (host country freedom, inspection, BSO, A Level / IGCSE published). Raised entry threshold to USD 25,000 Top Year Fees. Reduced operating-history requirement from "since 2025 or earlier" to "open > 12 months".
+- **v1 — 2026-04-03** — initial methodology: Year 3 USD as base, downward reputation penalty only (0/10/25%).

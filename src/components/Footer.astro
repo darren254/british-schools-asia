@@ -2,6 +2,34 @@
 const currentYear = new Date().getFullYear();
 ---
 <footer class="bg-black text-white">
+  <!-- Footer email capture -->
+  <div class="bsa-container pt-16 md:pt-20 pb-10 border-b border-white/10">
+    <div class="max-w-xl mx-auto text-center">
+      <p class="label text-white/40 mb-3">Newsletter</p>
+      <h3 class="font-display text-2xl md:text-3xl mb-4 text-white">Get updates by email</h3>
+      <p class="font-body text-sm text-white/60 mb-6">
+        New rankings, school profiles, and editorial guides — straight to your inbox.
+      </p>
+      <form class="bsa-subscribe-form flex flex-col sm:flex-row gap-3" data-source="footer" novalidate>
+        <input
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="Your email address"
+          class="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white font-body text-sm placeholder:text-white/40 outline-none focus:border-white/60"
+          style="border-radius:0;"
+        />
+        <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+        <button type="submit" class="btn-primary whitespace-nowrap">Sign Up</button>
+      </form>
+      <p class="bsa-subscribe-message font-body text-sm text-white/60 mt-4 min-h-[1.25rem]" role="status" aria-live="polite"></p>
+      <p class="font-body text-xs text-white/40 mt-4">
+        We use your email only to send you updates from British Schools Asia. Unsubscribe at any time.
+      </p>
+    </div>
+  </div>
+
   <div class="bsa-container py-16 md:py-20">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
       <!-- Brand -->
@@ -19,6 +47,7 @@ const currentYear = new Date().getFullYear();
           <a href="/rankings" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Rankings</a>
           <a href="/cities" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Cities</a>
           <a href="/countries" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Countries</a>
+          <a href="/news" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">News</a>
           <a href="/journal" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Journal</a>
           <a href="/methodology" class="text-sm text-white no-underline hover:opacity-70" style="text-decoration:none;">Methodology</a>
         </nav>
@@ -41,3 +70,58 @@ const currentYear = new Date().getFullYear();
     </p>
   </div>
 </footer>
+
+<script is:inline>
+  (function () {
+    const forms = document.querySelectorAll('form.bsa-subscribe-form');
+    if (!forms.length) return;
+    forms.forEach((form) => {
+      const emailInput = form.querySelector('input[name="email"]');
+      const hpInput = form.querySelector('input[name="hp"]');
+      const button = form.querySelector('button[type="submit"]');
+      // Message element: prefer one inside the same form's container (sibling),
+      // otherwise fall back to the form's parent .bsa-subscribe-message.
+      const msg = form.parentElement && form.parentElement.querySelector('.bsa-subscribe-message');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = (emailInput.value || '').trim();
+        if (!email) {
+          if (msg) msg.textContent = 'Please enter your email.';
+          return;
+        }
+        button.disabled = true;
+        button.style.opacity = '0.6';
+        if (msg) msg.textContent = 'Subscribing…';
+        try {
+          const res = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({
+              email,
+              hp: hpInput ? hpInput.value : '',
+              source: form.dataset.source || 'unknown',
+            }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && data.ok) {
+            form.style.display = 'none';
+            if (msg) {
+              msg.textContent = data.alreadySubscribed
+                ? 'You are already subscribed. Thanks!'
+                : 'Thanks — you are on the list.';
+            }
+          } else {
+            if (msg) msg.textContent = (data && data.error) || 'Something went wrong. Please try again.';
+            button.disabled = false;
+            button.style.opacity = '1';
+          }
+        } catch (err) {
+          if (msg) msg.textContent = 'Network error. Please try again.';
+          button.disabled = false;
+          button.style.opacity = '1';
+        }
+      });
+    });
+  })();
+</script>

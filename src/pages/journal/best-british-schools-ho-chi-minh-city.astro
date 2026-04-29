@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Ho Chi Minh City — Journal" description="A guide to Ho Chi Minh City's top-ranked British curriculum schools, covering fees, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/journal-ho-chi-minh-city.jpg"
+      alt="Ho Chi Minh City skyline across the Saigon River"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Ho Chi Minh City</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 4 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Ho Chi Minh City has a deep international school market, but only one school qualifies for the British Schools Asia index — the longest-established British curriculum option in the country.
+        </p>
+
+        <p>
+          <a href="/schools/vietnam/ho-chi-minh-city/british-international-school-ho-chi-minh-city">British International School Ho Chi Minh City (BIS HCMC)</a> ranks first in the city. Founded in 1997 and operated by Nord Anglia Education, the school has grown from a small pre-school in District 1 into one of the largest international schools in Vietnam, with approximately 2,300 students from over 55 nationalities.
+        </p>
+
+        <p>
+          BIS HCMC runs three purpose-built campuses — Early Years, Junior, and Secondary — all in the An Phu area of District 2, the city's principal expat residential hub. The curriculum follows the English National Curriculum at primary level, IGCSE in Years 10–11, and either A Levels or the IB Diploma in Years 12–13. The dual sixth-form pathway is unusual in Vietnam and a meaningful differentiator.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          Year 3 tuition for 2025–26 is VND 705,200,000 — roughly USD 27,000 at current rates — placing HCMC slightly below Hanoi and well below Singapore or Hong Kong. Like its sister school in Hanoi, BIS HCMC bundles uniform, daily lunch, snacks for younger students, learning materials, day trips, and most co-curricular activities into the headline fee. That makes the all-in cost cleaner to plan around.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          District 2's An Phu neighbourhood is the practical answer to "where do British school families live in HCMC". The three campuses sit close together along Nguyen Van Huong Street, which keeps multi-child logistics simple. Families based in District 1 or District 3 should expect a 25–40 minute commute, longer in peak traffic.
+        </p>
+
+        <p>
+          Pathway is the second decision. BIS HCMC is one of very few schools in the region that runs both A Levels and the IB Diploma in parallel. Children who change pathway intent late in secondary have meaningful flexibility here.
+        </p>
+
+        <p>
+          For a full breakdown, visit the <a href="/cities/ho-chi-minh-city">Ho Chi Minh City page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/ho-chi-minh-city" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Ho Chi Minh City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

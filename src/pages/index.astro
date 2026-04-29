@@ -30,7 +30,6 @@ const cities = [
   { name: 'Beijing', slug: 'beijing', image: '/images/beijing-hero.jpg' },
   { name: 'Shanghai', slug: 'shanghai', image: '/images/shanghai-hero.jpg' },
   { name: 'Shenzhen', slug: 'shenzhen', image: '/images/shenzhen-hero.jpg' },
-  { name: 'Tokyo', slug: 'tokyo', image: '/images/tokyo-hero.jpg' },
   { name: 'Ho Chi Minh City', slug: 'ho-chi-minh-city', image: '/images/ho-chi-minh-city-hero.jpg' },
   { name: 'Hanoi', slug: 'hanoi', image: '/images/hanoi-hero.jpg' },
   { name: 'Jakarta', slug: 'jakarta', image: '/images/jakarta-hero.jpg' },
@@ -50,13 +49,13 @@ const cities = [
       alt="Aerial view of Singapore"
       class="absolute inset-0 w-full h-full object-cover"
     />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 100%);"></div>
     <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
       <div class="bsa-container">
-        <h1 class="text-white text-4xl md:text-5xl lg:text-6xl max-w-2xl mb-4">
+        <h1 class="text-white text-4xl md:text-5xl lg:text-6xl max-w-2xl mb-4" style="text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 2px 12px rgba(0,0,0,0.35);">
           Find the top British schools in Asia
         </h1>
-        <p class="text-white/80 font-body text-base md:text-lg max-w-lg mb-8">
+        <p class="text-white/85 font-body text-base md:text-lg max-w-lg mb-8" style="text-shadow: 0 1px 2px rgba(0,0,0,0.5);">
           Independent rankings, fees, and reviews for British curriculum schools across the region.
         </p>
         <a href="/rankings" class="btn-ghost">View Rankings</a>
@@ -103,45 +102,6 @@ const cities = [
         {cities.map((city) => (
           <CityCard city={city.name} slug={city.slug} schoolCount={city.count} image={city.image} />
         ))}
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider bsa-container" />
-
-  <!-- BROWSE BY COUNTRY -->
-  <section class="section">
-    <div class="bsa-container">
-      <p class="label mb-4">Browse by Country</p>
-      <h2 class="mb-10">Explore schools by country</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-6">
-        <a href="/countries/singapore" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">Singapore</p>
-        </a>
-        <a href="/countries/hong-kong" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">Hong Kong</p>
-        </a>
-        <a href="/countries/thailand" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">Thailand</p>
-        </a>
-        <a href="/countries/malaysia" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">Malaysia</p>
-        </a>
-        <a href="/countries/china" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">China</p>
-        </a>
-        <a href="/countries/japan" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">Japan</p>
-        </a>
-        <a href="/countries/vietnam" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">Vietnam</p>
-        </a>
-        <a href="/countries/indonesia" class="group no-underline block" style="text-decoration:none;">
-          <p class="font-body text-sm group-hover:underline">Indonesia</p>
-        </a>
-      </div>
-      <div class="mt-8">
-        <a href="/countries" class="btn-ghost-dark">View All Countries</a>
       </div>
     </div>
   </section>
@@ -199,15 +159,25 @@ const cities = [
       <p class="font-body text-white/60 mb-8 max-w-md mx-auto">
         Receive updates when new schools are ranked and new guides are published.
       </p>
-      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return false;">
-        <input
-          type="email"
-          placeholder="Your email address"
-          class="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white font-body text-sm placeholder:text-white/40 outline-none focus:border-white/60"
-          style="border-radius:0;"
-        />
-        <button type="submit" class="btn-primary whitespace-nowrap">Sign Up</button>
-      </form>
+      <div class="max-w-md mx-auto">
+        <form class="bsa-subscribe-form flex flex-col sm:flex-row gap-3" data-source="homepage" novalidate>
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="Your email address"
+            class="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white font-body text-sm placeholder:text-white/40 outline-none focus:border-white/60"
+            style="border-radius:0;"
+          />
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+          <button type="submit" class="btn-primary whitespace-nowrap">Sign Up</button>
+        </form>
+        <p class="bsa-subscribe-message font-body text-sm text-white/60 mt-4 min-h-[1.25rem]" role="status" aria-live="polite"></p>
+        <p class="font-body text-xs text-white/40 mt-4">
+          We use your email only to send you updates from British Schools Asia. Unsubscribe at any time.
+        </p>
+      </div>
     </div>
   </section>
 

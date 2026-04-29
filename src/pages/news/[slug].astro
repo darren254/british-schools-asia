@@ -1,0 +1,388 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import authors from '../../data/authors.json';
+
+export async function getStaticPaths() {
+  const articleFiles = import.meta.glob('../../data/news/*.json', { eager: true });
+  const articles = Object.values(articleFiles)
+    .map((m: any) => m.default || m)
+    .filter((a: any) => a && a.slug);
+
+  return articles.map((article: any) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const author = (authors as any)[article.author];
+
+const formatDate = (iso: string) => {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+};
+
+// Load other articles for "More from News" rail
+const articleFiles = import.meta.glob('../../data/news/*.json', { eager: true });
+const allArticles = Object.values(articleFiles)
+  .map((m: any) => m.default || m)
+  .filter((a: any) => a && a.slug && a.slug !== article.slug)
+  .sort((a: any, b: any) => (a.date < b.date ? 1 : -1))
+  .slice(0, 4);
+---
+<BaseLayout
+  title={article.headline}
+  description={article.dek}
+  ogImage={article.heroImage}
+>
+  <Header slot="header" />
+
+  <article class="news-article">
+    <!-- Top: kicker + headline + dek + byline -->
+    <header class="news-article-header">
+      <div class="container-narrow">
+        <p class="label text-black/60 mb-5 mt-12 md:mt-16">{article.kicker}</p>
+
+        <h1 class="news-headline">{article.headline}</h1>
+
+        {article.dek && (
+          <p class="news-dek">{article.dek}</p>
+        )}
+
+        {author && (
+          <div class="news-byline">
+            {author.photo && (
+              <img src={author.photo} alt={author.name} class="news-byline-photo" />
+            )}
+            <div class="news-byline-text">
+              <p class="news-byline-name">By <a href={`/authors/${author.slug}`}>{author.name}</a></p>
+              <p class="news-byline-bio">{author.shortBio}</p>
+              <p class="news-byline-date">{formatDate(article.date)}</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+
+    <!-- Hero image (full container width inside narrow column for consistency with NYT) -->
+    <figure class="news-hero">
+      <div class="container-narrow">
+        <img src={article.heroImage} alt={article.heroAlt} loading="eager" />
+        {article.heroCredit && (
+          <figcaption class="news-credit">{article.heroCredit}</figcaption>
+        )}
+      </div>
+    </figure>
+
+    <!-- Body -->
+    <div class="news-body">
+      <div class="container-narrow">
+        {article.body.map((block: any) => {
+          if (block.type === 'paragraph') {
+            return <p>{block.text}</p>;
+          }
+          if (block.type === 'heading') {
+            return <h2>{block.text}</h2>;
+          }
+          if (block.type === 'image') {
+            return (
+              <figure class="news-inline-image">
+                <img src={block.src} alt={block.alt} loading="lazy" />
+                <figcaption>
+                  {block.caption && <span class="news-caption">{block.caption}</span>}
+                  {block.credit && <span class="news-credit-inline">{block.credit}</span>}
+                </figcaption>
+              </figure>
+            );
+          }
+          if (block.type === 'pullquote') {
+            return <blockquote class="news-pullquote">{block.text}</blockquote>;
+          }
+          return null;
+        })}
+
+        {article.sourceUrl && article.sourceName && (
+          <p class="news-source">
+            <a href={article.sourceUrl} rel="nofollow noopener" target="_blank">Read more &rsaquo; {article.sourceName}</a>
+          </p>
+        )}
+
+        {article.tags && article.tags.length > 0 && (
+          <div class="news-tags">
+            {article.tags.map((tag: string) => (
+              <span class="news-tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- More from News -->
+    {allArticles.length > 0 && (
+      <>
+        <hr class="divider-subtle container-narrow" />
+        <section class="news-related">
+          <div class="container-narrow">
+            <p class="label text-black/50 mb-6">More from News</p>
+            <ul class="news-related-list">
+              {allArticles.map((a: any) => (
+                <li>
+                  <a href={`/news/${a.slug}`}>
+                    <span class="news-related-kicker">{a.kicker}:</span>{' '}
+                    <span class="news-related-headline">{a.headline}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </>
+    )}
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  /* ===== NEWS ARTICLE — NYT-faithful chrome ===== */
+
+  .news-article {
+    background: #fff;
+  }
+
+  /* Headline */
+  .news-headline {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: #000;
+    margin: 0 0 1rem;
+  }
+  @media (min-width: 768px) {
+    .news-headline {
+      font-size: 3rem;
+    }
+  }
+
+  /* Dek / standfirst */
+  .news-dek {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.45;
+    color: rgba(0, 0, 0, 0.65);
+    margin: 0 0 2rem;
+  }
+  @media (min-width: 768px) {
+    .news-dek {
+      font-size: 1.4rem;
+    }
+  }
+
+  /* Byline row */
+  .news-byline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  .news-byline-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .news-byline-text { flex: 1; min-width: 0; }
+  .news-byline-name {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 0.15rem;
+  }
+  .news-byline-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .news-byline-bio {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.55);
+    line-height: 1.4;
+    margin: 0 0 0.25rem;
+  }
+  .news-byline-date {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0;
+  }
+
+  /* Hero image */
+  .news-hero {
+    margin: 0 0 0.75rem;
+  }
+  .news-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Caption + credit (half-size, per locked rule) */
+  .news-credit {
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+    margin: 0.5rem 0 0;
+  }
+
+  /* Body */
+  .news-body {
+    padding: 1rem 0 3rem;
+  }
+  .news-body p {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    line-height: 1.65;
+    color: #1a1a1a;
+    margin: 0 0 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .news-body p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+  }
+  .news-body h2 {
+    font-family: var(--font-display);
+    font-size: 1.65rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000;
+    margin: 2.5rem 0 1rem;
+  }
+  @media (min-width: 768px) {
+    .news-body h2 {
+      font-size: 1.85rem;
+    }
+  }
+
+  /* Body links — plain, no underline, no bold (locked rule) */
+  .news-body a,
+  .news-related a {
+    color: #000;
+    text-decoration: none;
+    font-weight: inherit;
+    border-bottom: none;
+  }
+  .news-body a:hover,
+  .news-related a:hover {
+    opacity: 0.7;
+  }
+
+  /* Inline image */
+  .news-inline-image {
+    margin: 2rem 0;
+  }
+  .news-inline-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .news-inline-image figcaption {
+    margin-top: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .news-caption {
+    color: rgba(0, 0, 0, 0.7);
+    margin-right: 0.4rem;
+  }
+  .news-credit-inline {
+    color: rgba(0, 0, 0, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.625rem;
+  }
+
+  /* Pull quote */
+  .news-pullquote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.65rem;
+    line-height: 1.35;
+    color: #000;
+    margin: 2.5rem 0;
+    padding-left: 1.25rem;
+    border-left: 2px solid #000;
+  }
+  @media (min-width: 768px) {
+    .news-pullquote {
+      font-size: 1.85rem;
+    }
+  }
+
+  /* Source line */
+  .news-source {
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Tags */
+  .news-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .news-tag {
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 9999px;
+  }
+
+  /* Related rail */
+  .news-related {
+    padding: 2.5rem 0 4rem;
+  }
+  .news-related-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  .news-related-list li {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0 0 1rem;
+    color: #000;
+  }
+  .news-related-kicker {
+    font-weight: 600;
+  }
+</style>

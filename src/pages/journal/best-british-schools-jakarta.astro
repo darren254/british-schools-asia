@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import JournalSubNav from '../../components/JournalSubNav.astro';
+---
+<BaseLayout title="Best British Schools in Jakarta — Journal" description="A guide to Jakarta's top-ranked British curriculum schools, covering fees, curricula, and what parents should know.">
+  <Header slot="header" />
+
+  <JournalSubNav active="Cities" />
+
+  <!-- HERO -->
+  <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/journal-jakarta.jpg"
+      alt="Jakarta skyline at night"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+      <div class="bsa-container max-w-2xl">
+        <p class="label text-white/70 mb-4">Cities</p>
+        <h1 class="text-white text-3xl md:text-5xl leading-tight">Best British Schools in Jakarta</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="section">
+    <div class="container-narrow">
+      <p class="font-body text-black/50 text-sm mb-8">Published April 2026 &middot; 4 min read</p>
+
+      <div class="space-y-6 font-body text-black/80 leading-relaxed">
+        <p>
+          Jakarta has two British curriculum schools in the British Schools Asia index. The market is small but distinct: a recently launched challenger leads on academic positioning, and a long-established incumbent serves the bulk of the city's expat population.
+        </p>
+
+        <p>
+          <a href="/schools/indonesia/jakarta/the-independent-school-of-jakarta">The Independent School of Jakarta (ISJ)</a> ranks first. The school opened in September 2021 and is operated by The Schools Trust, a UK-registered charity running 16 schools across 11 countries. Every teacher is UK-qualified, the staff-to-pupil ratio is 1:9, and Pre-Prep classes cap at around 15. The school is accredited by British Schools Overseas, listed in The Good Schools Guide, and led by former ISI inspector Eileen Fisher. A purpose-built Senior Campus is scheduled to open in Pondok Indah in 2028.
+        </p>
+
+        <p>
+          <a href="/schools/indonesia/jakarta/british-school-jakarta">British School Jakarta (BSJ)</a> ranks second. Established in 1973 under the auspices of the British Embassy, it is one of Southeast Asia's longest-running British schools, with approximately 1,400 students from over 44 nationalities. BSJ runs the English National Curriculum at primary level, then transitions to the IB Middle Years Programme and IB Diploma — so families committed to A Levels need to look elsewhere.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">Fees in context</h2>
+
+        <p>
+          Jakarta is one of the more affordable Asian cities for British curriculum schooling. ISJ fees range from around IDR 149 million at Pre-Nursery to IDR 505 million at Year 13. BSJ Key Stage 2 tuition is around IDR 388 million per year, with a separate annual Capital Levy. Currency exposure matters here — fees are billed in IDR but families paid in USD or GBP can see meaningful year-on-year movement.
+        </p>
+
+        <h2 class="text-2xl mt-10 mb-4">What parents should know</h2>
+
+        <p>
+          Pathway is the first decision. ISJ takes students through GCSEs and A Levels; BSJ runs the IB Diploma. If you're set on one or the other, the choice is effectively made for you.
+        </p>
+
+        <p>
+          Location is the second. ISJ sits in Pondok Indah in South Jakarta, the traditional expat heartland and walking distance from the city's main international hospitals and malls. BSJ's main campus is in Bintaro Sektor 9, around 20 km south of central Jakarta — a self-contained planned township with a longer commute for families based in the centre.
+        </p>
+
+        <p>
+          For a full breakdown of both schools, visit the <a href="/cities/jakarta">Jakarta city page</a> or browse the <a href="/rankings">full rankings</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="divider container-narrow" />
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="container-narrow">
+      <p class="label mb-6">Related</p>
+      <div class="flex flex-col gap-6">
+        <a href="/rankings" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Asia's Top British Schools — Full Rankings
+        </a>
+        <a href="/cities/jakarta" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          Jakarta City Guide
+        </a>
+        <a href="/methodology" class="font-display text-xl no-underline hover:underline" style="text-decoration:none;">
+          How We Rank Schools
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

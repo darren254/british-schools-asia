@@ -9,32 +9,25 @@
 **Tech stack:** Astro + Tailwind CSS v4 + Cloudflare Pages (ISJ stack only).
 **Brand reference:** Net-a-Porter design language.
 
-## Inclusion rules (FROZEN)
+## Inclusion rules (FROZEN — methodology v2, 2026-04-28)
 
-- British school = uses the English National Curriculum.
+- British school = uses the English National Curriculum (primary track).
 - Geography = top 100 commercial cities in Asia. A city is only included if it has at least one qualifying school.
-- Fee threshold = Year 3 tuition of USD 18,000+ equivalent (internal benchmark only; never shown publicly).
-- No exceptions. If a school does not meet the rule, it is not listed.
-- Schools must have been open since 2025 or earlier (at least one full academic year). Opening-soon schools can be listed but NOT ranked.
+- Fee threshold = **Top Year Fees of USD 25,000+** equivalent.
+- School must have been open more than 12 months.
 - If a school does not publish fees, it is not included at all.
+- No exceptions. If a school does not meet the rule, it is not listed.
 
-## Ranking system (FROZEN)
+## Ranking system (FROZEN — methodology v2, 2026-04-28)
 
-- Base ranking = fees (Year 3 fee in USD equivalent, used internally).
-- Reputation = downward penalty only, not a positive scoring component.
-- Penalty levels: 0% (no issues), 10% (credible repeated moderate concerns), 25% (serious well-supported concerns).
-- Evidence window: last 36 months only. Older coverage is ignored.
-- Minimum 3 independent non-school sources required to apply any penalty.
-- Allowed sources: Reddit, Facebook parent groups, Quora, forums, press, school review sites, Google reviews (where available).
-- Banned sources for reputation: school website copy, admissions pages, generic directory blurbs, promotional content.
-- If fewer than 3 independent sources exist: no editorial score, no penalty, factual listing only.
+See `docs/ranking-methodology.md` for the full ruleset. Summary:
 
-## Homepage Top 20 logic (FROZEN)
-
-1. Build global master ranking by Adjusted Fee Score (fee minus penalty).
-2. Pass 1 — City Champions: take each city's highest-ranked school, sort by Adjusted Fee Score, take top 8 into the Top 20 pool.
-3. Pass 2 — Global Fill: fill remaining 12 spots from the global master ranking, skipping schools already chosen in Pass 1.
-4. Result: Top 20 is fee-driven but structurally diverse across cities.
+- **Base score:** `(Top Year Fees in USD + 100,000) / 2` (compresses fee dispersion).
+- **Penalties (multiplicative):** social media moderate (-10%), social media bad (-20%), tier-1 negative press (-10%).
+- **Positive signals (additive):** host country freedom (+10%), inspection in last 24mo (+1%), BSO accreditation (+1%), A Level results published (+1%), IGCSE results published (+1%).
+- **Final score:** `Base × (1 + bonuses − penalties)`. Sort descending → asiaRank and cityRank.
+- **Public framing:** "data and judgement based" / "research team and panel of industry experts". Internal mechanics never disclosed.
+- v1 methodology (Year 3 fee × penalty) is superseded; do not reference.
 
 ## Public-facing rules
 

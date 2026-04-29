@@ -1,0 +1,51 @@
+{
+  "documentedAt": "2026-04-28",
+  "source": "Approximate mid-market rates from xe.com / oanda; rounded for ranking purposes",
+  "rates": {
+    "SGD": {
+      "perUSD": 1.286,
+      "usdPerLocal": 0.7777,
+      "lastUsed": "2026-04-03"
+    },
+    "HKD": {
+      "perUSD": 7.8,
+      "usdPerLocal": 0.1282,
+      "lastUsed": "2026-04-27"
+    },
+    "THB": {
+      "perUSD": 34.4,
+      "usdPerLocal": 0.02907,
+      "lastUsed": "2026-04-27"
+    },
+    "MYR": {
+      "perUSD": 4.299,
+      "usdPerLocal": 0.2326,
+      "lastUsed": "2026-04-03"
+    },
+    "JPY": {
+      "perUSD": 149.25,
+      "usdPerLocal": 0.0067,
+      "lastUsed": "2026-04-03"
+    },
+    "CNY": {
+      "perUSD": 7.246,
+      "usdPerLocal": 0.138,
+      "lastUsed": "2026-04-27"
+    },
+    "VND": {
+      "perUSD": 25510,
+      "usdPerLocal": 0.0000392,
+      "lastUsed": "2026-04-03"
+    },
+    "IDR": {
+      "perUSD": 16393,
+      "usdPerLocal": 0.000061,
+      "lastUsed": "2026-04-27"
+    }
+  },
+  "notes": [
+    "Year 3 fee in USD is the methodology benchmark (internal only).",
+    "Rates documented at the time of school addition; not adjusted retroactively.",
+    "For a re-conversion using fresh rates, update this file and rerun the ranking sort."
+  ]
+}

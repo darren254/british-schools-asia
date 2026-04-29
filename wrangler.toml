@@ -1,3 +1,7 @@
 name = "british-schools-asia"
 pages_build_output_dir = "./dist"
 compatibility_date = "2026-04-03"
+
+[[kv_namespaces]]
+binding = "EMAIL_SUBSCRIBERS"
+id = "e37aac7687964f9c83b134743cd39a1a"

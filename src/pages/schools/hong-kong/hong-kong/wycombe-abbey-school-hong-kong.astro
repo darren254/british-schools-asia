@@ -5,9 +5,9 @@ import Footer from '../../../../components/Footer.astro';
 import SchoolCard from '../../../../components/SchoolCard.astro';
 import schools from '../../../../data/schools.json';
 
-const school = schools.find((s) => s.slug === 'the-british-school-in-tokyo')!;
+const school = schools.find((s) => s.slug === 'wycombe-abbey-school-hong-kong')!;
 const relatedSchools = schools
-  .filter((s) => s.citySlug === 'tokyo' && s.slug !== school.slug)
+  .filter((s) => s.citySlug === 'hong-kong' && s.slug !== school.slug)
   .sort((a, b) => a.cityRank - b.cityRank);
 
 function formatFee(amount: number): string {
@@ -15,7 +15,7 @@ function formatFee(amount: number): string {
 }
 
 function toUSD(local: number): string {
-  return Math.round(local * 0.0067).toLocaleString('en-US');
+  return Math.round(local * 0.1282).toLocaleString('en-US');
 }
 ---
 <BaseLayout
@@ -27,7 +27,7 @@ function toUSD(local: number): string {
   <!-- HERO IMAGE -->
   <section class="relative w-full h-[40vh] min-h-[300px] overflow-hidden">
     <img
-      src={school.heroImage || '/images/tokyo-hero.jpg'}
+      src={school.heroImage || '/images/hong-kong-hero.jpg'}
       alt={school.name}
       class="absolute inset-0 w-full h-full object-cover"
     />
@@ -39,9 +39,9 @@ function toUSD(local: number): string {
     <nav class="font-body text-xs text-black/50" aria-label="Breadcrumb">
       <a href="/" class="hover:text-black">Home</a>
       <span class="mx-1">/</span>
-      <a href="/countries/japan" class="hover:text-black">Japan</a>
+      <a href="/countries/hong-kong" class="hover:text-black">Hong Kong</a>
       <span class="mx-1">/</span>
-      <a href="/cities/tokyo" class="hover:text-black">Tokyo</a>
+      <a href="/cities/hong-kong" class="hover:text-black">Hong Kong</a>
       <span class="mx-1">/</span>
       <span class="text-black">{school.name}</span>
     </nav>
@@ -119,7 +119,9 @@ function toUSD(local: number): string {
       <div class="max-w-2xl">
         <p class="label mb-4">Overview</p>
         <h2 class="mb-6">About {school.name}</h2>
-        <p class="font-body text-black/70 leading-relaxed">{school.overview}</p>
+        {school.overview.split('\n\n').map((para) => (
+          <p class="font-body text-black/70 leading-relaxed mb-4 last:mb-0">{para}</p>
+        ))}
       </div>
     </div>
   </section>
@@ -133,7 +135,9 @@ function toUSD(local: number): string {
         <div class="max-w-2xl">
           <p class="label mb-4">Editorial Assessment</p>
           <h2 class="mb-6">Our assessment</h2>
-          <p class="font-body text-black/70 leading-relaxed">{school.editorial}</p>
+          {school.editorial.split('\n\n').map((para) => (
+            <p class="font-body text-black/70 leading-relaxed mb-4 last:mb-0">{para}</p>
+          ))}
         </div>
       </div>
     </section>
@@ -156,14 +160,14 @@ function toUSD(local: number): string {
       <div class="bsa-container">
         <p class="label mb-4">Fees</p>
         <h2 class="mb-3">Fee schedule</h2>
-        <p class="font-body text-black/50 text-sm mb-8">All fees in JPY per year. USD equivalent shown at 1 JPY = 0.0067 USD.</p>
+        <p class="font-body text-black/50 text-sm mb-8">All fees in HKD per year. USD equivalent shown at 1 HKD = 0.1282 USD.</p>
 
         <div class="overflow-x-auto">
           <table class="w-full text-left max-w-2xl">
             <thead>
               <tr class="border-b border-black">
                 <th class="label py-3 pr-4">Year Group</th>
-                <th class="label py-3 pr-4 text-right">Annual Fee (JPY)</th>
+                <th class="label py-3 pr-4 text-right">Annual Fee (HKD)</th>
                 <th class="label py-3 text-right hidden md:table-cell">Annual Fee (USD)</th>
               </tr>
             </thead>
