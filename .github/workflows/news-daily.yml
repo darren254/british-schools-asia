@@ -35,7 +35,7 @@ jobs:
         run: |
           git config user.name "British Schools Asia bot"
           git config user.email "bot@britishschoolsasia.com"
-          git add src/data/news/ research/news-seen.json
+          git add src/data/news/ public/images/news/ research/news-seen.json
           if git diff --cached --quiet; then
             echo "No changes — exiting cleanly."
             echo "changed=false" >> $GITHUB_OUTPUT
