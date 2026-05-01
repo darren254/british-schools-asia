@@ -81,10 +81,10 @@ const allArticles = Object.values(articleFiles)
       <div class="container-narrow">
         {article.body.map((block: any) => {
           if (block.type === 'paragraph') {
-            return <p>{block.text}</p>;
+            return <p set:html={block.text}></p>;
           }
           if (block.type === 'heading') {
-            return <h2>{block.text}</h2>;
+            return <h2 set:html={block.text}></h2>;
           }
           if (block.type === 'image') {
             return (

@@ -5,9 +5,9 @@
   "dek": "NAIS Hong Kong will open a university-style Sixth Form Centre in Hung Hom in August 2026, becoming the first international school in Hong Kong to offer both A Levels and the IB Diploma.",
   "author": "marcus-chen",
   "date": "2026-04-29",
-  "heroImage": "/images/hong-kong-hero.jpg",
-  "heroAlt": "Hong Kong harbour",
-  "heroCredit": "",
+  "heroImage": "/images/news/2026-04-29-nord-anglia-hong-kong-sixth-form-a-levels-2026.png",
+  "heroAlt": "Nord Anglia Hong Kong to Launch Sixth Form Centre and A Levels",
+  "heroCredit": "After: WhichSchoolAdvisor",
   "body": [
     {
       "type": "paragraph",
@@ -35,7 +35,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The NAIS announcement is part of a wider expansion of sixth-form provision in Hong Kong's international school sector this year. Kellett School, also rooted in the British curriculum, is simultaneously opening a new Sixth Form Centre at the Bay Hub on Kai Cheung Road opposite its Kowloon Bay campus, with capacity for up to 240 students, pending Education Bureau approval. The YK Pao Education Foundation and North London Collegiate School have also confirmed separate new-school launches in the city for 2026."
+      "text": "The NAIS announcement is part of a wider expansion of sixth-form provision in Hong Kong's international school sector this year. As <a href=\"https://whichschooladvisor.com/hong-kong/school-news/every-new-school-opening-in-hong-kong-nord-anglia-esf-nlcs-more\">WhichSchoolAdvisor</a> has reported, Kellett School, also rooted in the British curriculum, is simultaneously opening a new Sixth Form Centre at the Bay Hub on Kai Cheung Road opposite its Kowloon Bay campus, with capacity for up to 240 students, pending Education Bureau approval. The YK Pao Education Foundation and North London Collegiate School have also confirmed separate new-school launches in the city for 2026."
     },
     {
       "type": "paragraph",
