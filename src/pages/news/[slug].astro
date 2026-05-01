@@ -103,12 +103,6 @@ const allArticles = Object.values(articleFiles)
           return null;
         })}
 
-        {article.sourceUrl && article.sourceName && (
-          <p class="news-source">
-            <a href={article.sourceUrl} rel="nofollow noopener" target="_blank">Read more &rsaquo; {article.sourceName}</a>
-          </p>
-        )}
-
         {article.tags && article.tags.length > 0 && (
           <div class="news-tags">
             {article.tags.map((tag: string) => (
@@ -334,18 +328,6 @@ const allArticles = Object.values(articleFiles)
     .news-pullquote {
       font-size: 1.85rem;
     }
-  }
-
-  /* Source line */
-  .news-source {
-    font-family: var(--font-body);
-    font-size: 0.6875rem;
-    color: rgba(0, 0, 0, 0.5);
-    margin-top: 2rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
   }
 
   /* Tags */
