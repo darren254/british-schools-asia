@@ -46,6 +46,25 @@ This file documents what access and abilities Claude has when working on this pr
 - **In repo:** added as GitHub Actions secret `ANTHROPIC_API_KEY`. Never committed.
 - **Local dev:** if a script needs the key, write it to `.env.local` (gitignored).
 
+## Google AI Studio (Gemini)
+
+- **Key:** stored in `~/Documents/API Keys.txt` under "Google → Google AI Studio". Used by the `/news` pipeline to convert source-article images into pop-art versions before publishing.
+- **In repo:** added as GitHub Actions secret `GEMINI_API_KEY`. Never committed.
+- **Model:** `gemini-3-pro-image-preview` (Nano Banana Pro — Gemini 3 Pro Image). Strong at full re-stylization. The older `gemini-2.5-flash-image` (Nano Banana) is weaker — only does light editing/filtering. Do not use it for stylization.
+- **Billing:** paid tier required for image models. Free tier returns `limit: 0` for any image-gen request even with a valid key.
+- **Cost:** ~$0.04 per image at Pro tier; ~2 images/day = ~$2.50/month.
+
+## News pipeline — image flow
+
+1. Claude (with web_search) picks 2 stories per day and returns each with a `sourceUrl`.
+2. Pipeline fetches the source article HTML, extracts `og:image`, downloads it locally to `public/images/news/<slug>.<ext>`.
+3. Pipeline sends that image to Gemini Nano Banana Pro with the prompt locked in `scripts/news-pipeline.mjs` (`WARHOL_PROMPT`).
+4. Gemini returns a PNG; pipeline overwrites the local file as `<slug>.png`, deletes the original `.jpg`, updates the article JSON's `heroImage` to point to the `.png`.
+5. If the source-image fetch fails, the article falls back to the kicker city's hero (e.g. `/images/hong-kong-hero.jpg`) — these stay as-is, not warholized, since they're shared with other pages.
+6. If the Warhol step fails (rare — model returns text instead of image, or `MALFORMED_FUNCTION_CALL` for some images), the article keeps the original photographic source image.
+
+`scripts/warholize-existing.mjs` is a one-off backfill script that walks every article in `src/data/news/` and warholizes its hero in place. Skips articles whose hero is a city-level fallback (so we don't repaint shared images). Idempotent — already-warholized PNGs are skipped unless `--force`.
+
 ## Deployment model
 
 - **Daily news cron:** GitHub Actions runs at 01:00 UTC → pipeline writes new article JSONs to `src/data/news/` → commits to `main` → builds (`npm run build`) → `wrangler pages deploy dist` → live in ~30s.

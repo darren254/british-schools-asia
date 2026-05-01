@@ -48,7 +48,8 @@ const today = () => new Date().toISOString().slice(0, 10);
 
 // =================== WARHOLIZE ===================
 
-const WARHOL_PROMPT = 'give me a paitning version of this image in the style of Andy Warhol. Remove and logo or text overlay';
+const WARHOL_PROMPT = 'give me a painting version of this image in the style of pop art. not a filter - a painting. Remove and logo or text overlay';
+const WARHOL_MODEL = 'gemini-3-pro-image-preview'; // Nano Banana Pro — Gemini 3 Pro Image, the strong stylizer
 
 async function warholize(localImagePath) {
   const apiKey = process.env.GEMINI_API_KEY;
@@ -60,7 +61,7 @@ async function warholize(localImagePath) {
     const buf = readFileSync(localImagePath);
     const ext = extname(localImagePath).slice(1).toLowerCase();
     const mime = ext === 'png' ? 'image/png' : ext === 'webp' ? 'image/webp' : ext === 'avif' ? 'image/avif' : 'image/jpeg';
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${apiKey}`, {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${WARHOL_MODEL}:generateContent?key=${apiKey}`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
@@ -69,7 +70,7 @@ async function warholize(localImagePath) {
           { inlineData: { mimeType: mime, data: buf.toString('base64') } },
         ]}],
       }),
-      signal: AbortSignal.timeout(120000),
+      signal: AbortSignal.timeout(240000),
     });
     if (!res.ok) {
       console.log(`    Warhol API ${res.status} — keeping original`);
