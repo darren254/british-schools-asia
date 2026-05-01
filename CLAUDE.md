@@ -18,7 +18,7 @@ This file documents what access and abilities Claude has when working on this pr
   - Read repo metadata, issues, PRs, releases (`gh repo view`, `gh issue list`, etc.)
   - Read/write Actions workflow files (`.github/workflows/*.yml`)
   - Push branches and open PRs
-  - Add/update/delete Actions secrets (`gh secret set`, `gh secret list`, `gh secret delete`) — values can come from the user's `~/Documents/API Keys.rtf` or be passed inline
+  - Add/update/delete Actions secrets (`gh secret set`, `gh secret list`, `gh secret delete`) — values can come from the user's `~/Documents/API Keys.txt` or be passed inline
   - Trigger workflow runs (`gh workflow run`)
   - View workflow logs (`gh run list`, `gh run view`)
 - **What still needs user OK:**
@@ -27,7 +27,7 @@ This file documents what access and abilities Claude has when working on this pr
 ## Cloudflare
 
 - **Account ID:** `1a2801b87f9672afbf53602cb74884c9` (Darren@schoolstrust.co.uk's account)
-- **API token:** stored in `~/Documents/API Keys.rtf` under "Cloudflare" — token starts `cfut_…`. Do not commit. Reference, don't paste.
+- **API token:** stored in `~/Documents/API Keys.txt` under "Cloudflare" — token starts `cfut_…`. Do not commit. Reference, don't paste.
 - **Pages projects on this account:**
   - `british-schools-asia` — **no Git source connected** (deploy via `wrangler pages deploy dist` from GitHub Actions, not via Pages↔GitHub OAuth)
   - `international-schools-guide`, `isj-website-v4`, `isj-parent-map` — connected to GitHub (different projects, not this one)
@@ -42,7 +42,7 @@ This file documents what access and abilities Claude has when working on this pr
 
 ## Anthropic API
 
-- **Key:** stored in `~/Documents/API Keys.rtf` under "Anthropic - Claude". Used by GitHub Actions cron jobs that need to call Claude programmatically (e.g. the `/news` daily pipeline).
+- **Key:** stored in `~/Documents/API Keys.txt` under "Anthropic - Claude". Used by GitHub Actions cron jobs that need to call Claude programmatically (e.g. the `/news` daily pipeline).
 - **In repo:** added as GitHub Actions secret `ANTHROPIC_API_KEY`. Never committed.
 - **Local dev:** if a script needs the key, write it to `.env.local` (gitignored).
 

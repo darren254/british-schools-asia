@@ -7,7 +7,7 @@
  * Env: ANTHROPIC_API_KEY (required), NEWS_DRY_RUN=1 (optional)
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, unlinkSync } from 'node:fs';
 import { join, dirname, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -45,6 +45,58 @@ const KICKER_TO_HERO_ALT = {
 };
 
 const today = () => new Date().toISOString().slice(0, 10);
+
+// =================== WARHOLIZE ===================
+
+const WARHOL_PROMPT = 'give me a paitning version of this image in the style of Andy Warhol. Remove and logo or text overlay';
+
+async function warholize(localImagePath) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    console.log('    GEMINI_API_KEY not set — skipping Warhol step');
+    return null;
+  }
+  try {
+    const buf = readFileSync(localImagePath);
+    const ext = extname(localImagePath).slice(1).toLowerCase();
+    const mime = ext === 'png' ? 'image/png' : ext === 'webp' ? 'image/webp' : ext === 'avif' ? 'image/avif' : 'image/jpeg';
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [
+          { text: WARHOL_PROMPT },
+          { inlineData: { mimeType: mime, data: buf.toString('base64') } },
+        ]}],
+      }),
+      signal: AbortSignal.timeout(120000),
+    });
+    if (!res.ok) {
+      console.log(`    Warhol API ${res.status} — keeping original`);
+      return null;
+    }
+    const data = await res.json();
+    const parts = data?.candidates?.[0]?.content?.parts || [];
+    for (const p of parts) {
+      if (p.inlineData) {
+        const out = Buffer.from(p.inlineData.data, 'base64');
+        // Overwrite the local image with the Warholized PNG (always saved as .png)
+        const newPath = localImagePath.replace(/\.(jpg|jpeg|webp|avif|gif)$/i, '.png');
+        writeFileSync(newPath, out);
+        // If filename changed (extension swap), the OLD file should be removed
+        if (newPath !== localImagePath) {
+          try { unlinkSync(localImagePath); } catch {}
+        }
+        console.log(`    Warholized → ${newPath} (${out.length} bytes)`);
+        return newPath.replace(/^.*public/, '');
+      }
+    }
+    return null;
+  } catch (e) {
+    console.log(`    Warhol error: ${e.message} — keeping original`);
+    return null;
+  }
+}
 
 // =================== SOURCE IMAGE ===================
 
@@ -238,9 +290,14 @@ async function main() {
       const img = await fetchSourceImage(a.sourceUrl, finalSlug);
       if (img) {
         heroImage = img.localPath;
-        heroCredit = `Photograph: ${a.sourceName || 'source'}`;
+        heroCredit = `After: ${a.sourceName || 'source'}`;
         heroAlt = a.headline;
         console.log(`    got ${img.bytes} bytes → ${img.localPath}`);
+
+        // Warholize: replace the file in place
+        const fullPath = join(repoRoot, 'public', img.localPath);
+        const warholPath = await warholize(fullPath);
+        if (warholPath) heroImage = warholPath;
       } else {
         console.log(`    no source image; falling back to city hero`);
       }
