@@ -49,7 +49,31 @@ const today = () => new Date().toISOString().slice(0, 10);
 // =================== WARHOLIZE ===================
 
 const WARHOL_PROMPT = 'give me a painting version of this image in the style of pop art. not a filter - a painting. Remove and logo or text overlay';
-const WARHOL_MODEL = 'gemini-3-pro-image-preview'; // Nano Banana Pro — Gemini 3 Pro Image, the strong stylizer
+// Fallback used when primary returns MALFORMED_FUNCTION_CALL (Pro model occasionally rejects images on the locked prompt)
+const WARHOL_PROMPT_FALLBACK = 'Repaint this scene as a flat pop-art illustration with bold black outlines and saturated colour blocks. No text, no logos, no signage. Output only the painting.';
+const WARHOL_MODEL = 'gemini-3-pro-image-preview'; // Nano Banana Pro
+
+async function callGeminiImage(buf, mime, promptText) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${WARHOL_MODEL}:generateContent?key=${apiKey}`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      contents: [{ parts: [
+        { text: promptText },
+        { inlineData: { mimeType: mime, data: buf.toString('base64') } },
+      ]}],
+    }),
+    signal: AbortSignal.timeout(240000),
+  });
+  if (!res.ok) return { error: `API ${res.status}` };
+  const data = await res.json();
+  const parts = data?.candidates?.[0]?.content?.parts || [];
+  for (const p of parts) {
+    if (p.inlineData) return { image: Buffer.from(p.inlineData.data, 'base64') };
+  }
+  return { error: data?.candidates?.[0]?.finishReason || 'no image' };
+}
 
 async function warholize(localImagePath) {
   const apiKey = process.env.GEMINI_API_KEY;
@@ -61,38 +85,25 @@ async function warholize(localImagePath) {
     const buf = readFileSync(localImagePath);
     const ext = extname(localImagePath).slice(1).toLowerCase();
     const mime = ext === 'png' ? 'image/png' : ext === 'webp' ? 'image/webp' : ext === 'avif' ? 'image/avif' : 'image/jpeg';
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${WARHOL_MODEL}:generateContent?key=${apiKey}`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [
-          { text: WARHOL_PROMPT },
-          { inlineData: { mimeType: mime, data: buf.toString('base64') } },
-        ]}],
-      }),
-      signal: AbortSignal.timeout(240000),
-    });
-    if (!res.ok) {
-      console.log(`    Warhol API ${res.status} — keeping original`);
+
+    // Try the locked prompt first; fall back to alt prompt on MALFORMED_FUNCTION_CALL or no image
+    let r = await callGeminiImage(buf, mime, WARHOL_PROMPT);
+    if (!r.image) {
+      console.log(`    Warhol primary returned ${r.error} — retrying with fallback prompt`);
+      r = await callGeminiImage(buf, mime, WARHOL_PROMPT_FALLBACK);
+    }
+    if (!r.image) {
+      console.log(`    Warhol fallback also failed (${r.error}) — keeping original`);
       return null;
     }
-    const data = await res.json();
-    const parts = data?.candidates?.[0]?.content?.parts || [];
-    for (const p of parts) {
-      if (p.inlineData) {
-        const out = Buffer.from(p.inlineData.data, 'base64');
-        // Overwrite the local image with the Warholized PNG (always saved as .png)
-        const newPath = localImagePath.replace(/\.(jpg|jpeg|webp|avif|gif)$/i, '.png');
-        writeFileSync(newPath, out);
-        // If filename changed (extension swap), the OLD file should be removed
-        if (newPath !== localImagePath) {
-          try { unlinkSync(localImagePath); } catch {}
-        }
-        console.log(`    Warholized → ${newPath} (${out.length} bytes)`);
-        return newPath.replace(/^.*public/, '');
-      }
+
+    const newPath = localImagePath.replace(/\.(jpg|jpeg|webp|avif|gif)$/i, '.png');
+    writeFileSync(newPath, r.image);
+    if (newPath !== localImagePath) {
+      try { unlinkSync(localImagePath); } catch {}
     }
-    return null;
+    console.log(`    Warholized → ${newPath} (${r.image.length} bytes)`);
+    return newPath.replace(/^.*public/, '');
   } catch (e) {
     console.log(`    Warhol error: ${e.message} — keeping original`);
     return null;
