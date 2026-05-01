@@ -27,12 +27,12 @@ A school missing any criterion is excluded entirely (not listed at all).
 ## Base score
 
 ```
-Base Score = (Top Year Fees in USD + 100,000) / 2
+Base Score = Top Year Fees in USD + 500,000
 ```
 
 Top Year Fees = the highest single year-group annual tuition in the school's published schedule, in USD at the documented rate.
 
-The +100,000 / 2 transform compresses the fee distribution: a $25,000 school scores 62,500; a $60,000 school scores 80,000. Premium schools cluster near the top while lower-fee schools remain meaningfully above zero — quality signals can then move ranks materially.
+The +500,000 transform flattens the fee distribution heavily: a $25,000 school scores 525,000; a $60,000 school scores 560,000 (a 6.7% spread). With penalties up to −30% and bonuses up to +14%, the adjustment band is wider than the entire fee range — so quality signals (inspections, accreditation, host country freedom, results transparency) become the dominant ranking force. Fees still anchor the order, but the index now rewards good schools over expensive schools.
 
 ## Adjustments
 
@@ -145,5 +145,6 @@ Changes to this document require explicit project-owner approval. When changed:
 
 ### Change log
 
+- **v2.1 — 2026-04-30** — flattened base-score formula from `(Top Year Fees + 100,000) / 2` to `Top Year Fees + 500,000`. Same inclusion criteria, same adjustments (bonuses + penalties unchanged). The new formula amplifies the impact of bonuses/penalties relative to fees — quality signals now dominate fee position.
 - **v2 — 2026-04-28** — replaced Year 3 fee × penalty model with `(Top Year Fees + 100,000) / 2 × (1 + bonuses − penalties)` formula. Added positive signals (host country freedom, inspection, BSO, A Level / IGCSE published). Raised entry threshold to USD 25,000 Top Year Fees. Reduced operating-history requirement from "since 2025 or earlier" to "open > 12 months".
 - **v1 — 2026-04-03** — initial methodology: Year 3 USD as base, downward reputation penalty only (0/10/25%).

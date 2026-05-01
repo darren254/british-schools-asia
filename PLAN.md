@@ -22,7 +22,7 @@
 
 See `docs/ranking-methodology.md` for the full ruleset. Summary:
 
-- **Base score:** `(Top Year Fees in USD + 100,000) / 2` (compresses fee dispersion).
+- **Base score:** `Top Year Fees in USD + 500,000` (heavy fee compression — quality signals dominate).
 - **Penalties (multiplicative):** social media moderate (-10%), social media bad (-20%), tier-1 negative press (-10%).
 - **Positive signals (additive):** host country freedom (+10%), inspection in last 24mo (+1%), BSO accreditation (+1%), A Level results published (+1%), IGCSE results published (+1%).
 - **Final score:** `Base × (1 + bonuses − penalties)`. Sort descending → asiaRank and cityRank.
